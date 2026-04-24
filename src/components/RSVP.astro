@@ -1,0 +1,73 @@
+---
+---
+<section data-animate class="py-14 px-8 text-center bg-cream">
+  <!-- Ícono corazón -->
+  <div class="flex justify-center mb-4">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+      <path d="M20 34 L5 20 Q2 14 8 10 Q14 6 20 14 Q26 6 32 10 Q38 14 35 20 Z" fill="#a8bf8c" opacity="0.6" stroke="#6b8a50" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <h3 class="text-xs tracking-[0.35em] uppercase text-bot-dark font-semibold mb-4">Confirmar asistencia</h3>
+  <p class="font-serif italic text-bot-mid text-sm mb-8 max-w-xs mx-auto">
+    Por favor confirmá tu asistencia antes del <strong class="not-italic text-bot-dark">1 de Enero 2027</strong>
+  </p>
+
+  <div class="flex flex-col gap-3 max-w-[200px] mx-auto">
+    <button
+      id="rsvp-confirm"
+      class="bg-bot-dark text-white text-[10px] tracking-[0.25em] uppercase py-3 px-6 rounded-full hover:bg-bot-mid transition-colors"
+    >
+      Confirmar asistencia
+    </button>
+    <button class="border border-bot-dark text-bot-dark text-[10px] tracking-[0.25em] uppercase py-3 px-6 rounded-full hover:bg-bot-dark hover:text-white transition-colors">
+      No podré asistir
+    </button>
+  </div>
+</section>
+
+<script>
+  import gsap from 'gsap';
+
+  const btn = document.getElementById('rsvp-confirm') as HTMLButtonElement | null;
+  if (btn) {
+    btn.addEventListener('click', () => {
+      const emojis = ['🌿', '🍃', '💚', '🌱', '✨'];
+      const rect = btn.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top;
+
+      for (let i = 0; i < 18; i++) {
+        const span = document.createElement('span');
+        span.textContent = emojis[i % emojis.length];
+        span.style.cssText = `
+          position: fixed;
+          font-size: 18px;
+          pointer-events: none;
+          z-index: 9999;
+          left: ${cx}px;
+          top: ${cy}px;
+          transform: translate(-50%, -50%);
+        `;
+        document.body.appendChild(span);
+
+        const angle = (i / 18) * Math.PI * 2;
+        const distance = 70 + Math.random() * 80;
+
+        gsap.to(span, {
+          x: Math.cos(angle) * distance,
+          y: Math.sin(angle) * distance - 60,
+          opacity: 0,
+          scale: 0.3,
+          duration: 0.9 + Math.random() * 0.5,
+          ease: 'power2.out',
+          onComplete: () => span.remove(),
+        });
+      }
+
+      btn.textContent = '¡Confirmado! 🌿';
+      btn.disabled = true;
+      btn.classList.add('opacity-70', 'cursor-default');
+    });
+  }
+</script>

@@ -1,0 +1,82 @@
+---
+import { Coffee, Plane, Gem, Leaf } from '@lucide/astro';
+
+const milestones = [
+  { year: '2020', title: 'Nos conocimos', desc: 'Una tarde de otoño que ninguno olvidará', side: 'left' },
+  { year: '2022', title: 'Nuestro primer viaje', desc: 'París nos enamoró a los dos', side: 'right' },
+  { year: '2024', title: 'La propuesta', desc: 'En el lugar donde todo comenzó', side: 'left' },
+  { year: '2027', title: '¡La boda!', desc: '17 de Febrero, el día más feliz', side: 'right' },
+];
+---
+<section data-animate class="py-16 px-6 bg-cream-dk">
+  <h3 class="text-[10px] tracking-[0.45em] uppercase text-bot-dark font-semibold text-center mb-12">Nuestra historia</h3>
+
+  <div class="relative max-w-xs mx-auto">
+    <!-- Línea central vertical -->
+    <div class="absolute left-1/2 top-4 bottom-4 w-px bg-tan/40 -translate-x-1/2"></div>
+
+    <div class="space-y-10">
+
+      <!-- 2020 -->
+      <div class="story-item flex items-center gap-4">
+        <div class="flex-1 text-right">
+          <div class="inline-block bg-cream border border-tan/25 rounded-xl px-3 py-2.5 shadow-sm text-left">
+            <p class="text-[9px] tracking-widest text-bot-mid uppercase mb-0.5">{milestones[0].year}</p>
+            <p class="font-serif font-medium text-bot-dark text-sm">{milestones[0].title}</p>
+            <p class="text-xs text-bot-mid/55 italic mt-0.5">{milestones[0].desc}</p>
+          </div>
+        </div>
+        <div class="flex-shrink-0 w-10 h-10 bg-cream-dk border border-bot-mid/60 rounded-full flex items-center justify-center shadow-sm z-10 text-bot-mid">
+          <Coffee size={17} stroke-width={1.5} />
+        </div>
+        <div class="flex-1"></div>
+      </div>
+
+      <!-- 2022 -->
+      <div class="story-item flex items-center gap-4 flex-row-reverse">
+        <div class="flex-1 text-left">
+          <div class="inline-block bg-cream border border-tan/25 rounded-xl px-3 py-2.5 shadow-sm">
+            <p class="text-[9px] tracking-widest text-bot-mid uppercase mb-0.5">{milestones[1].year}</p>
+            <p class="font-serif font-medium text-bot-dark text-sm">{milestones[1].title}</p>
+            <p class="text-xs text-bot-mid/55 italic mt-0.5">{milestones[1].desc}</p>
+          </div>
+        </div>
+        <div class="flex-shrink-0 w-10 h-10 bg-cream-dk border border-bot-mid/60 rounded-full flex items-center justify-center shadow-sm z-10 text-bot-mid">
+          <Plane size={17} stroke-width={1.5} />
+        </div>
+        <div class="flex-1"></div>
+      </div>
+
+      <!-- 2024 -->
+      <div class="story-item flex items-center gap-4">
+        <div class="flex-1 text-right">
+          <div class="inline-block bg-cream border border-tan/25 rounded-xl px-3 py-2.5 shadow-sm text-left">
+            <p class="text-[9px] tracking-widest text-bot-mid uppercase mb-0.5">{milestones[2].year}</p>
+            <p class="font-serif font-medium text-bot-dark text-sm">{milestones[2].title}</p>
+            <p class="text-xs text-bot-mid/55 italic mt-0.5">{milestones[2].desc}</p>
+          </div>
+        </div>
+        <div class="flex-shrink-0 w-10 h-10 bg-cream-dk border border-bot-mid/60 rounded-full flex items-center justify-center shadow-sm z-10 text-bot-mid">
+          <Gem size={17} stroke-width={1.5} />
+        </div>
+        <div class="flex-1"></div>
+      </div>
+
+      <!-- 2027 -->
+      <div class="story-item flex items-center gap-4 flex-row-reverse">
+        <div class="flex-1 text-left">
+          <div class="inline-block bg-cream border border-tan/25 rounded-xl px-3 py-2.5 shadow-sm">
+            <p class="text-[9px] tracking-widest text-bot-mid uppercase mb-0.5">{milestones[3].year}</p>
+            <p class="font-serif font-medium text-bot-dark text-sm">{milestones[3].title}</p>
+            <p class="text-xs text-bot-mid/55 italic mt-0.5">{milestones[3].desc}</p>
+          </div>
+        </div>
+        <div class="flex-shrink-0 w-10 h-10 bg-cream-dk border border-bot-mid/60 rounded-full flex items-center justify-center shadow-sm z-10 text-bot-mid">
+          <Leaf size={17} stroke-width={1.5} />
+        </div>
+        <div class="flex-1"></div>
+      </div>
+
+    </div>
+  </div>
+</section>

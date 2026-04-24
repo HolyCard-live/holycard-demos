@@ -1,0 +1,25 @@
+---
+import TornEdge from './TornEdge.astro';
+interface Props {
+  src: string;
+  alt?: string;
+  topColor?: string;
+  bottomColor?: string;
+}
+const {
+  src,
+  alt = 'Foto de la pareja',
+  topColor = '#f7f4ed',
+  bottomColor = '#f7f4ed',
+} = Astro.props;
+---
+<div class="photo-parallax relative h-72 overflow-hidden">
+  <TornEdge position="top" color={topColor} />
+  <img
+    src={src}
+    alt={alt}
+    class="w-full h-full object-cover object-center scale-125"
+    loading="lazy"
+  />
+  <TornEdge position="bottom" color={bottomColor} />
+</div>

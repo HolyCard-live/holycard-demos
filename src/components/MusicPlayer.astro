@@ -1,0 +1,67 @@
+---
+---
+<section data-animate class="py-10 px-8 bg-cream-dk text-center">
+  <p class="font-serif italic text-sm text-bot-mid mb-6">Dale play a nuestra canción</p>
+
+  <!-- Portada del álbum (placeholder) -->
+  <div class="w-16 h-16 mx-auto mb-4 rounded-lg overflow-hidden shadow-md">
+    <img
+      src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200&auto=format&fit=crop"
+      alt="Álbum"
+      class="w-full h-full object-cover"
+    />
+  </div>
+
+  <p class="font-serif text-base text-bot-dark font-medium leading-tight">A Thousand Years</p>
+  <p class="text-xs text-bot-mid mt-1 mb-5">Christina Perri</p>
+
+  <!-- Barra de progreso -->
+  <div class="max-w-[200px] mx-auto mb-2">
+    <div class="h-1 bg-bot-light/30 rounded-full overflow-hidden">
+      <div class="h-full bg-bot-mid rounded-full w-[35%]"></div>
+    </div>
+    <div class="flex justify-between text-[10px] text-bot-mid/60 mt-1">
+      <span>1:32</span>
+      <span>4:45</span>
+    </div>
+  </div>
+
+  <!-- Controles -->
+  <div class="flex items-center justify-center gap-6 mt-4">
+    <button class="text-bot-mid/60 hover:text-bot-mid transition-colors" aria-label="Anterior">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/>
+      </svg>
+    </button>
+
+    <!-- Botón play principal -->
+    <button id="playBtn" class="w-12 h-12 bg-bot-dark text-white rounded-full flex items-center justify-center shadow-lg hover:bg-bot-mid transition-colors" aria-label="Reproducir">
+      <svg id="playIcon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+      <svg id="pauseIcon" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+      </svg>
+    </button>
+
+    <button class="text-bot-mid/60 hover:text-bot-mid transition-colors" aria-label="Siguiente">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6 18l8.5-6L6 6v12zm2.5-6 8.5 6V6z"/>
+        <path d="M16 6h2v12h-2z"/>
+      </svg>
+    </button>
+  </div>
+</section>
+
+<script>
+  const playBtn = document.getElementById('playBtn');
+  const playIcon = document.getElementById('playIcon');
+  const pauseIcon = document.getElementById('pauseIcon');
+  let playing = false;
+
+  playBtn?.addEventListener('click', () => {
+    playing = !playing;
+    playIcon?.classList.toggle('hidden', playing);
+    pauseIcon?.classList.toggle('hidden', !playing);
+  });
+</script>

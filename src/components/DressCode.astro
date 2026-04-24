@@ -1,0 +1,66 @@
+---
+import { Sparkles } from '@lucide/astro';
+---
+<section data-animate class="py-16 px-6 text-center bg-cream">
+  <h3 class="text-[10px] tracking-[0.45em] uppercase text-bot-dark font-semibold mb-8">Código de vestimenta</h3>
+
+  <div class="border border-tan/40 rounded-2xl p-8 max-w-xs mx-auto">
+
+    <!-- Siluetas pareja -->
+    <div class="flex justify-center gap-6 mb-6">
+      <!-- Caballero -->
+      <svg width="52" height="80" viewBox="0 0 52 80" fill="none" stroke="#2d3d20" stroke-width="1.2" stroke-linecap="round">
+        <circle cx="26" cy="10" r="7"/>
+        <path d="M14 30 Q16 20 26 20 Q36 20 38 30 L40 55 H12 Z"/>
+        <path d="M14 30 L8 52 M38 30 L44 52"/>
+        <path d="M20 55 L18 78 M32 55 L34 78"/>
+        <path d="M23 22 L26 30 L29 22"/>
+        <path d="M22 28 Q26 32 30 28"/>
+      </svg>
+      <!-- Dama -->
+      <svg width="52" height="80" viewBox="0 0 52 80" fill="none" stroke="#2d3d20" stroke-width="1.2" stroke-linecap="round">
+        <circle cx="26" cy="10" r="7"/>
+        <path d="M18 22 Q20 20 26 20 Q32 20 34 22 L38 38 Q26 44 14 38 Z"/>
+        <path d="M18 22 L10 48 M34 22 L42 48"/>
+        <path d="M14 38 Q26 46 38 38 L42 78 H10 Z"/>
+        <path d="M22 25 Q26 30 30 25"/>
+      </svg>
+    </div>
+
+    <span class="inline-block bg-bot-dark/5 border border-bot-dark/20 text-bot-dark text-sm px-5 py-1.5 rounded-full font-serif italic mb-6">
+      Formal
+    </span>
+
+    <div class="space-y-2.5 text-sm text-bot-dark/70 font-serif mb-7">
+      <p>Damas: Vestido largo (no blanco)</p>
+      <p>Caballeros: Traje formal</p>
+    </div>
+
+    <!-- Paleta sugerida -->
+    <div class="border-t border-tan/30 pt-5">
+      <p class="text-[9px] tracking-[0.3em] uppercase text-bot-mid/60 mb-3 flex items-center justify-center gap-1.5">
+        <Sparkles size={10} stroke-width={1.5} />
+        Paleta sugerida
+      </p>
+      <div class="flex justify-center gap-3">
+        <div class="flex flex-col items-center gap-1.5">
+          <div class="w-7 h-7 rounded-full border border-tan/40 shadow-sm" style="background-color: #f7f4ed;"></div>
+          <span class="text-[8px] text-bot-mid/50 tracking-wide">Crema</span>
+        </div>
+        <div class="flex flex-col items-center gap-1.5">
+          <div class="w-7 h-7 rounded-full border border-tan/40 shadow-sm" style="background-color: #c8b89a;"></div>
+          <span class="text-[8px] text-bot-mid/50 tracking-wide">Nude</span>
+        </div>
+        <div class="flex flex-col items-center gap-1.5">
+          <div class="w-7 h-7 rounded-full border border-tan/40 shadow-sm" style="background-color: #2d3d20;"></div>
+          <span class="text-[8px] text-bot-mid/50 tracking-wide">Verde</span>
+        </div>
+        <div class="flex flex-col items-center gap-1.5">
+          <div class="w-7 h-7 rounded-full border border-tan/40 shadow-sm" style="background-color: #8aab8b;"></div>
+          <span class="text-[8px] text-bot-mid/50 tracking-wide">Salvia</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

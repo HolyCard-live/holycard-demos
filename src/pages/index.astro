@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Quote from '../components/Quote.astro';
+import MusicPlayer from '../components/MusicPlayer.astro';
+import Countdown from '../components/Countdown.astro';
+import Locations from '../components/Locations.astro';
+import Timeline from '../components/Timeline.astro';
+import PhotoSeparator from '../components/PhotoSeparator.astro';
+import DressCode from '../components/DressCode.astro';
+import Gifts from '../components/Gifts.astro';
+import RSVP from '../components/RSVP.astro';
+import PlaylistSection from '../components/PlaylistSection.astro';
+import NoChildren from '../components/NoChildren.astro';
+import Closing from '../components/Closing.astro';
+import BotanicalDivider from '../components/BotanicalDivider.astro';
+import PersonalMessage from '../components/PersonalMessage.astro';
+import PhotoGallery from '../components/PhotoGallery.astro';
+import OurStory from '../components/OurStory.astro';
+import InstagramSection from '../components/InstagramSection.astro';
+---
+
+<Layout>
+  <Hero />
+  <Quote />
+  <BotanicalDivider variant="branch" />
+  <PersonalMessage />
+  <MusicPlayer />
+  <BotanicalDivider variant="leaves" />
+  <Countdown />
+  <Locations />
+  <PhotoGallery />
+  <BotanicalDivider variant="branch" bg="#eae4d6" />
+  <Timeline />
+  <PhotoSeparator
+    src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&auto=format&fit=crop&q=80"
+    alt="Gustave & Sophie"
+    topColor="#eae4d6"
+    bottomColor="#eae4d6"
+  />
+  <OurStory />
+  <BotanicalDivider variant="leaves" />
+  <DressCode />
+  <Gifts />
+  <RSVP />
+  <BotanicalDivider variant="dots" />
+  <PlaylistSection />
+  <InstagramSection />
+  <NoChildren />
+  <PhotoSeparator
+    src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80"
+    alt="Gustave & Sophie"
+    topColor="#f7f4ed"
+    bottomColor="#f7f4ed"
+  />
+  <Closing />
+</Layout>
+
+<script>
+  import gsap from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  (window as any).__gsap = gsap;
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Fade-up genérico
+  gsap.utils.toArray<HTMLElement>('[data-animate]').forEach((el) => {
+    gsap.from(el, {
+      scrollTrigger: { trigger: el, start: 'top 88%' },
+      y: 32, opacity: 0, duration: 0.9, ease: 'power2.out',
+    });
+  });
+
+  // Hero texto stagger
+  gsap.from('.hero-text > *', {
+    y: 24, opacity: 0, stagger: 0.2, duration: 1, delay: 0.4, ease: 'power2.out',
+  });
+
+  // Timeline items
+  gsap.from('.timeline-item', {
+    scrollTrigger: { trigger: '.timeline-section', start: 'top 80%' },
+    x: -24, opacity: 0, stagger: 0.13, duration: 0.65, ease: 'power2.out',
+  });
+
+  // Parallax fotos
+  gsap.utils.toArray<HTMLElement>('.photo-parallax').forEach((wrapper) => {
+    const img = wrapper.querySelector('img');
+    if (!img) return;
+    gsap.fromTo(img,
+      { y: -40 },
+      { y: 40, ease: 'none', scrollTrigger: { trigger: wrapper, scrub: true } }
+    );
+  });
+
+  // Countdown scale-in
+  gsap.from('#cd-days, #cd-hours, #cd-mins, #cd-secs', {
+    scrollTrigger: { trigger: '#cd-days', start: 'top 85%' },
+    scale: 0.7, opacity: 0, stagger: 0.08, duration: 0.6, ease: 'back.out(1.4)',
+  });
+
+  // Story items
+  gsap.from('.story-item', {
+    scrollTrigger: { trigger: '.story-item', start: 'top 85%' },
+    opacity: 0, y: 20, stagger: 0.15, duration: 0.7, ease: 'power2.out',
+  });
+</script>

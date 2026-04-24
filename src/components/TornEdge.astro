@@ -1,0 +1,27 @@
+---
+interface Props {
+  position?: 'bottom' | 'top';
+  color?: string;
+}
+const { position = 'bottom', color = '#f7f4ed' } = Astro.props;
+---
+<div
+  class:list={[
+    'absolute left-0 right-0 w-full overflow-hidden leading-none z-10',
+    position === 'bottom' ? 'bottom-0' : 'top-0 rotate-180'
+  ]}
+  style="height: 32px;"
+  aria-hidden="true"
+>
+  <svg
+    viewBox="0 0 1200 32"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="w-full h-full"
+  >
+    <path
+      d={`M0,32 C75,32 100,20 150,20 C200,20 225,32 300,32 C375,32 400,20 450,20 C500,20 525,32 600,32 C675,32 700,20 750,20 C800,20 825,32 900,32 C975,32 1000,20 1050,20 C1100,20 1125,32 1200,32 L1200,32 L0,32 Z`}
+      fill={color}
+    />
+  </svg>
+</div>

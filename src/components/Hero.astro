@@ -1,0 +1,100 @@
+---
+import TornEdge from './TornEdge.astro';
+---
+<section class="relative w-full h-screen overflow-hidden">
+  <!-- Foto pareja -->
+  <img
+    src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80"
+    alt="Gustave & Sophie"
+    class="absolute inset-0 w-full h-full object-cover object-center scale-105"
+  />
+
+  <!-- Overlay gradiente para dar profundidad al texto -->
+  <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-black/10"></div>
+
+  <!-- Partículas / hojas flotantes -->
+  <div id="hero-particles" class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true"></div>
+
+  <!-- Hojas botánicas — esquina superior izquierda -->
+  <svg class="absolute top-0 left-0 w-36 opacity-60" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 130 Q30 80 80 20" stroke="#a8bf8c" stroke-width="1.5" fill="none"/>
+    <path d="M80 20 Q50 45 35 85" stroke="#a8bf8c" stroke-width="1" fill="none"/>
+    <ellipse cx="55" cy="52" rx="22" ry="10" transform="rotate(-40 55 52)" fill="#8aab8b" opacity="0.7"/>
+    <ellipse cx="38" cy="75" rx="18" ry="8" transform="rotate(-30 38 75)" fill="#a8bf8c" opacity="0.6"/>
+    <ellipse cx="70" cy="35" rx="16" ry="7" transform="rotate(-55 70 35)" fill="#6b8a50" opacity="0.5"/>
+    <path d="M15 120 Q25 90 60 50" stroke="#8aab8b" stroke-width="1" fill="none" opacity="0.5"/>
+    <ellipse cx="42" cy="63" rx="14" ry="6" transform="rotate(-45 42 63)" fill="#a8bf8c" opacity="0.5"/>
+  </svg>
+
+  <!-- Hojas botánicas — esquina superior derecha -->
+  <svg class="absolute top-0 right-0 w-36 opacity-60 scale-x-[-1]" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 130 Q30 80 80 20" stroke="#a8bf8c" stroke-width="1.5" fill="none"/>
+    <path d="M80 20 Q50 45 35 85" stroke="#a8bf8c" stroke-width="1" fill="none"/>
+    <ellipse cx="55" cy="52" rx="22" ry="10" transform="rotate(-40 55 52)" fill="#8aab8b" opacity="0.7"/>
+    <ellipse cx="38" cy="75" rx="18" ry="8" transform="rotate(-30 38 75)" fill="#a8bf8c" opacity="0.6"/>
+    <ellipse cx="70" cy="35" rx="16" ry="7" transform="rotate(-55 70 35)" fill="#6b8a50" opacity="0.5"/>
+    <ellipse cx="42" cy="63" rx="14" ry="6" transform="rotate(-45 42 63)" fill="#a8bf8c" opacity="0.5"/>
+  </svg>
+
+  <!-- Texto centrado en la parte baja -->
+  <div class="hero-text absolute bottom-0 left-0 right-0 flex flex-col items-center pb-24 px-6 text-white text-center">
+    <p class="text-[10px] tracking-[0.5em] uppercase mb-4 opacity-90">Nos casamos</p>
+    <div class="w-8 border-t border-white/50 mx-auto mb-4"></div>
+    <h1 class="font-script text-7xl leading-tight mb-4 drop-shadow-lg">Gustave & Sophie</h1>
+    <p class="text-xs tracking-[0.25em] opacity-80">17 · Febrero · 2027</p>
+  </div>
+
+  <!-- Borde rasgado inferior -->
+  <TornEdge position="bottom" color="#f7f4ed" />
+</section>
+
+<script>
+  import gsap from 'gsap';
+
+  const container = document.getElementById('hero-particles');
+  if (container) {
+    const leafPaths = [
+      'M10 24 Q2 16 4 4 Q14 2 18 12 Q16 20 10 24Z',
+      'M8 20 Q1 13 3 3 Q12 1 15 10 Q13 17 8 20Z',
+      'M12 28 Q3 18 5 4 Q16 1 22 13 Q18 24 12 28Z',
+    ];
+
+    for (let i = 0; i < 10; i++) {
+      const div = document.createElement('div');
+      const size = 14 + Math.random() * 14;
+      div.style.cssText = `
+        position: absolute;
+        left: ${Math.random() * 100}%;
+        top: -40px;
+        width: ${size}px;
+        opacity: ${0.2 + Math.random() * 0.4};
+      `;
+      const svgNS = 'http://www.w3.org/2000/svg';
+      const svg = document.createElementNS(svgNS, 'svg');
+      svg.setAttribute('viewBox', '0 0 24 30');
+      svg.style.width = '100%';
+      const path = document.createElementNS(svgNS, 'path');
+      path.setAttribute('d', leafPaths[i % leafPaths.length]);
+      path.setAttribute('fill', i % 2 === 0 ? '#8aab8b' : '#a8bf8c');
+      svg.appendChild(path);
+      div.appendChild(svg);
+      container.appendChild(div);
+
+      const duration = 7 + Math.random() * 6;
+      gsap.to(div, {
+        y: (container.parentElement?.offsetHeight ?? 600) + 60,
+        x: (Math.random() - 0.5) * 80,
+        rotation: (Math.random() - 0.5) * 360,
+        duration,
+        delay: Math.random() * 4,
+        ease: 'none',
+        repeat: -1,
+        repeatDelay: Math.random() * 2,
+        onRepeat() {
+          gsap.set(div, { y: -40, x: 0 });
+          div.style.left = `${Math.random() * 100}%`;
+        },
+      });
+    }
+  }
+</script>

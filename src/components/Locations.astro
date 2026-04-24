@@ -1,0 +1,47 @@
+---
+import { Church, Wine } from '@lucide/astro';
+---
+<section data-animate class="py-16 px-6 bg-cream">
+
+  <!-- Ceremonia -->
+  <div class="border border-tan/30 rounded-2xl p-6 bg-cream-dk/30 text-center mb-6">
+    <div class="flex justify-center mb-5">
+      <Church size={40} stroke-width={1} class="text-bot-mid" />
+    </div>
+    <h3 class="text-[10px] tracking-[0.4em] uppercase text-bot-dark font-semibold mb-3">Ceremonia Religiosa</h3>
+    <p class="font-serif text-bot-mid text-sm mb-1">18:00 hrs</p>
+    <p class="font-serif text-bot-dark text-base font-medium">Iglesia Notre Dame</p>
+    <p class="text-xs text-bot-mid/50 mt-1 mb-5">Av. Principal 1234, Ciudad</p>
+    <a
+      href="#"
+      class="inline-block bg-bot-dark text-white text-[10px] tracking-[0.25em] uppercase py-2.5 px-7 rounded-full hover:bg-bot-mid transition-colors"
+    >
+      Ver ubicación
+    </a>
+  </div>
+
+  <!-- Separador decorativo -->
+  <div class="flex items-center gap-3 my-2">
+    <div class="flex-1 border-t border-tan/30"></div>
+    <span class="text-tan text-xs">✦</span>
+    <div class="flex-1 border-t border-tan/30"></div>
+  </div>
+
+  <!-- Recepción -->
+  <div class="border border-tan/30 rounded-2xl p-6 bg-cream-dk/30 text-center mt-6">
+    <div class="flex justify-center mb-5">
+      <Wine size={40} stroke-width={1} class="text-bot-mid" />
+    </div>
+    <h3 class="text-[10px] tracking-[0.4em] uppercase text-bot-dark font-semibold mb-3">Recepción</h3>
+    <p class="font-serif text-bot-mid text-sm mb-1">20:00 hrs</p>
+    <p class="font-serif text-bot-dark text-base font-medium">Salón Le Jardin</p>
+    <p class="text-xs text-bot-mid/50 mt-1 mb-5">Calle Jardín 567, Ciudad</p>
+    <a
+      href="#"
+      class="inline-block bg-bot-dark text-white text-[10px] tracking-[0.25em] uppercase py-2.5 px-7 rounded-full hover:bg-bot-mid transition-colors"
+    >
+      Ver ubicación
+    </a>
+  </div>
+
+</section>

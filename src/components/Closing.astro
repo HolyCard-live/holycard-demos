@@ -1,0 +1,74 @@
+---
+---
+<section class="relative py-20 px-8 text-center bg-cream overflow-hidden">
+
+  <!-- Hojas botánicas decorativas — esquina superior izquierda -->
+  <svg class="absolute top-0 left-0 w-32 opacity-20" viewBox="0 0 120 140" fill="none">
+    <path d="M10 130 Q30 80 80 20" stroke="#6b8a50" stroke-width="1.5" fill="none"/>
+    <ellipse cx="55" cy="52" rx="22" ry="10" transform="rotate(-40 55 52)" fill="#6b8a50"/>
+    <ellipse cx="38" cy="75" rx="18" ry="8" transform="rotate(-30 38 75)" fill="#8aab8b"/>
+    <ellipse cx="70" cy="35" rx="16" ry="7" transform="rotate(-55 70 35)" fill="#6b8a50"/>
+    <ellipse cx="42" cy="63" rx="14" ry="6" transform="rotate(-45 42 63)" fill="#a8bf8c"/>
+  </svg>
+
+  <!-- Hojas botánicas decorativas — esquina inferior derecha -->
+  <svg class="absolute bottom-0 right-0 w-32 opacity-20 scale-x-[-1] rotate-180" viewBox="0 0 120 140" fill="none">
+    <path d="M10 130 Q30 80 80 20" stroke="#6b8a50" stroke-width="1.5" fill="none"/>
+    <ellipse cx="55" cy="52" rx="22" ry="10" transform="rotate(-40 55 52)" fill="#6b8a50"/>
+    <ellipse cx="38" cy="75" rx="18" ry="8" transform="rotate(-30 38 75)" fill="#8aab8b"/>
+    <ellipse cx="70" cy="35" rx="16" ry="7" transform="rotate(-55 70 35)" fill="#6b8a50"/>
+    <ellipse cx="42" cy="63" rx="14" ry="6" transform="rotate(-45 42 63)" fill="#a8bf8c"/>
+  </svg>
+
+  <div class="relative z-10">
+    <p class="text-[10px] tracking-[0.35em] uppercase text-bot-mid mb-4">
+      Esperamos contar con tu presencia
+    </p>
+
+    <div class="w-8 border-t border-bot-light mx-auto mb-6"></div>
+
+    <h2 class="font-script text-5xl text-bot-dark mb-4">¡Muchas Gracias!</h2>
+
+    <p class="font-serif italic text-bot-mid text-lg">Gustave & Sophie</p>
+
+    <div class="flex justify-center mt-8 gap-1 opacity-40">
+      <svg width="20" height="20" viewBox="0 0 40 40" fill="#6b8a50">
+        <path d="M20 36 Q8 24 12 8 Q24 4 32 16 Q28 28 20 36Z"/>
+      </svg>
+      <svg width="20" height="20" viewBox="0 0 40 40" fill="#8aab8b">
+        <path d="M20 36 Q8 24 12 8 Q24 4 32 16 Q28 28 20 36Z"/>
+      </svg>
+      <svg width="20" height="20" viewBox="0 0 40 40" fill="#6b8a50">
+        <path d="M20 36 Q8 24 12 8 Q24 4 32 16 Q28 28 20 36Z"/>
+      </svg>
+    </div>
+
+    <!-- WhatsApp share -->
+    <div class="mt-8">
+      <a
+        id="whatsapp-share"
+        href="#"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 bg-[#25D366] text-white text-[10px] tracking-[0.2em] uppercase py-2.5 px-6 rounded-full hover:opacity-90 transition-opacity"
+      >
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.122 1.528 5.858L0 24l6.335-1.508A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.032-1.384l-.36-.215-3.732.888.903-3.636-.236-.375A9.818 9.818 0 1112 21.818z"/>
+        </svg>
+        Compartir invitación
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<script>
+  const btn = document.getElementById('whatsapp-share') as HTMLAnchorElement | null;
+  if (btn) {
+    const text = encodeURIComponent(
+      '🌿 Gustave & Sophie nos casamos el 17 de Febrero 2027.\nTe invitamos a celebrar con nosotros.\n' + window.location.href
+    );
+    btn.href = `https://wa.me/?text=${text}`;
+  }
+</script>
