@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "start": "astro preview --host 0.0.0.0"
+    "start": "serve dist -l tcp://0.0.0.0:${PORT:-4321}"
   },
   "dependencies": {
     "astro": "^5.7.0",
@@ -15,7 +15,8 @@
     "gsap": "^3.12.5",
     "lenis": "^1.1.14",
     "@lucide/astro": "^0.556.0",
-    "howler": "^2.2.4"
+    "howler": "^2.2.4",
+    "serve": "^14.2.4"
   },
   "devDependencies": {
     "typescript": "^5.0.0"
