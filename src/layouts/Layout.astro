@@ -203,6 +203,7 @@ const { title = 'Gustave & Sophie — 17 · Feb · 2027' } = Astro.props;
         const dismissSplash = () => {
           if (dismissed) return;
           dismissed = true;
+          window.dispatchEvent(new CustomEvent('splashStarting'));
 
           const g = (window as any).__gsap;
           const flap = document.getElementById('splash-flap');

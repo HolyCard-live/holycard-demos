@@ -3,26 +3,26 @@
 <section data-animate class="py-10 px-8 bg-cream-dk text-center">
   <p class="font-serif italic text-sm text-bot-mid mb-6">Dale play a nuestra canción</p>
 
-  <!-- Portada del álbum (placeholder) -->
+  <!-- Portada del álbum -->
   <div class="w-16 h-16 mx-auto mb-4 rounded-lg overflow-hidden shadow-md">
     <img
-      src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=200&auto=format&fit=crop"
+      src="https://img.youtube.com/vi/QgaTQ5-XfMM/mqdefault.jpg"
       alt="Álbum"
       class="w-full h-full object-cover"
     />
   </div>
 
-  <p class="font-serif text-base text-bot-dark font-medium leading-tight">A Thousand Years</p>
-  <p class="text-xs text-bot-mid mt-1 mb-5">Christina Perri</p>
+  <p class="font-serif text-base text-bot-dark font-medium leading-tight">Nuestra canción</p>
+  <p class="text-xs text-bot-mid mt-1 mb-5">♪</p>
 
   <!-- Barra de progreso -->
   <div class="max-w-[200px] mx-auto mb-2">
     <div class="h-1 bg-bot-light/30 rounded-full overflow-hidden">
-      <div class="h-full bg-bot-mid rounded-full w-[35%]"></div>
+      <div id="progress-fill" class="h-full bg-bot-mid rounded-full transition-all duration-1000" style="width: 0%"></div>
     </div>
     <div class="flex justify-between text-[10px] text-bot-mid/60 mt-1">
-      <span>1:32</span>
-      <span>4:45</span>
+      <span id="time-current">0:00</span>
+      <span id="time-total">0:00</span>
     </div>
   </div>
 
@@ -51,17 +51,127 @@
       </svg>
     </button>
   </div>
+
+  <!-- Contenedor oculto para el iframe de YouTube -->
+  <div id="yt-player" style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;"></div>
 </section>
 
 <script>
+  const VIDEO_ID = 'QgaTQ5-XfMM';
+
   const playBtn = document.getElementById('playBtn');
   const playIcon = document.getElementById('playIcon');
   const pauseIcon = document.getElementById('pauseIcon');
-  let playing = false;
+  const progressFill = document.getElementById('progress-fill') as HTMLElement | null;
+  const timeCurrent = document.getElementById('time-current');
+  const timeTotal = document.getElementById('time-total');
 
+  let ytPlayer: any = null;
+  let isPlaying = false;
+  let userStarted = false;
+  let pendingFadeIn = false;
+  let progressInterval: ReturnType<typeof setInterval> | null = null;
+
+  function formatTime(sec: number): string {
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60);
+    return `${m}:${s.toString().padStart(2, '0')}`;
+  }
+
+  function startProgress() {
+    if (progressInterval) clearInterval(progressInterval);
+    progressInterval = setInterval(() => {
+      if (!ytPlayer || !isPlaying) return;
+      const current = ytPlayer.getCurrentTime?.() ?? 0;
+      const duration = ytPlayer.getDuration?.() ?? 0;
+      if (duration > 0) {
+        if (progressFill) progressFill.style.width = `${(current / duration) * 100}%`;
+        if (timeCurrent) timeCurrent.textContent = formatTime(current);
+        if (timeTotal) timeTotal.textContent = formatTime(duration);
+      }
+    }, 1000);
+  }
+
+  function fadeInVolume() {
+    let vol = 0;
+    ytPlayer.setVolume(0);
+    const step = setInterval(() => {
+      vol = Math.min(vol + 4, 100);
+      ytPlayer.setVolume(vol);
+      if (vol >= 100) clearInterval(step);
+    }, 40); // ~1 segundo de fade (25 pasos × 40ms)
+  }
+
+  (window as any).onYouTubeIframeAPIReady = function () {
+    ytPlayer = new (window as any).YT.Player('yt-player', {
+      videoId: VIDEO_ID,
+      playerVars: {
+        autoplay: 1,
+        mute: 1,
+        controls: 0,
+        disablekb: 1,
+        fs: 0,
+        iv_load_policy: 3,
+        modestbranding: 1,
+        rel: 0,
+        playsinline: 1,
+      },
+      events: {
+        onReady: () => {
+          // El video ya corre muted gracias a autoplay:1, mute:1
+          // Si el usuario clickeó antes de que el player estuviera listo, hacer fade ahora
+          if (pendingFadeIn) {
+            ytPlayer.setVolume(0);
+            ytPlayer.unMute();
+            fadeInVolume();
+          }
+        },
+        onStateChange: (event: any) => {
+          const YT = (window as any).YT;
+          if (event.data === YT.PlayerState.PLAYING && userStarted) {
+            isPlaying = true;
+            playIcon?.classList.add('hidden');
+            pauseIcon?.classList.remove('hidden');
+            startProgress();
+          } else if (
+            event.data === YT.PlayerState.PAUSED ||
+            event.data === YT.PlayerState.ENDED
+          ) {
+            if (userStarted) {
+              isPlaying = false;
+              playIcon?.classList.remove('hidden');
+              pauseIcon?.classList.add('hidden');
+            }
+          }
+        },
+      },
+    });
+  };
+
+  // Cargar YouTube IFrame API
+  const tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  document.head.appendChild(tag);
+
+  // Al click en el sobre: fade in instantáneo
+  window.addEventListener('splashStarting', () => {
+    userStarted = true;
+    if (ytPlayer) {
+      ytPlayer.setVolume(0);
+      ytPlayer.unMute();
+      fadeInVolume();
+    } else {
+      pendingFadeIn = true;
+    }
+  });
+
+  // Botón play/pause
   playBtn?.addEventListener('click', () => {
-    playing = !playing;
-    playIcon?.classList.toggle('hidden', playing);
-    pauseIcon?.classList.toggle('hidden', !playing);
+    if (!ytPlayer || !userStarted) return;
+    if (isPlaying) {
+      ytPlayer.pauseVideo();
+    } else {
+      ytPlayer.playVideo();
+    }
   });
 </script>
