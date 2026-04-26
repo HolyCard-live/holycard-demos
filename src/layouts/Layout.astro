@@ -31,7 +31,7 @@ const { title = 'Gustave & Sophie — 17 · Feb · 2027' } = Astro.props;
       rel="stylesheet"
     />
   </head>
-  <body class="bg-cream font-serif antialiased">
+  <body class="bg-cream lg:bg-[#ddd8cd] font-serif antialiased">
 
     <!-- Scroll progress bar -->
     <div
@@ -58,7 +58,7 @@ const { title = 'Gustave & Sophie — 17 · Feb · 2027' } = Astro.props;
       -->
       <div id="splash-envelope-wrap" style="
         position: relative;
-        width: min(82vw, 270px);
+        width: clamp(270px, 28vw, 380px);
         background-color: #c8c0ae;
         border: 1px solid #b5a87d;
         box-shadow: 0 16px 52px rgba(0,0,0,0.22), 0 4px 12px rgba(0,0,0,0.10);
@@ -88,10 +88,10 @@ const { title = 'Gustave & Sophie — 17 · Feb · 2027' } = Astro.props;
             <div style="width: 5px; height: 5px; background-color: #6b8a50; transform: rotate(45deg);"></div>
             <div style="width: 32px; height: 1px; background-color: #8aab8b;"></div>
           </div>
-          <p style="font-family: 'Cormorant Garamond', serif; font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: #4d6838; margin-bottom: 1rem; font-weight: 400;">Con todo nuestro amor</p>
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: #4d6838; margin-bottom: 1rem; font-weight: 400;">Con todo nuestro amor</p>
           <h1 style="font-family: 'Great Vibes', cursive; font-size: 4rem; color: #2d3d20; line-height: 1.05; margin-bottom: 0.9rem;">G &amp; S</h1>
           <div style="width: 30px; height: 1px; background-color: #c8b89a; margin: 0 auto 0.9rem;"></div>
-          <p style="font-family: 'Cormorant Garamond', serif; font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: #3d4e2a; font-weight: 400;">17 · Febrero · 2027</p>
+          <p style="font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase; color: #3d4e2a; font-weight: 400;">17 · Febrero · 2027</p>
         </div>
 
         <!-- BASE DEL SOBRE: franja visible debajo de la tarjeta con pliegues en V -->
@@ -158,15 +158,15 @@ const { title = 'Gustave & Sophie — 17 · Feb · 2027' } = Astro.props;
     <!-- Sticky mini header -->
     <header
       id="sticky-header"
-      class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-lg z-40 bg-cream/90 backdrop-blur-sm border-b border-bot-light/20 px-6 py-3 flex items-center justify-between opacity-0 pointer-events-none transition-opacity duration-300"
+      class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-lg lg:max-w-4xl z-40 bg-cream/90 backdrop-blur-sm border-b border-bot-light/20 px-6 py-3 flex items-center justify-between opacity-0 pointer-events-none transition-opacity duration-300"
       aria-hidden="true"
     >
       <div class="w-8 border-t border-bot-mid/40"></div>
-      <p class="font-script text-xl text-bot-dark">Gustave &amp; Sophie</p>
-      <p class="text-[9px] tracking-[0.2em] text-bot-mid/60 uppercase">17·02·2027</p>
+      <p class="font-script text-2xl lg:text-3xl text-bot-dark">Gustave &amp; Sophie</p>
+      <p class="text-sm lg:text-base tracking-[0.2em] text-bot-mid uppercase">17·02·2027</p>
     </header>
 
-    <main class="max-w-lg mx-auto min-h-screen shadow-2xl overflow-hidden">
+    <main class="max-w-lg lg:max-w-4xl mx-auto min-h-screen shadow-2xl overflow-hidden">
       <slot />
     </main>
 

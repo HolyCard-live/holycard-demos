@@ -13,10 +13,12 @@ const {
   bottomColor = '#f7f4ed',
 } = Astro.props;
 ---
-<div class="photo-parallax relative h-72 overflow-hidden">
+<div class="photo-parallax relative h-72 lg:h-96 overflow-hidden">
   <TornEdge position="top" color={topColor} />
   <img
     src={src}
+    srcset={`${src.replace(/w=\d+/, 'w=800')} 800w, ${src.replace(/w=\d+/, 'w=1600')} 1600w`}
+    sizes="(min-width: 1024px) 896px, 100vw"
     alt={alt}
     class="w-full h-full object-cover object-center scale-125"
     loading="lazy"

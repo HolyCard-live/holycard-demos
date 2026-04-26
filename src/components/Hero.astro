@@ -4,7 +4,9 @@ import TornEdge from './TornEdge.astro';
 <section class="relative w-full h-screen overflow-hidden">
   <!-- Foto pareja -->
   <img
-    src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80"
+    src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900&auto=format&fit=crop&q=80"
+    srcset="https://images.unsplash.com/photo-1519741497674-611481863552?w=900&auto=format&fit=crop&q=80 900w, https://images.unsplash.com/photo-1519741497674-611481863552?w=1800&auto=format&fit=crop&q=80 1800w"
+    sizes="(min-width: 1024px) 896px, 100vw"
     alt="Gustave & Sophie"
     class="absolute inset-0 w-full h-full object-cover object-center scale-105"
   />
@@ -16,7 +18,7 @@ import TornEdge from './TornEdge.astro';
   <div id="hero-particles" class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true"></div>
 
   <!-- Hojas botánicas — esquina superior izquierda -->
-  <svg class="absolute top-0 left-0 w-36 opacity-60" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg class="absolute top-0 left-0 w-36 lg:w-52 opacity-60" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 130 Q30 80 80 20" stroke="#a8bf8c" stroke-width="1.5" fill="none"/>
     <path d="M80 20 Q50 45 35 85" stroke="#a8bf8c" stroke-width="1" fill="none"/>
     <ellipse cx="55" cy="52" rx="22" ry="10" transform="rotate(-40 55 52)" fill="#8aab8b" opacity="0.7"/>
@@ -27,7 +29,7 @@ import TornEdge from './TornEdge.astro';
   </svg>
 
   <!-- Hojas botánicas — esquina superior derecha -->
-  <svg class="absolute top-0 right-0 w-36 opacity-60 scale-x-[-1]" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg class="absolute top-0 right-0 w-36 lg:w-52 opacity-60 scale-x-[-1]" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M10 130 Q30 80 80 20" stroke="#a8bf8c" stroke-width="1.5" fill="none"/>
     <path d="M80 20 Q50 45 35 85" stroke="#a8bf8c" stroke-width="1" fill="none"/>
     <ellipse cx="55" cy="52" rx="22" ry="10" transform="rotate(-40 55 52)" fill="#8aab8b" opacity="0.7"/>
@@ -38,10 +40,10 @@ import TornEdge from './TornEdge.astro';
 
   <!-- Texto centrado en la parte baja -->
   <div class="hero-text absolute bottom-0 left-0 right-0 flex flex-col items-center pb-24 px-6 text-white text-center">
-    <p class="text-[10px] tracking-[0.5em] uppercase mb-4 opacity-90">Nos casamos</p>
+    <p class="text-sm lg:text-base tracking-[0.45em] uppercase mb-4">Nos casamos</p>
     <div class="w-8 border-t border-white/50 mx-auto mb-4"></div>
-    <h1 class="font-script text-7xl leading-tight mb-4 drop-shadow-lg">Gustave & Sophie</h1>
-    <p class="text-xs tracking-[0.25em] opacity-80">17 · Febrero · 2027</p>
+    <h1 class="font-script text-7xl lg:text-9xl leading-tight mb-4 drop-shadow-lg">Gustave & Sophie</h1>
+    <p class="text-base lg:text-lg tracking-[0.25em]">17 · Febrero · 2027</p>
   </div>
 
   <!-- Borde rasgado inferior -->
