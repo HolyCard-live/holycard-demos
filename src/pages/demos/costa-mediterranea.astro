@@ -1,0 +1,647 @@
+---
+import DemoLayout from '../../layouts/DemoLayout.astro';
+const fonts = 'https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,500;1,300&family=Caveat:wght@500;700&family=Outfit:wght@300;400;500&display=swap';
+---
+<DemoLayout
+  title="Tomás & Isabella · 06·06·2027 · Tulum"
+  description="Una boda al ritmo del mar, en Tulum."
+  themeColor="#faf3e8"
+  bodyClass="boho-body"
+  fontsHref={fonts}
+  ogImage="https://images.unsplash.com/photo-1530653333484-8d8b1ee0ed05?w=1200&auto=format&fit=crop&q=80"
+  progressColor="#c8654a"
+>
+
+  <!-- ============ SPLASH ============ -->
+  <div id="bh-splash" class="bh-splash">
+    <svg class="bh-sun" viewBox="0 0 200 200" aria-hidden="true">
+      <circle cx="100" cy="100" r="42" fill="#c8654a" />
+      <g id="bh-sun-rays" stroke="#c8654a" stroke-width="3" stroke-linecap="round">
+        <line x1="100" y1="20" x2="100" y2="48"/>
+        <line x1="100" y1="152" x2="100" y2="180"/>
+        <line x1="20" y1="100" x2="48" y2="100"/>
+        <line x1="152" y1="100" x2="180" y2="100"/>
+        <line x1="40" y1="40" x2="60" y2="60"/>
+        <line x1="140" y1="140" x2="160" y2="160"/>
+        <line x1="40" y1="160" x2="60" y2="140"/>
+        <line x1="140" y1="60" x2="160" y2="40"/>
+      </g>
+    </svg>
+    <p class="bh-pre">Nos casamos al lado del mar</p>
+    <h1>Tomás <em>&amp;</em> Isabella</h1>
+    <p class="bh-date">Tulum · 06 · Junio · 2027</p>
+    <button id="bh-cta">Bienvenido al verano →</button>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="bh-hero">
+    <img src="https://images.unsplash.com/photo-1530653333484-8d8b1ee0ed05?w=1800&auto=format&fit=crop&q=85" alt="Tulum"/>
+    <div class="bh-hero-shade"></div>
+    <svg class="bh-wave-top" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,0 L0,0 Z" fill="#faf3e8"/>
+    </svg>
+    <div class="bh-hero-text">
+      <p class="bh-hero-pre">Save the date</p>
+      <h1>
+        <span>Tomás</span>
+        <em>&amp;</em>
+        <span>Isabella</span>
+      </h1>
+      <div class="bh-hero-meta">
+        <p>Sábado · 06 · Junio · 2027</p>
+        <p>Cenote Calavera · Tulum, México</p>
+      </div>
+    </div>
+    <svg class="bh-wave-bot" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,40 C240,0 480,80 720,40 C960,0 1200,80 1440,40 L1440,80 L0,80 Z" fill="#faf3e8"/>
+    </svg>
+  </section>
+
+  <!-- ============ FRASE ============ -->
+  <section class="bh-quote" data-animate>
+    <svg viewBox="0 0 60 60" class="bh-quote-shape" aria-hidden="true">
+      <path d="M30,5 C45,5 55,18 55,30 C55,42 42,55 30,55 C18,55 5,42 5,30 C5,18 15,5 30,5 Z" fill="none" stroke="#c8654a" stroke-width="1" stroke-dasharray="2 4"/>
+    </svg>
+    <blockquote>
+      Todo lo que el mar nos enseñó —tener paciencia, llegar a tiempo, regresar siempre— lo aprendimos juntos.
+    </blockquote>
+    <p>— T &amp; I</p>
+  </section>
+
+  <!-- ============ MENSAJE ============ -->
+  <section class="bh-letter" data-animate>
+    <div class="bh-letter-frame">
+      <div class="bh-letter-corner bh-c-tl"></div>
+      <div class="bh-letter-corner bh-c-tr"></div>
+      <div class="bh-letter-corner bh-c-bl"></div>
+      <div class="bh-letter-corner bh-c-br"></div>
+      <p class="bh-script">Querida persona,</p>
+      <p>
+        Llevamos seis años amaneciendo juntos, y muchos de esos amaneceres han sido frente al mar de Tulum.
+        Es nuestro lugar favorito del mundo, así que era ahí, o ningún otro lado.
+      </p>
+      <p>
+        Nos vamos a casar con los pies descalzos, con un cenote a nuestras espaldas y con la esperanza
+        de que tú estés ahí. No traigas regalo: trae ganas de bailar hasta el amanecer.
+      </p>
+      <p class="bh-sign">Con amor, <span>T &amp; I</span></p>
+    </div>
+  </section>
+
+  <!-- ============ COUNTDOWN ============ -->
+  <section class="bh-cd" data-animate>
+    <p class="bh-kicker">Cuenta regresiva al sol</p>
+    <div class="bh-cd-row">
+      <div class="bh-cd-cell">
+        <svg viewBox="0 0 100 100"><path d="M50,10 C75,10 90,30 90,50 C90,75 70,90 50,90 C25,90 10,70 10,50 C10,25 30,10 50,10 Z" fill="none" stroke="#c8654a" stroke-width="1.5"/></svg>
+        <span id="bh-d">--</span><p>Días</p>
+      </div>
+      <div class="bh-cd-cell">
+        <svg viewBox="0 0 100 100"><path d="M50,10 C75,10 90,30 90,50 C90,75 70,90 50,90 C25,90 10,70 10,50 C10,25 30,10 50,10 Z" fill="none" stroke="#3d6b7c" stroke-width="1.5"/></svg>
+        <span id="bh-h">--</span><p>Horas</p>
+      </div>
+      <div class="bh-cd-cell">
+        <svg viewBox="0 0 100 100"><path d="M50,10 C75,10 90,30 90,50 C90,75 70,90 50,90 C25,90 10,70 10,50 C10,25 30,10 50,10 Z" fill="none" stroke="#c8654a" stroke-width="1.5"/></svg>
+        <span id="bh-m">--</span><p>Minutos</p>
+      </div>
+      <div class="bh-cd-cell">
+        <svg viewBox="0 0 100 100"><path d="M50,10 C75,10 90,30 90,50 C90,75 70,90 50,90 C25,90 10,70 10,50 C10,25 30,10 50,10 Z" fill="none" stroke="#3d6b7c" stroke-width="1.5"/></svg>
+        <span id="bh-s">--</span><p>Segundos</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HISTORIA ============ -->
+  <section class="bh-story">
+    <div class="bh-story-head" data-animate>
+      <p class="bh-kicker">Nuestra historia</p>
+      <h2>De cómo el mar <em>se metió en todo</em></h2>
+    </div>
+    <div class="bh-tl">
+      <div class="bh-tl-line" aria-hidden="true">
+        <svg viewBox="0 0 20 600" preserveAspectRatio="none">
+          <path d="M10,0 Q15,150 10,300 Q5,450 10,600" stroke="#c8654a" stroke-width="2" fill="none" stroke-dasharray="3 6"/>
+        </svg>
+      </div>
+      <div class="bh-tl-items">
+        <article data-animate><p class="bh-tl-year">2021</p><h3>Holbox.</h3><p>Coincidimos en el mismo bar tres noches seguidas. La cuarta, ya estábamos hablando.</p></article>
+        <article data-animate><p class="bh-tl-year">2022</p><h3>Mudamos al perro.</h3><p>"Nico" cambió de casa antes que nosotros. Y prefería claramente la suya.</p></article>
+        <article data-animate><p class="bh-tl-year">2023</p><h3>El mar nos rompió.</h3><p>Casi nos vamos en una marea. Volvimos riendo. Algo se alineó esa noche.</p></article>
+        <article data-animate><p class="bh-tl-year">2025</p><h3>"Casémonos en Tulum".</h3><p>Lo dijo ella. Él tardó dos minutos en buscar fechas en Google.</p></article>
+        <article data-animate><p class="bh-tl-year">2027</p><h3>El día.</h3><p>Cenote Calavera. Atardecer. Tú ahí.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERÍA ============ -->
+  <section class="bh-gallery" data-animate>
+    <div class="bh-gal-head">
+      <p class="bh-kicker">Memorias</p>
+      <h2>Salt &amp; sun.</h2>
+    </div>
+    <div class="bh-gal-grid">
+      <figure class="blob-1"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure class="blob-2"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure class="blob-3"><img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure class="blob-1"><img src="https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure class="blob-2"><img src="https://images.unsplash.com/photo-1530653333484-8d8b1ee0ed05?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure class="blob-3"><img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+    </div>
+  </section>
+
+  <!-- ============ ITINERARIO ============ -->
+  <section class="bh-program" data-animate>
+    <p class="bh-kicker center">El día</p>
+    <h2>Hora por hora.</h2>
+    <div class="bh-program-list">
+      <div><span>16:00</span><div><h4>Welcome &amp; mezcal sour</h4><p>Recepción descalza con bebida fresca.</p></div></div>
+      <div><span>17:30</span><div><h4>Ceremonia simbólica</h4><p>Frente al cenote, con poesía y temazcal.</p></div></div>
+      <div><span>19:00</span><div><h4>Atardecer &amp; brindis</h4><p>Música acústica y cocteles tropicales.</p></div></div>
+      <div><span>20:30</span><div><h4>Cena de cuatro tiempos</h4><p>Pesca local, vegetariano disponible.</p></div></div>
+      <div><span>22:30</span><div><h4>Pista, hoguera, baile</h4><p>DJ con cumbia, reggae, tropical house.</p></div></div>
+      <div><span>02:00</span><div><h4>Tacos de canasta</h4><p>Para los que aguanten.</p></div></div>
+    </div>
+  </section>
+
+  <!-- ============ UBICACIONES ============ -->
+  <section class="bh-loc" data-animate>
+    <p class="bh-kicker center">Locaciones</p>
+    <h2>Te esperamos aquí.</h2>
+    <div class="bh-loc-grid">
+      <article>
+        <div class="bh-loc-img" style="background-image:url('https://images.unsplash.com/photo-1601128533718-374ffcca299b?w=800&auto=format&fit=crop&q=80')"></div>
+        <p class="bh-loc-tag">Ceremonia · 17:30</p>
+        <h3>Cenote Calavera</h3>
+        <p>Carretera Tulum-Cobá Km 1.5, Tulum, Q. Roo.</p>
+        <a href="https://maps.google.com" target="_blank" rel="noopener">Ver en mapa →</a>
+      </article>
+      <article>
+        <div class="bh-loc-img" style="background-image:url('https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&auto=format&fit=crop&q=80')"></div>
+        <p class="bh-loc-tag">Recepción · 19:00</p>
+        <h3>Papaya Playa Project</h3>
+        <p>Carretera Tulum-Boca Paila Km 4.5, Zona Hotelera.</p>
+        <a href="https://maps.google.com" target="_blank" rel="noopener">Ver en mapa →</a>
+      </article>
+    </div>
+    <div class="bh-hotels">
+      <h4>Donde quedarte</h4>
+      <ul>
+        <li><strong>Be Tulum</strong> — Tarifa especial con código <em>TI2027</em> · USD 320/noche</li>
+        <li><strong>Nomade Tulum</strong> — Boutique frente al mar · USD 280/noche</li>
+        <li><strong>Casa Malca</strong> — Vibra arte + playa · USD 360/noche</li>
+        <li><strong>Hotel Bardo</strong> — Para quien prefiere quietud · USD 220/noche</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ DRESS CODE ============ -->
+  <section class="bh-dress" data-animate>
+    <p class="bh-kicker center">Dress code</p>
+    <h2>Beach formal · pies descalzos.</h2>
+    <p class="bh-dress-text">
+      Telas frescas, tonos cálidos, faldas largas, lino, algodón. La ceremonia es en la arena —
+      bota tus zapatos, los recogeremos por ti. Para ellos: lino o algodón, sin saco. Para ellas:
+      vestidos largos, naturales, con movimiento.
+    </p>
+    <div class="bh-swatches">
+      <div><span style="background:#c8654a"></span><p>Terracotta</p></div>
+      <div><span style="background:#e8d5b7"></span><p>Arena</p></div>
+      <div><span style="background:#3d6b7c"></span><p>Mar</p></div>
+      <div><span style="background:#d9b382"></span><p>Caracol</p></div>
+      <div><span style="background:#9c6b53"></span><p>Cobre</p></div>
+    </div>
+    <p class="bh-dress-no">Te pedimos no vestir blanco completo · es solo cosa de ella.</p>
+  </section>
+
+  <!-- ============ REGALOS ============ -->
+  <section class="bh-gifts" data-animate>
+    <p class="bh-kicker center">Regalos</p>
+    <h2>Lo único <em>imprescindible</em> es tu presencia.</h2>
+    <div class="bh-gifts-cards">
+      <div class="bh-gift-card">
+        <h4>Sobre el día</h4>
+        <p>Habrá un buzón en forma de concha junto al cenote. Sobres con nuestras iniciales esperándote.</p>
+      </div>
+      <div class="bh-gift-card">
+        <h4>Transferencia</h4>
+        <p>BBVA · 0125 8472 9301 4658<br/>CLABE: 012180012345678901<br/>Tomás Echeverría / Isabella del Mar</p>
+      </div>
+      <div class="bh-gift-card">
+        <h4>Mesa Liverpool</h4>
+        <p>Evento <em>#48291</em> · Búscanos como "Echeverría-Del Mar".</p>
+      </div>
+      <div class="bh-gift-card">
+        <h4>Luna de miel</h4>
+        <p>Estamos juntando para Sicilia. Aporta a un atardecer, un gelato, una noche en barco.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RSVP ============ -->
+  <section class="bh-rsvp" data-animate>
+    <p class="bh-kicker center">Confirmación</p>
+    <h2>¿Vienes?</h2>
+    <p class="bh-rsvp-deadline">Confirma antes del 15 de mayo de 2027.</p>
+    <form id="bh-rsvp-form" novalidate>
+      <label><span>Tu nombre</span><input type="text" name="name" required placeholder="Como te conozca el novio"/></label>
+      <div class="bh-rsvp-row">
+        <label><span>Asistencia</span><select name="attend"><option>Sí, voy</option><option>No podré, los amo</option></select></label>
+        <label><span>Acompañantes</span><input type="number" name="guests" min="0" max="3" value="1"/></label>
+      </div>
+      <label><span>Restricciones / alergias</span><input type="text" name="diet" placeholder="Vegetariano, mariscos, sin gluten..."/></label>
+      <label><span>Una canción para la pista</span><input type="text" name="song" placeholder="Artista — Canción"/></label>
+      <button type="submit">Confirmar →</button>
+      <p id="bh-rsvp-ok" class="bh-rsvp-ok" hidden>¡Listo! Nos vemos en junio. 🌊</p>
+    </form>
+  </section>
+
+  <!-- ============ PLAYLIST ============ -->
+  <section class="bh-pl" data-animate>
+    <p class="bh-kicker center">Playlist</p>
+    <h2>Lo que va a sonar.</h2>
+    <div class="bh-pl-grid">
+      <div><strong>Drømmer</strong><em>Daniela Andrade</em></div>
+      <div><strong>Buena Vida</strong><em>Ximena Sariñana</em></div>
+      <div><strong>Cha-La Head Cha-La</strong><em>Sebastián Yatra</em></div>
+      <div><strong>Te Esperaba</strong><em>Carlos Sadness</em></div>
+      <div><strong>Caribe</strong><em>Bomba Estéreo</em></div>
+      <div><strong>Latido (remix)</strong><em>Lasso · BNZA</em></div>
+      <div><strong>Lonely Boy</strong><em>The Black Keys</em></div>
+      <div><strong>Three Little Birds</strong><em>Bob Marley</em></div>
+    </div>
+  </section>
+
+  <!-- ============ HASHTAG ============ -->
+  <section class="bh-hash" data-animate>
+    <p class="bh-kicker center">Etiqueta nuestras fotos</p>
+    <h2 class="bh-hash-tag">#TomáseIsabellaTulum</h2>
+    <p>Sube todo. Las borrosas, las que parecen sin propósito, las que parecen cinema. Queremos verlas.</p>
+  </section>
+
+  <!-- ============ CIERRE ============ -->
+  <section class="bh-end">
+    <svg class="bh-end-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,40 C240,0 480,80 720,40 C960,0 1200,80 1440,40 L1440,0 L0,0 Z" fill="#c8654a"/>
+    </svg>
+    <div class="bh-end-inner" data-animate>
+      <p class="bh-script">Hasta el sol.</p>
+      <h2>Te esperamos.</h2>
+      <p class="bh-end-sig">Tomás &amp; Isabella · Junio 2027</p>
+    </div>
+  </section>
+
+  <style is:global>
+    .boho-body {
+      background: #faf3e8;
+      color: #2d3a3f;
+      font-family: 'Outfit', system-ui, sans-serif;
+      font-weight: 300;
+    }
+    .boho-body h1, .boho-body h2, .boho-body h3, .boho-body h4 {
+      font-family: 'Cormorant Infant', serif;
+      font-weight: 500;
+      color: #2d3a3f;
+    }
+    .boho-body em { font-family: 'Cormorant Infant', serif; font-style: italic; }
+    .boho-body [data-animate] { opacity: 0; transform: translateY(28px); transition: opacity 1s ease, transform 1s ease; }
+    .boho-body [data-animate].in { opacity: 1; transform: none; }
+    .boho-body .bh-kicker {
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #c8654a;
+      margin: 0 0 16px;
+    }
+    .boho-body .bh-kicker.center { text-align: center; }
+    .boho-body .bh-script {
+      font-family: 'Caveat', cursive;
+      color: #c8654a;
+    }
+
+    /* SPLASH */
+    .bh-splash {
+      position: fixed; inset: 0; z-index: 100;
+      background: linear-gradient(180deg, #faf3e8 0%, #f3e0c8 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 24px;
+      transition: opacity 0.6s ease;
+      text-align: center;
+    }
+    .bh-sun { width: 110px; height: 110px; margin-bottom: 24px; animation: bh-spin 30s linear infinite; }
+    @keyframes bh-spin { to { transform: rotate(360deg); } }
+    .bh-pre {
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #c8654a;
+      margin: 0 0 16px;
+    }
+    .bh-splash h1 {
+      font-family: 'Cormorant Infant', serif;
+      font-size: clamp(40px, 7vw, 64px);
+      margin: 0 0 16px;
+      color: #2d3a3f;
+    }
+    .bh-splash h1 em { color: #c8654a; }
+    .bh-date {
+      font-size: 12px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #2d3a3f;
+      margin: 0 0 32px;
+    }
+    #bh-cta {
+      background: #c8654a;
+      color: #faf3e8;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    #bh-cta:hover { transform: translateY(-2px); background: #b25539; }
+
+    /* HERO */
+    .bh-hero { position: relative; height: 100vh; min-height: 700px; overflow: hidden; }
+    .bh-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(1.05); }
+    .bh-hero-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(250,243,232,0.35) 0%, rgba(45,58,63,0.5) 70%, rgba(45,58,63,0.7) 100%); }
+    .bh-wave-top { position: absolute; top: 0; left: 0; width: 100%; height: 50px; }
+    .bh-wave-bot { position: absolute; bottom: -1px; left: 0; width: 100%; height: 80px; }
+    .bh-hero-text { position: absolute; bottom: 14vh; left: 0; right: 0; padding: 0 24px; text-align: center; color: #faf3e8; }
+    .bh-hero-pre {
+      font-size: 11px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: #faf3e8;
+      margin: 0 0 24px;
+    }
+    .bh-hero h1 {
+      font-size: clamp(54px, 11vw, 130px);
+      margin: 0 0 32px;
+      line-height: 0.9;
+      color: #faf3e8;
+      font-weight: 500;
+    }
+    .bh-hero h1 em {
+      display: inline-block;
+      color: #e8d5b7;
+      transform: rotate(-6deg);
+      padding: 0 12px;
+      font-style: italic;
+    }
+    .bh-hero h1 span { display: inline-block; }
+    @media (min-width: 700px) { .bh-hero h1 span, .bh-hero h1 em { display: inline; } }
+    .bh-hero-meta { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; }
+    .bh-hero-meta p { margin: 0; }
+
+    /* QUOTE */
+    .bh-quote { max-width: 800px; margin: 0 auto; padding: 100px 32px; text-align: center; position: relative; }
+    .bh-quote-shape { width: 80px; height: 80px; margin: 0 auto 32px; animation: bh-spin 60s linear infinite; }
+    .bh-quote blockquote {
+      font-family: 'Cormorant Infant', serif;
+      font-style: italic;
+      font-size: clamp(22px, 3vw, 36px);
+      line-height: 1.4;
+      margin: 0 0 24px;
+      color: #2d3a3f;
+    }
+    .bh-quote p { font-family: 'Caveat', cursive; font-size: 24px; color: #c8654a; margin: 0; }
+
+    /* LETTER */
+    .bh-letter { padding: 80px 24px; max-width: 760px; margin: 0 auto; }
+    .bh-letter-frame {
+      position: relative;
+      background: #fff;
+      padding: 60px 36px 48px;
+      border-radius: 8px;
+      box-shadow: 0 30px 80px rgba(45,58,63,0.08);
+    }
+    .bh-letter-corner { position: absolute; width: 32px; height: 32px; border: 2px solid #c8654a; }
+    .bh-c-tl { top: 12px; left: 12px; border-right: none; border-bottom: none; }
+    .bh-c-tr { top: 12px; right: 12px; border-left: none; border-bottom: none; }
+    .bh-c-bl { bottom: 12px; left: 12px; border-right: none; border-top: none; }
+    .bh-c-br { bottom: 12px; right: 12px; border-left: none; border-top: none; }
+    .bh-letter-frame .bh-script { font-family: 'Caveat', cursive; font-size: 36px; color: #c8654a; margin: 0 0 16px; }
+    .bh-letter-frame p {
+      font-family: 'Cormorant Infant', serif;
+      font-size: 19px;
+      line-height: 1.7;
+      color: #2d3a3f;
+      margin: 0 0 20px;
+    }
+    .bh-sign { font-family: 'Caveat', cursive !important; font-size: 28px !important; color: #c8654a !important; text-align: right; }
+    .bh-sign span { font-family: 'Cormorant Infant', serif; font-style: italic; font-size: 24px; }
+
+    /* COUNTDOWN */
+    .bh-cd { padding: 80px 24px; text-align: center; }
+    .bh-cd-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 800px; margin: 32px auto 0; }
+    .bh-cd-cell { position: relative; padding: 24px 8px; }
+    .bh-cd-cell svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .bh-cd-cell span { display: block; font-family: 'Cormorant Infant', serif; font-size: clamp(28px, 5vw, 56px); color: #c8654a; line-height: 1; position: relative; }
+    .bh-cd-cell p { margin: 8px 0 0; font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; position: relative; color: #2d3a3f; }
+
+    /* STORY */
+    .bh-story { padding: 100px 24px; max-width: 1000px; margin: 0 auto; position: relative; }
+    .bh-story-head h2 { font-size: clamp(36px, 5vw, 60px); margin: 0 0 56px; line-height: 1.1; }
+    .bh-tl { position: relative; }
+    .bh-tl-line { position: absolute; left: 14px; top: 0; bottom: 0; width: 20px; }
+    .bh-tl-line svg { width: 100%; height: 100%; }
+    .bh-tl-items { padding-left: 56px; display: grid; gap: 48px; }
+    .bh-tl-items article { position: relative; }
+    .bh-tl-items article::before {
+      content: '';
+      position: absolute;
+      left: -52px; top: 6px;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: #c8654a;
+      border: 4px solid #faf3e8;
+      box-shadow: 0 0 0 1px #c8654a;
+    }
+    .bh-tl-year { font-family: 'Caveat', cursive; font-size: 28px; color: #3d6b7c; margin: 0 0 6px; }
+    .bh-tl-items h3 { font-size: 24px; margin: 0 0 8px; }
+    .bh-tl-items p { font-family: 'Cormorant Infant', serif; font-size: 17px; line-height: 1.6; color: #4a5258; margin: 0; }
+
+    /* GALLERY */
+    .bh-gallery { padding: 100px 24px; max-width: 1280px; margin: 0 auto; }
+    .bh-gal-head { text-align: center; margin-bottom: 48px; }
+    .bh-gal-head h2 { font-size: clamp(36px, 5vw, 60px); margin: 0; }
+    .bh-gal-grid { display: grid; gap: 32px; grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 768px) { .bh-gal-grid { grid-template-columns: repeat(3, 1fr); } }
+    .bh-gal-grid figure { margin: 0; aspect-ratio: 4/5; overflow: hidden; }
+    .bh-gal-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s ease; }
+    .bh-gal-grid figure:hover img { transform: scale(1.05); }
+    .blob-1 { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    .blob-2 { border-radius: 30% 70% 70% 30% / 50% 60% 40% 50%; }
+    .blob-3 { border-radius: 50% 50% 70% 30% / 40% 60% 30% 70%; }
+
+    /* PROGRAM */
+    .bh-program { padding: 100px 24px; max-width: 800px; margin: 0 auto; text-align: center; }
+    .bh-program h2 { font-size: clamp(36px, 5vw, 56px); margin: 0 0 56px; }
+    .bh-program-list { display: grid; gap: 20px; text-align: left; }
+    .bh-program-list > div {
+      display: grid; grid-template-columns: 80px 1fr; gap: 24px;
+      padding: 20px 24px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(45,58,63,0.06);
+    }
+    .bh-program-list span { font-family: 'Cormorant Infant', serif; font-size: 24px; color: #c8654a; align-self: center; }
+    .bh-program-list h4 { margin: 0 0 4px; font-size: 19px; }
+    .bh-program-list p { font-family: 'Cormorant Infant', serif; font-size: 15px; color: #4a5258; margin: 0; }
+
+    /* LOC */
+    .bh-loc { padding: 100px 24px; max-width: 1100px; margin: 0 auto; text-align: center; }
+    .bh-loc h2 { font-size: clamp(36px, 5vw, 56px); margin: 0 0 56px; }
+    .bh-loc-grid { display: grid; gap: 24px; text-align: left; }
+    @media (min-width: 640px) { .bh-loc-grid { grid-template-columns: repeat(2, 1fr); } }
+    .bh-loc-grid article { background: #fff; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 28px rgba(45,58,63,0.08); }
+    .bh-loc-img { width: 100%; height: 220px; background-size: cover; background-position: center; }
+    .bh-loc-grid article > * { padding-left: 24px; padding-right: 24px; }
+    .bh-loc-tag { font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #c8654a; margin: 20px 0 8px; }
+    .bh-loc-grid h3 { font-size: 26px; margin: 0 0 8px; }
+    .bh-loc-grid > article > p { font-family: 'Cormorant Infant', serif; font-size: 16px; color: #4a5258; margin: 0 0 16px; }
+    .bh-loc-grid a { display: inline-block; color: #c8654a; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; border-bottom: 1px solid #c8654a; padding-bottom: 4px; margin-bottom: 24px; text-decoration: none; }
+    .bh-hotels { margin-top: 48px; padding: 32px; background: #fff; border-radius: 20px; text-align: left; box-shadow: 0 6px 24px rgba(45,58,63,0.06); }
+    .bh-hotels h4 { margin: 0 0 16px; font-size: 22px; color: #3d6b7c; }
+    .bh-hotels ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+    .bh-hotels li { font-family: 'Cormorant Infant', serif; font-size: 17px; color: #4a5258; }
+    .bh-hotels strong { color: #2d3a3f; }
+    .bh-hotels em { color: #c8654a; font-style: normal; letter-spacing: 0.1em; }
+
+    /* DRESS */
+    .bh-dress { padding: 100px 24px; max-width: 800px; margin: 0 auto; text-align: center; }
+    .bh-dress h2 { font-size: clamp(32px, 4vw, 48px); margin: 0 0 24px; }
+    .bh-dress-text { font-family: 'Cormorant Infant', serif; font-size: 18px; line-height: 1.7; color: #4a5258; margin: 0 0 40px; }
+    .bh-swatches { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .bh-swatches > div { text-align: center; }
+    .bh-swatches span { display: block; width: 56px; height: 56px; border-radius: 50%; }
+    .bh-swatches p { margin: 12px 0 0; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #2d3a3f; }
+    .bh-dress-no { font-family: 'Caveat', cursive; font-size: 22px; color: #c8654a; margin-top: 32px; }
+
+    /* GIFTS */
+    .bh-gifts { padding: 100px 24px; max-width: 1100px; margin: 0 auto; text-align: center; }
+    .bh-gifts h2 { font-size: clamp(32px, 4.5vw, 52px); margin: 0 0 56px; }
+    .bh-gifts-cards { display: grid; gap: 20px; text-align: left; }
+    @media (min-width: 640px) { .bh-gifts-cards { grid-template-columns: repeat(2, 1fr); } }
+    .bh-gift-card { padding: 28px; background: #fff; border-radius: 16px; box-shadow: 0 6px 24px rgba(45,58,63,0.06); }
+    .bh-gift-card h4 { margin: 0 0 12px; font-size: 20px; color: #c8654a; }
+    .bh-gift-card p { font-family: 'Cormorant Infant', serif; font-size: 17px; line-height: 1.6; color: #4a5258; margin: 0; }
+    .bh-gift-card em { color: #3d6b7c; font-style: normal; }
+
+    /* RSVP */
+    .bh-rsvp { padding: 100px 24px; max-width: 640px; margin: 0 auto; text-align: center; }
+    .bh-rsvp h2 { font-size: clamp(40px, 6vw, 64px); margin: 0 0 12px; }
+    .bh-rsvp-deadline { font-family: 'Caveat', cursive; font-size: 22px; color: #c8654a; margin: 0 0 40px; }
+    #bh-rsvp-form { display: grid; gap: 16px; text-align: left; }
+    #bh-rsvp-form label { display: grid; gap: 6px; }
+    #bh-rsvp-form span { font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #c8654a; }
+    #bh-rsvp-form input, #bh-rsvp-form select {
+      background: #fff;
+      border: 1px solid rgba(200,101,74,0.25);
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 16px;
+      font-family: 'Outfit', sans-serif;
+      color: #2d3a3f;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    #bh-rsvp-form input:focus, #bh-rsvp-form select:focus { border-color: #c8654a; }
+    .bh-rsvp-row { display: grid; grid-template-columns: 1fr 110px; gap: 12px; }
+    #bh-rsvp-form button {
+      margin-top: 16px;
+      background: #c8654a;
+      color: #faf3e8;
+      border: none;
+      border-radius: 999px;
+      padding: 14px 24px;
+      font-size: 12px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .bh-rsvp-ok { font-family: 'Caveat', cursive; font-size: 24px; color: #3d6b7c; text-align: center; margin-top: 16px; }
+
+    /* PLAYLIST */
+    .bh-pl { padding: 100px 24px; max-width: 900px; margin: 0 auto; text-align: center; }
+    .bh-pl h2 { font-size: clamp(32px, 4vw, 48px); margin: 0 0 40px; }
+    .bh-pl-grid { display: grid; gap: 14px; grid-template-columns: 1fr; text-align: left; }
+    @media (min-width: 640px) { .bh-pl-grid { grid-template-columns: 1fr 1fr; } }
+    .bh-pl-grid > div {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: 0 4px 16px rgba(45,58,63,0.05);
+    }
+    .bh-pl-grid strong { display: block; font-size: 16px; color: #2d3a3f; }
+    .bh-pl-grid em { font-family: 'Cormorant Infant', serif; font-style: italic; font-size: 14px; color: #c8654a; }
+
+    /* HASH */
+    .bh-hash { padding: 100px 24px; text-align: center; max-width: 720px; margin: 0 auto; }
+    .bh-hash-tag { font-family: 'Caveat', cursive !important; font-size: clamp(36px, 7vw, 64px); color: #c8654a; margin: 16px 0 24px; word-break: break-word; }
+    .bh-hash p { font-family: 'Cormorant Infant', serif; font-size: 18px; color: #4a5258; margin: 0; }
+
+    /* END */
+    .bh-end { position: relative; padding-top: 100px; padding-bottom: 80px; background: #c8654a; color: #faf3e8; text-align: center; }
+    .bh-end-wave { position: absolute; top: -1px; left: 0; width: 100%; height: 80px; transform: rotate(180deg); }
+    .bh-end-inner { padding: 60px 24px; }
+    .bh-end-inner .bh-script { font-size: 56px; color: #faf3e8; margin: 0 0 16px; }
+    .bh-end h2 { font-size: clamp(48px, 8vw, 96px); margin: 0 0 32px; color: #faf3e8; }
+    .bh-end-sig { font-family: 'Cormorant Infant', serif; font-style: italic; font-size: 19px; opacity: 0.85; margin: 0; }
+  </style>
+
+  <script>
+    import gsap from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    gsap.registerPlugin(ScrollTrigger);
+
+    const splash = document.getElementById('bh-splash');
+    const cta = document.getElementById('bh-cta');
+    if (splash) {
+      document.body.style.overflow = 'hidden';
+      const dismiss = () => {
+        gsap.to(splash, { opacity: 0, duration: 0.7, ease: 'power2.in', onComplete: () => {
+          splash.style.display = 'none';
+          document.body.style.overflow = '';
+        }});
+      };
+      cta?.addEventListener('click', dismiss);
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      }
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-animate]').forEach(el => io.observe(el));
+
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const heroImg = document.querySelector<HTMLImageElement>('.bh-hero img');
+      if (heroImg) gsap.to(heroImg, { yPercent: 15, ease: 'none', scrollTrigger: { trigger: '.bh-hero', start: 'top top', end: 'bottom top', scrub: true } });
+    }
+
+    const target = new Date('2027-06-06T17:30:00-05:00').getTime();
+    const tick = () => {
+      const diff = target - Date.now();
+      if (diff <= 0) return;
+      const set = (id: string, v: number) => { const el = document.getElementById(id); if (el) el.textContent = String(v).padStart(2, '0'); };
+      set('bh-d', Math.floor(diff / 86400000));
+      set('bh-h', Math.floor((diff / 3600000) % 24));
+      set('bh-m', Math.floor((diff / 60000) % 60));
+      set('bh-s', Math.floor((diff / 1000) % 60));
+    };
+    tick(); setInterval(tick, 1000);
+
+    const form = document.getElementById('bh-rsvp-form');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('bh-rsvp-ok')?.removeAttribute('hidden');
+      (form as HTMLFormElement).reset();
+    });
+  </script>
+</DemoLayout>

@@ -1,0 +1,652 @@
+---
+import DemoLayout from '../../layouts/DemoLayout.astro';
+const fonts = 'https://fonts.googleapis.com/css2?family=Audiowide&family=VT323&family=Space+Grotesk:wght@300;400;500&family=Monoton&display=swap';
+---
+<DemoLayout
+  title="DIEGO & SOFÍA · 08·08·2027 · LAS VEGAS"
+  description="Boda neón en Las Vegas. Synthwave + chapel + after."
+  themeColor="#1b0a2e"
+  bodyClass="neon-body"
+  fontsHref={fonts}
+  ogImage="https://images.unsplash.com/photo-1605379399642-870262d3d051?w=1200&auto=format&fit=crop&q=80"
+  progressColor="#ff2d95"
+>
+
+  <!-- ============ SPLASH ============ -->
+  <div id="nr-splash" class="nr-splash">
+    <div class="nr-stars" id="nr-stars" aria-hidden="true"></div>
+    <div class="nr-grid-floor" aria-hidden="true"></div>
+    <div class="nr-sun" aria-hidden="true"></div>
+    <div class="nr-splash-content">
+      <p class="nr-pre">// loading_invitation.exe</p>
+      <h1 class="nr-glitch" data-text="DIEGO & SOFÍA">DIEGO &amp; SOFÍA</h1>
+      <p class="nr-issue">08 · 08 · 2027 · LAS VEGAS</p>
+      <button id="nr-cta">› INSERT COIN</button>
+    </div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="nr-hero">
+    <div class="nr-hero-bg"></div>
+    <div class="nr-grid-floor nr-grid-hero" aria-hidden="true"></div>
+    <div class="nr-sun nr-sun-hero" aria-hidden="true"></div>
+    <div class="nr-hero-content">
+      <p class="nr-mono">[ Sat · 08 · 08 · 2027 · 22:00 PDT ]</p>
+      <h1 class="nr-monoton">
+        <span class="nr-pink">DIEGO</span><br/>
+        <span class="nr-cyan">&amp;</span><br/>
+        <span class="nr-pink">SOFÍA</span>
+      </h1>
+      <p class="nr-mono nr-loc">› Little White Wedding Chapel</p>
+      <p class="nr-mono nr-loc">› Las Vegas Strip · Nevada</p>
+    </div>
+  </section>
+
+  <!-- ============ FRASE ============ -->
+  <section class="nr-quote" data-animate>
+    <p class="nr-mono">SYSTEM_QUOTE.txt</p>
+    <blockquote>
+      "Vamos a casarnos como en los 80, en Las Vegas, sin avisar mucho.
+      Pero <em>sí avisamos a ti</em>."
+    </blockquote>
+    <p class="nr-mono">— D &amp; S</p>
+  </section>
+
+  <!-- ============ MENSAJE ============ -->
+  <section class="nr-letter" data-animate>
+    <div class="nr-terminal">
+      <div class="nr-term-bar">
+        <span class="nr-dot nr-d-r"></span>
+        <span class="nr-dot nr-d-y"></span>
+        <span class="nr-dot nr-d-g"></span>
+        <p>~/diego_y_sofia/letter.txt</p>
+      </div>
+      <div class="nr-term-body">
+        <p><span class="nr-prompt">$</span> cat letter.txt</p>
+        <p>Llevamos siete años saliendo y otros dos viviendo juntos.</p>
+        <p>Decidimos saltarnos toda la formalidad: nada de iglesia, nada de banquete largo,</p>
+        <p>nada de tías sentadas en el lugar incorrecto.</p>
+        <p>Vamos a Las Vegas, nos casamos en una capilla con neón rosa y</p>
+        <p>después <em>fiesta de toda la noche</em> en el Cosmopolitan.</p>
+        <p>Si te animas, ven. Si no, te mandamos foto.</p>
+        <p><span class="nr-prompt">$</span> <span class="nr-cursor">_</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COUNTDOWN ============ -->
+  <section class="nr-cd" data-animate>
+    <p class="nr-mono center">// countdown_to_party.run</p>
+    <div class="nr-cd-grid">
+      <div class="nr-cd-cell"><span id="nr-d">--</span><p>DAYS</p></div>
+      <div class="nr-cd-cell"><span id="nr-h">--</span><p>HRS</p></div>
+      <div class="nr-cd-cell"><span id="nr-m">--</span><p>MIN</p></div>
+      <div class="nr-cd-cell"><span id="nr-s">--</span><p>SEC</p></div>
+    </div>
+  </section>
+
+  <!-- ============ HISTORIA ============ -->
+  <section class="nr-story">
+    <div class="nr-story-head" data-animate>
+      <p class="nr-mono">// our_history.log</p>
+      <h2 class="nr-monoton"><span class="nr-cyan">8 YEARS,</span><br/><span class="nr-pink">5 MOVES,</span><br/><span class="nr-yellow">1 HACK</span></h2>
+    </div>
+    <div class="nr-story-grid">
+      <article data-animate>
+        <p class="nr-year nr-pink">2019</p>
+        <h3>BOOT.</h3>
+        <p>Match en una app. Café que duró seis horas. Una cita más, otra, ya estábamos.</p>
+      </article>
+      <article data-animate>
+        <p class="nr-year nr-cyan">2021</p>
+        <h3>UPGRADE.</h3>
+        <p>Mudanza a Roma Norte. Comprado: una consola PS5, un sofá, una cafetera. En ese orden.</p>
+      </article>
+      <article data-animate>
+        <p class="nr-year nr-yellow">2024</p>
+        <h3>CRITICAL HIT.</h3>
+        <p>Un viaje a Las Vegas. Después de tres días, dijimos <em>¿y si nos casamos aquí?</em>.</p>
+      </article>
+      <article data-animate>
+        <p class="nr-year nr-pink">2026</p>
+        <h3>ENGAGEMENT.</h3>
+        <p>El "sí" en una sala con consola encendida. Sin foto. Sin público. Con risas.</p>
+      </article>
+      <article data-animate>
+        <p class="nr-year nr-cyan">2027</p>
+        <h3>FINAL LEVEL.</h3>
+        <p>Vamos a la capilla. Tú decides si nos sigues.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ GALERÍA ============ -->
+  <section class="nr-gallery" data-animate>
+    <p class="nr-mono center">/photos/love</p>
+    <h2 class="nr-monoton center"><span class="nr-pink">EVIDENCE</span></h2>
+    <div class="nr-gal-grid">
+      <figure><img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1558981420-c532b1cce842?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+    </div>
+  </section>
+
+  <!-- ============ ITINERARIO ============ -->
+  <section class="nr-program" data-animate>
+    <p class="nr-mono center">// schedule.cfg</p>
+    <h2 class="nr-monoton center"><span class="nr-cyan">THE NIGHT</span></h2>
+    <div class="nr-prog-list">
+      <div><span class="nr-time">19:00</span><div><h4>// CHECK_IN</h4><p>Recoge tu wristband en el Cosmopolitan lobby.</p></div></div>
+      <div><span class="nr-time">20:00</span><div><h4>// CEREMONY</h4><p>Little White Wedding Chapel. Elvis officiating. <em>Sí, en serio.</em></p></div></div>
+      <div><span class="nr-time">21:00</span><div><h4>// DINNER</h4><p>Steakhouse en Bellagio.</p></div></div>
+      <div><span class="nr-time">23:00</span><div><h4>// AFTER_PARTY</h4><p>Marquee Nightclub · open bar 2 hrs.</p></div></div>
+      <div><span class="nr-time">02:00</span><div><h4>// MIDNIGHT_PIZZA</h4><p>Secret Pizza, Cosmopolitan, 3rd floor.</p></div></div>
+      <div><span class="nr-time">04:00</span><div><h4>// END_OF_FILE</h4><p>O hasta que el amanecer nos rinda.</p></div></div>
+    </div>
+  </section>
+
+  <!-- ============ UBICACIONES ============ -->
+  <section class="nr-loc" data-animate>
+    <p class="nr-mono center">// locations.map</p>
+    <h2 class="nr-monoton center"><span class="nr-pink">WHERE</span></h2>
+    <div class="nr-loc-grid">
+      <article>
+        <div class="nr-loc-pin"><span class="nr-pink">[ 01 ]</span></div>
+        <h3>Little White Wedding Chapel</h3>
+        <p>1301 S Las Vegas Blvd, Las Vegas, NV 89104</p>
+        <a href="https://maps.google.com" target="_blank" rel="noopener">› GOOGLE_MAPS</a>
+      </article>
+      <article>
+        <div class="nr-loc-pin"><span class="nr-cyan">[ 02 ]</span></div>
+        <h3>The Cosmopolitan · Marquee</h3>
+        <p>3708 S Las Vegas Blvd, Las Vegas, NV 89109</p>
+        <a href="https://maps.google.com" target="_blank" rel="noopener">› GOOGLE_MAPS</a>
+      </article>
+    </div>
+    <div class="nr-loc-info">
+      <h4>// HOTEL_BLOCK</h4>
+      <p>Reservamos un bloque en <strong>The Cosmopolitan</strong> con tarifa $349 USD/noche. Código: <em>DIEGOSOFIA808</em>. Reserva al (702) 698-7000.</p>
+      <h4>// FLIGHTS</h4>
+      <p>LAX/MEX/JFK → LAS. Aeropuerto Harry Reid. 15 min al Strip en taxi.</p>
+    </div>
+  </section>
+
+  <!-- ============ DRESS CODE ============ -->
+  <section class="nr-dress" data-animate>
+    <p class="nr-mono center">// dresscode.style</p>
+    <h2 class="nr-monoton center"><span class="nr-cyan">VEGAS</span><br/><span class="nr-pink">CHIC</span></h2>
+    <p class="nr-dress-text">
+      Lo extra. Lentejuela, metálico, terciopelo, lo que prefieras. Si está glow-in-the-dark,
+      mejor. <em>NO black tie</em> — déjame eso al casino. Si no tienes algo brillante,
+      avísanos: tenemos un plan B con accesorios.
+    </p>
+    <div class="nr-swatches">
+      <div><span style="background:#ff2d95"></span><p>NEON PINK</p></div>
+      <div><span style="background:#00f5ff"></span><p>CYAN</p></div>
+      <div><span style="background:#ffd700"></span><p>GOLD</p></div>
+      <div><span style="background:#9d4edd"></span><p>VIOLET</p></div>
+      <div><span style="background:#1b0a2e"></span><p>NIGHT</p></div>
+    </div>
+  </section>
+
+  <!-- ============ REGALOS ============ -->
+  <section class="nr-gifts" data-animate>
+    <p class="nr-mono center">// gifts.cfg</p>
+    <h2 class="nr-monoton center"><span class="nr-yellow">DROP</span><br/><span class="nr-pink">A COIN</span></h2>
+    <p class="nr-gifts-intro">Tu pase es nuestro regalo. Si quieres aportar a la noche, tenemos opciones.</p>
+    <div class="nr-gifts-grid">
+      <div><h4>›› ENVELOPE</h4><p>Buzón en el lobby de la chapel. Sobres con neón en la mesa.</p></div>
+      <div><h4>›› TRANSFER</h4><p>BBVA · 0123 4567 8901 4567<br/>CLABE 012180012345678901</p></div>
+      <div><h4>›› HONEYMOON</h4><p>Vamos a Tokyo en septiembre. Aporta a un karaoke, un ramen, un game center.</p></div>
+      <div><h4>›› AMAZON</h4><p>Lista pública: amazon.com/wedding/diegoysofia2027</p></div>
+    </div>
+  </section>
+
+  <!-- ============ RSVP ============ -->
+  <section class="nr-rsvp" data-animate>
+    <div class="nr-terminal">
+      <div class="nr-term-bar">
+        <span class="nr-dot nr-d-r"></span>
+        <span class="nr-dot nr-d-y"></span>
+        <span class="nr-dot nr-d-g"></span>
+        <p>rsvp.exe</p>
+      </div>
+      <div class="nr-term-body">
+        <p><span class="nr-prompt">$</span> ./rsvp --reply</p>
+        <form id="nr-rsvp-form" novalidate>
+          <label><span>// NAME:</span><input type="text" name="name" required placeholder="player_one"/></label>
+          <label><span>// ATTEND:</span>
+            <select name="attend">
+              <option>YES, see you in Vegas</option>
+              <option>NO, send pics please</option>
+            </select>
+          </label>
+          <label><span>// PARTY_SIZE:</span><input type="number" name="guests" min="1" max="3" value="1"/></label>
+          <label><span>// FOOD_NEEDS:</span><input type="text" name="diet" placeholder="VEGAN, GLUTEN_FREE..."/></label>
+          <label><span>// SONG_REQUEST:</span><input type="text" name="song" placeholder="ARTIST - TRACK"/></label>
+          <button type="submit">[ SUBMIT_RSVP ]</button>
+          <p id="nr-rsvp-ok" class="nr-rsvp-ok" hidden>&gt; RSVP_RECEIVED. SEE_YOU_IN_VEGAS.</p>
+        </form>
+      </div>
+    </div>
+    <p class="nr-deadline center">⚠ DEADLINE: 15 · 07 · 2027</p>
+  </section>
+
+  <!-- ============ PLAYLIST ============ -->
+  <section class="nr-pl" data-animate>
+    <p class="nr-mono center">// playlist.m3u</p>
+    <h2 class="nr-monoton center"><span class="nr-cyan">SOUNDTRACK</span></h2>
+    <ol class="nr-pl-list">
+      <li><span>01</span><div><strong>Take On Me</strong><em>a-ha</em></div></li>
+      <li><span>02</span><div><strong>Blinding Lights</strong><em>The Weeknd</em></div></li>
+      <li><span>03</span><div><strong>Midnight City</strong><em>M83</em></div></li>
+      <li><span>04</span><div><strong>Dancing in the Dark</strong><em>Bruce Springsteen</em></div></li>
+      <li><span>05</span><div><strong>Don't Stop Believin'</strong><em>Journey</em></div></li>
+      <li><span>06</span><div><strong>Like A Prayer</strong><em>Madonna</em></div></li>
+      <li><span>07</span><div><strong>Need You Tonight</strong><em>INXS</em></div></li>
+      <li><span>08</span><div><strong>Heart of Glass</strong><em>Blondie</em></div></li>
+    </ol>
+  </section>
+
+  <!-- ============ HASHTAG ============ -->
+  <section class="nr-hash" data-animate>
+    <p class="nr-mono center">// upload_to_cloud</p>
+    <h2 class="nr-hash-tag">#DIEGOYSOFIAGOTOVEGAS</h2>
+    <p>Sube todo. Mientras más cringe, mejor.</p>
+  </section>
+
+  <!-- ============ CIERRE ============ -->
+  <section class="nr-end">
+    <div class="nr-grid-floor nr-grid-end" aria-hidden="true"></div>
+    <div class="nr-sun nr-sun-end" aria-hidden="true"></div>
+    <div class="nr-end-inner" data-animate>
+      <p class="nr-mono center">// end_credits</p>
+      <h2 class="nr-monoton"><span class="nr-pink">SEE YOU</span><br/><span class="nr-cyan">IN VEGAS</span></h2>
+      <p class="nr-end-sig">D &amp; S · 08·08·2027</p>
+    </div>
+  </section>
+
+  <style is:global>
+    .neon-body {
+      background: #1b0a2e;
+      color: #f5f5f5;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 400;
+      overflow-x: hidden;
+    }
+    .neon-body h1, .neon-body h2 {
+      font-family: 'Audiowide', sans-serif;
+      letter-spacing: 0.04em;
+    }
+    .neon-body h3, .neon-body h4 {
+      font-family: 'Audiowide', sans-serif;
+      letter-spacing: 0.04em;
+      color: #ff2d95;
+    }
+    .neon-body em { font-style: italic; color: #00f5ff; }
+    .neon-body [data-animate] { opacity: 0; transform: translateY(28px); transition: opacity 0.9s ease, transform 0.9s ease; }
+    .neon-body [data-animate].in { opacity: 1; transform: none; }
+    .neon-body .nr-pre, .neon-body .nr-mono {
+      font-family: 'VT323', monospace;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      color: #00f5ff;
+      margin: 0 0 16px;
+    }
+    .neon-body .nr-mono.center, .neon-body .nr-pre.center { text-align: center; }
+    .neon-body .nr-monoton { font-family: 'Monoton', sans-serif; font-weight: 400; }
+    .neon-body .nr-pink { color: #ff2d95; text-shadow: 0 0 12px rgba(255,45,149,0.7), 0 0 32px rgba(255,45,149,0.4); }
+    .neon-body .nr-cyan { color: #00f5ff; text-shadow: 0 0 12px rgba(0,245,255,0.7), 0 0 32px rgba(0,245,255,0.4); }
+    .neon-body .nr-yellow { color: #ffd700; text-shadow: 0 0 12px rgba(255,215,0,0.7), 0 0 32px rgba(255,215,0,0.4); }
+
+    .nr-grid-floor {
+      position: absolute;
+      bottom: 0; left: -50%;
+      width: 200%;
+      height: 50%;
+      background-image:
+        linear-gradient(to right, rgba(255,45,149,0.4) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,45,149,0.4) 1px, transparent 1px);
+      background-size: 50px 50px;
+      transform: perspective(400px) rotateX(60deg);
+      transform-origin: 50% 100%;
+      animation: nr-grid 4s linear infinite;
+      mask-image: linear-gradient(to top, #000 0%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 100%);
+    }
+    @keyframes nr-grid { to { background-position: 0 50px, 0 50px; } }
+    .nr-sun {
+      position: absolute;
+      bottom: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 360px; height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 50% 50%, #ff8e1a 0%, #ff2d95 50%, #9d4edd 100%);
+      box-shadow: 0 0 60px rgba(255,45,149,0.5), 0 0 120px rgba(157,78,221,0.3);
+      mask-image: linear-gradient(to bottom, #000 50%, rgba(0,0,0,0.4) 75%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, #000 50%, rgba(0,0,0,0.4) 75%, transparent 100%);
+    }
+    .nr-sun::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        repeating-linear-gradient(to bottom, transparent 0 20px, #1b0a2e 20px 23px);
+      mask: inherit; -webkit-mask: inherit;
+      border-radius: inherit;
+    }
+
+    .nr-stars { position: absolute; inset: 0; }
+    .nr-stars span {
+      position: absolute;
+      width: 2px; height: 2px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 4px rgba(255,255,255,0.8);
+      animation: nr-twinkle 3s ease-in-out infinite;
+    }
+    @keyframes nr-twinkle { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+
+    /* SPLASH */
+    .nr-splash {
+      position: fixed; inset: 0; z-index: 100;
+      background: linear-gradient(180deg, #1b0a2e 0%, #2d1b54 100%);
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.7s ease;
+    }
+    .nr-splash-content {
+      position: relative; z-index: 5;
+      text-align: center;
+      padding: 32px;
+    }
+    .nr-glitch {
+      font-family: 'Audiowide', sans-serif;
+      font-size: clamp(36px, 7vw, 64px);
+      color: #ff2d95;
+      text-shadow:
+        0 0 20px rgba(255,45,149,0.6),
+        2px 0 0 rgba(0,245,255,0.4),
+        -2px 0 0 rgba(255,215,0,0.4);
+      margin: 0 0 24px;
+      letter-spacing: 0.08em;
+      position: relative;
+      animation: nr-glitch 4s infinite;
+    }
+    @keyframes nr-glitch {
+      0%, 95% { text-shadow: 0 0 20px rgba(255,45,149,0.6), 2px 0 0 rgba(0,245,255,0.4), -2px 0 0 rgba(255,215,0,0.4); }
+      96% { text-shadow: 0 0 20px rgba(255,45,149,0.6), 6px 0 0 rgba(0,245,255,0.6), -6px 0 0 rgba(255,215,0,0.6); transform: translateX(-2px); }
+      97% { transform: translateX(2px); }
+      98% { transform: translateX(0); }
+    }
+    .nr-splash .nr-issue {
+      font-family: 'VT323', monospace;
+      font-size: 18px;
+      color: #00f5ff;
+      letter-spacing: 0.32em;
+      margin: 0 0 32px;
+    }
+    #nr-cta {
+      background: transparent;
+      color: #00f5ff;
+      border: 2px solid #00f5ff;
+      padding: 14px 32px;
+      font-family: 'VT323', monospace;
+      font-size: 18px;
+      letter-spacing: 0.18em;
+      box-shadow: 0 0 20px rgba(0,245,255,0.4);
+      transition: all 0.3s ease;
+    }
+    #nr-cta:hover { background: #00f5ff; color: #1b0a2e; box-shadow: 0 0 40px rgba(0,245,255,0.8); }
+
+    /* HERO */
+    .nr-hero { position: relative; height: 100vh; min-height: 720px; overflow: hidden; background: linear-gradient(180deg, #1b0a2e 0%, #2d1b54 50%, #432a7c 100%); }
+    .nr-hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 10%, rgba(255,45,149,0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 30% 90%, rgba(0,245,255,0.15) 0%, transparent 50%);
+    }
+    .nr-grid-hero { height: 40%; }
+    .nr-sun-hero { bottom: 35%; width: 320px; height: 320px; }
+    .nr-hero-content { position: relative; z-index: 5; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 0 32px; max-width: 1200px; margin: 0 auto; }
+    .nr-hero h1 {
+      font-family: 'Monoton', sans-serif;
+      font-weight: 400;
+      font-size: clamp(64px, 14vw, 200px);
+      line-height: 0.9;
+      margin: 16px 0 32px;
+      letter-spacing: 0.04em;
+    }
+    .nr-loc { display: block; }
+
+    /* QUOTE */
+    .nr-quote { padding: 100px 32px; max-width: 800px; margin: 0 auto; text-align: center; }
+    .nr-quote blockquote {
+      font-family: 'Space Grotesk', sans-serif;
+      font-style: italic;
+      font-size: clamp(20px, 2.6vw, 32px);
+      line-height: 1.5;
+      margin: 16px 0;
+      color: #f5f5f5;
+    }
+
+    /* LETTER */
+    .nr-letter { padding: 60px 24px 100px; max-width: 760px; margin: 0 auto; }
+    .nr-terminal { background: #0a0518; border: 1px solid rgba(0,245,255,0.4); border-radius: 8px; box-shadow: 0 0 40px rgba(255,45,149,0.2); overflow: hidden; }
+    .nr-term-bar { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: rgba(255,45,149,0.15); border-bottom: 1px solid rgba(0,245,255,0.3); }
+    .nr-dot { width: 12px; height: 12px; border-radius: 50%; }
+    .nr-d-r { background: #ff5555; }
+    .nr-d-y { background: #ffd700; }
+    .nr-d-g { background: #00f5ff; }
+    .nr-term-bar p { margin: 0 0 0 12px; font-family: 'VT323', monospace; font-size: 14px; color: #00f5ff; letter-spacing: 0.05em; }
+    .nr-term-body { padding: 24px; font-family: 'VT323', monospace; font-size: 18px; color: #f5f5f5; line-height: 1.5; }
+    .nr-term-body p { margin: 0 0 12px; }
+    .nr-prompt { color: #ff2d95; }
+    .nr-cursor { color: #00f5ff; animation: nr-blink 1s steps(2) infinite; }
+    @keyframes nr-blink { 50% { opacity: 0; } }
+
+    /* COUNTDOWN */
+    .nr-cd { padding: 100px 24px; text-align: center; max-width: 900px; margin: 0 auto; }
+    .nr-cd-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 32px; }
+    .nr-cd-cell {
+      padding: 24px 8px;
+      border: 1px solid #ff2d95;
+      box-shadow: 0 0 20px rgba(255,45,149,0.3), inset 0 0 20px rgba(255,45,149,0.1);
+      background: rgba(255,45,149,0.05);
+    }
+    .nr-cd-cell span { display: block; font-family: 'Monoton', sans-serif; font-size: clamp(36px, 6vw, 64px); color: #00f5ff; line-height: 1; text-shadow: 0 0 16px rgba(0,245,255,0.6); }
+    .nr-cd-cell p { margin: 12px 0 0; font-family: 'VT323', monospace; font-size: 14px; letter-spacing: 0.32em; color: #ff2d95; }
+
+    /* STORY */
+    .nr-story { padding: 100px 24px; max-width: 1200px; margin: 0 auto; }
+    .nr-story-head { text-align: center; margin-bottom: 56px; }
+    .nr-story-head h2 { font-size: clamp(40px, 7vw, 80px); line-height: 1.1; margin: 0; }
+    .nr-story-grid { display: grid; gap: 24px; }
+    @media (min-width: 768px) { .nr-story-grid { grid-template-columns: repeat(3, 1fr); } }
+    .nr-story-grid article {
+      padding: 32px 24px;
+      border: 1px solid rgba(0,245,255,0.4);
+      background: rgba(0,245,255,0.03);
+      box-shadow: 0 0 20px rgba(0,245,255,0.1);
+      transition: transform 0.3s ease;
+    }
+    .nr-story-grid article:hover { transform: translateY(-4px); box-shadow: 0 0 40px rgba(255,45,149,0.3); }
+    .nr-year { font-family: 'Monoton', sans-serif; font-size: 36px; margin: 0 0 12px; line-height: 1; }
+    .nr-story-grid h3 { font-size: 18px; margin: 0 0 12px; }
+    .nr-story-grid p { font-family: 'Space Grotesk', sans-serif; font-size: 16px; line-height: 1.6; color: #d8d8d8; margin: 0; }
+
+    /* GALLERY */
+    .nr-gallery { padding: 100px 24px; max-width: 1280px; margin: 0 auto; }
+    .nr-gallery h2 { font-size: clamp(40px, 6vw, 72px); margin: 12px 0 56px; }
+    .nr-gal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    @media (min-width: 768px) { .nr-gal-grid { grid-template-columns: repeat(3, 1fr); } }
+    .nr-gal-grid figure { margin: 0; aspect-ratio: 4/5; overflow: hidden; position: relative; border: 1px solid #ff2d95; box-shadow: 0 0 16px rgba(255,45,149,0.4); }
+    .nr-gal-grid figure::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,245,255,0.1), rgba(255,45,149,0.1)); mix-blend-mode: screen; pointer-events: none; }
+    .nr-gal-grid img { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.1) hue-rotate(-10deg); transition: transform 1.4s ease; }
+    .nr-gal-grid figure:hover img { transform: scale(1.06); }
+
+    /* PROGRAM */
+    .nr-program { padding: 100px 24px; max-width: 800px; margin: 0 auto; }
+    .nr-program h2 { font-size: clamp(36px, 6vw, 64px); margin: 12px 0 56px; }
+    .nr-prog-list { display: grid; gap: 12px; }
+    .nr-prog-list > div { display: grid; grid-template-columns: 90px 1fr; gap: 20px; align-items: center; padding: 20px; border-left: 3px solid #ff2d95; background: rgba(255,45,149,0.05); }
+    .nr-time { font-family: 'VT323', monospace; font-size: 28px; color: #00f5ff; }
+    .nr-prog-list h4 { font-family: 'Audiowide', sans-serif; font-size: 16px; margin: 0 0 4px; color: #ff2d95; letter-spacing: 0.05em; }
+    .nr-prog-list p { font-family: 'Space Grotesk', sans-serif; font-size: 15px; color: #d8d8d8; margin: 0; }
+
+    /* LOC */
+    .nr-loc { padding: 100px 24px; max-width: 1100px; margin: 0 auto; }
+    .nr-loc h2 { font-size: clamp(40px, 6vw, 72px); margin: 12px 0 56px; }
+    .nr-loc-grid { display: grid; gap: 24px; margin-bottom: 48px; }
+    @media (min-width: 700px) { .nr-loc-grid { grid-template-columns: repeat(2, 1fr); } }
+    .nr-loc-grid article { padding: 32px; border: 1px solid #00f5ff; background: rgba(0,245,255,0.03); position: relative; }
+    .nr-loc-pin { font-family: 'VT323', monospace; font-size: 18px; margin: 0 0 12px; }
+    .nr-loc-grid h3 { font-family: 'Audiowide', sans-serif; font-size: 22px; color: #f5f5f5; margin: 0 0 12px; letter-spacing: 0.04em; }
+    .nr-loc-grid > article > p { font-family: 'VT323', monospace; font-size: 18px; color: #d8d8d8; margin: 0 0 16px; }
+    .nr-loc-grid a { font-family: 'VT323', monospace; font-size: 16px; color: #ff2d95; text-decoration: none; border-bottom: 1px solid #ff2d95; padding-bottom: 4px; letter-spacing: 0.1em; }
+    .nr-loc-info { padding: 32px; border: 1px dashed rgba(255,45,149,0.5); }
+    .nr-loc-info h4 { font-family: 'Audiowide', sans-serif; font-size: 14px; color: #00f5ff; margin: 0 0 12px; letter-spacing: 0.1em; }
+    .nr-loc-info p { font-family: 'Space Grotesk', sans-serif; font-size: 16px; color: #d8d8d8; margin: 0 0 24px; line-height: 1.6; }
+    .nr-loc-info p:last-child { margin: 0; }
+    .nr-loc-info strong { color: #ff2d95; }
+    .nr-loc-info em { color: #ffd700; font-style: normal; letter-spacing: 0.1em; }
+
+    /* DRESS */
+    .nr-dress { padding: 100px 24px; max-width: 800px; margin: 0 auto; text-align: center; }
+    .nr-dress h2 { font-size: clamp(40px, 7vw, 80px); margin: 12px 0 24px; line-height: 1; }
+    .nr-dress-text { font-family: 'Space Grotesk', sans-serif; font-size: 18px; line-height: 1.7; color: #d8d8d8; margin: 0 0 40px; }
+    .nr-swatches { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+    .nr-swatches > div { text-align: center; }
+    .nr-swatches span { display: block; width: 56px; height: 56px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.3); box-shadow: 0 0 16px currentColor; }
+    .nr-swatches p { margin: 12px 0 0; font-family: 'VT323', monospace; font-size: 13px; letter-spacing: 0.16em; color: #00f5ff; }
+
+    /* GIFTS */
+    .nr-gifts { padding: 100px 24px; max-width: 1100px; margin: 0 auto; text-align: center; }
+    .nr-gifts h2 { font-size: clamp(40px, 7vw, 80px); margin: 12px 0 32px; line-height: 1; }
+    .nr-gifts-intro { font-family: 'Space Grotesk', sans-serif; font-size: 17px; color: #d8d8d8; max-width: 640px; margin: 0 auto 48px; }
+    .nr-gifts-grid { display: grid; gap: 16px; text-align: left; }
+    @media (min-width: 700px) { .nr-gifts-grid { grid-template-columns: repeat(2, 1fr); } }
+    .nr-gifts-grid > div { padding: 24px; border: 1px solid rgba(255,215,0,0.4); background: rgba(255,215,0,0.03); }
+    .nr-gifts-grid h4 { font-family: 'VT323', monospace; font-size: 22px; color: #ffd700; margin: 0 0 12px; letter-spacing: 0.04em; }
+    .nr-gifts-grid p { font-family: 'Space Grotesk', sans-serif; font-size: 15px; color: #d8d8d8; line-height: 1.6; margin: 0; }
+
+    /* RSVP */
+    .nr-rsvp { padding: 100px 24px; max-width: 720px; margin: 0 auto; }
+    .nr-rsvp .nr-terminal { margin-bottom: 24px; }
+    .nr-rsvp .nr-term-body { padding: 32px; }
+    .nr-rsvp .nr-term-body > p { margin-bottom: 24px; }
+    #nr-rsvp-form { display: grid; gap: 18px; font-family: 'VT323', monospace; }
+    #nr-rsvp-form label { display: grid; gap: 6px; }
+    #nr-rsvp-form span { font-family: 'VT323', monospace; font-size: 16px; color: #00f5ff; letter-spacing: 0.05em; }
+    #nr-rsvp-form input, #nr-rsvp-form select {
+      background: rgba(0,245,255,0.05);
+      border: 1px solid rgba(0,245,255,0.4);
+      padding: 10px 12px;
+      font-family: 'VT323', monospace;
+      font-size: 18px;
+      color: #f5f5f5;
+      outline: none;
+    }
+    #nr-rsvp-form input:focus, #nr-rsvp-form select:focus { border-color: #00f5ff; box-shadow: 0 0 12px rgba(0,245,255,0.4); }
+    #nr-rsvp-form button {
+      margin-top: 16px;
+      background: #ff2d95;
+      color: #1b0a2e;
+      border: none;
+      padding: 14px 24px;
+      font-family: 'Audiowide', sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.16em;
+      box-shadow: 0 0 24px rgba(255,45,149,0.6);
+    }
+    .nr-rsvp-ok { font-family: 'VT323', monospace; color: #00f5ff; text-align: center; margin-top: 16px; font-size: 18px; }
+    .nr-deadline { font-family: 'VT323', monospace; font-size: 18px; color: #ffd700; letter-spacing: 0.16em; }
+
+    /* PLAYLIST */
+    .nr-pl { padding: 100px 24px; max-width: 800px; margin: 0 auto; }
+    .nr-pl h2 { font-size: clamp(36px, 6vw, 64px); margin: 12px 0 48px; }
+    .nr-pl-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; }
+    .nr-pl-list li { display: grid; grid-template-columns: 60px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(255,45,149,0.2); align-items: center; }
+    .nr-pl-list span { font-family: 'VT323', monospace; font-size: 22px; color: #ffd700; }
+    .nr-pl-list strong { display: block; font-family: 'Audiowide', sans-serif; font-weight: 400; font-size: 18px; color: #f5f5f5; letter-spacing: 0.04em; }
+    .nr-pl-list em { font-family: 'VT323', monospace; font-style: normal; font-size: 16px; color: #00f5ff; }
+
+    /* HASH */
+    .nr-hash { padding: 100px 24px; text-align: center; max-width: 900px; margin: 0 auto; }
+    .nr-hash-tag {
+      font-family: 'Monoton', sans-serif !important;
+      font-size: clamp(28px, 7vw, 64px);
+      color: #ff2d95;
+      text-shadow: 0 0 20px rgba(255,45,149,0.6), 0 0 40px rgba(255,45,149,0.3);
+      margin: 16px 0 24px;
+      word-break: break-word;
+      letter-spacing: 0.04em;
+    }
+    .nr-hash p { font-family: 'Space Grotesk', sans-serif; font-size: 17px; color: #d8d8d8; margin: 0; }
+
+    /* END */
+    .nr-end { position: relative; padding: 140px 24px 100px; text-align: center; overflow: hidden; min-height: 500px; }
+    .nr-grid-end { height: 60%; }
+    .nr-sun-end { bottom: 35%; width: 240px; height: 240px; }
+    .nr-end-inner { position: relative; z-index: 5; max-width: 720px; margin: 0 auto; }
+    .nr-end h2 { font-size: clamp(48px, 9vw, 120px); line-height: 1; margin: 16px 0 32px; }
+    .nr-end-sig { font-family: 'VT323', monospace; font-size: 20px; color: #00f5ff; letter-spacing: 0.18em; margin: 0; }
+  </style>
+
+  <script>
+    import gsap from 'gsap';
+
+    // Stars in splash
+    const stars = document.getElementById('nr-stars');
+    if (stars) {
+      for (let i = 0; i < 60; i++) {
+        const s = document.createElement('span');
+        s.style.left = Math.random() * 100 + '%';
+        s.style.top = Math.random() * 100 + '%';
+        s.style.animationDelay = (Math.random() * 3) + 's';
+        stars.appendChild(s);
+      }
+    }
+
+    const splash = document.getElementById('nr-splash');
+    const cta = document.getElementById('nr-cta');
+    if (splash) {
+      document.body.style.overflow = 'hidden';
+      const dismiss = () => {
+        gsap.to(splash, { opacity: 0, duration: 0.6, ease: 'power2.in', onComplete: () => {
+          splash.style.display = 'none';
+          document.body.style.overflow = '';
+        }});
+      };
+      cta?.addEventListener('click', dismiss);
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-animate]').forEach(el => io.observe(el));
+
+    const target = new Date('2027-08-08T20:00:00-07:00').getTime();
+    const tick = () => {
+      const diff = target - Date.now();
+      if (diff <= 0) return;
+      const set = (id: string, v: number) => { const el = document.getElementById(id); if (el) el.textContent = String(v).padStart(2, '0'); };
+      set('nr-d', Math.floor(diff / 86400000));
+      set('nr-h', Math.floor((diff / 3600000) % 24));
+      set('nr-m', Math.floor((diff / 60000) % 60));
+      set('nr-s', Math.floor((diff / 1000) % 60));
+    };
+    tick(); setInterval(tick, 1000);
+
+    const form = document.getElementById('nr-rsvp-form');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('nr-rsvp-ok')?.removeAttribute('hidden');
+      (form as HTMLFormElement).reset();
+    });
+  </script>
+</DemoLayout>

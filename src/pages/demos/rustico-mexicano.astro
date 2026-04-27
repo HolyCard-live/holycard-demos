@@ -1,0 +1,704 @@
+---
+import DemoLayout from '../../layouts/DemoLayout.astro';
+const fonts = 'https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Inter:wght@300;400;500&display=swap';
+---
+<DemoLayout
+  title="Andrés & Mariana · 18·10·2027 · San Miguel de Allende"
+  description="Boda mexicana en Hacienda Las Trancas, San Miguel de Allende."
+  themeColor="#f5e8d0"
+  bodyClass="mex-body"
+  fontsHref={fonts}
+  ogImage="https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1200&auto=format&fit=crop&q=80"
+  progressColor="#8b1e1e"
+>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <pattern id="mx-papel" width="120" height="100" patternUnits="userSpaceOnUse">
+        <rect width="120" height="100" fill="none"/>
+        <g fill="#8b1e1e">
+          <circle cx="20" cy="20" r="6"/>
+          <circle cx="60" cy="20" r="6"/>
+          <circle cx="100" cy="20" r="6"/>
+          <path d="M40,40 L60,50 L40,60 L20,50 Z"/>
+          <path d="M80,40 L100,50 L80,60 L60,50 Z"/>
+          <path d="M0,40 L20,50 L0,60 L-20,50 Z"/>
+          <circle cx="30" cy="80" r="4"/>
+          <circle cx="60" cy="85" r="4"/>
+          <circle cx="90" cy="80" r="4"/>
+          <path d="M0,0 L20,10 L0,20 Z" opacity="0.6"/>
+          <path d="M120,0 L100,10 L120,20 Z" opacity="0.6"/>
+        </g>
+      </pattern>
+
+      <symbol id="mx-marigold" viewBox="0 0 100 100">
+        <g>
+          <circle cx="50" cy="50" r="8" fill="#8b3a0e"/>
+          <g fill="#f4a14e">
+            <ellipse cx="50" cy="20" rx="8" ry="14"/>
+            <ellipse cx="50" cy="80" rx="8" ry="14"/>
+            <ellipse cx="20" cy="50" rx="14" ry="8"/>
+            <ellipse cx="80" cy="50" rx="14" ry="8"/>
+            <ellipse cx="28" cy="28" rx="10" ry="12" transform="rotate(45 28 28)"/>
+            <ellipse cx="72" cy="28" rx="10" ry="12" transform="rotate(-45 72 28)"/>
+            <ellipse cx="28" cy="72" rx="10" ry="12" transform="rotate(-45 28 72)"/>
+            <ellipse cx="72" cy="72" rx="10" ry="12" transform="rotate(45 72 72)"/>
+          </g>
+          <g fill="#c4631e">
+            <ellipse cx="50" cy="32" rx="6" ry="10"/>
+            <ellipse cx="50" cy="68" rx="6" ry="10"/>
+            <ellipse cx="32" cy="50" rx="10" ry="6"/>
+            <ellipse cx="68" cy="50" rx="10" ry="6"/>
+            <ellipse cx="36" cy="36" rx="6" ry="8" transform="rotate(45 36 36)"/>
+            <ellipse cx="64" cy="36" rx="6" ry="8" transform="rotate(-45 64 36)"/>
+            <ellipse cx="36" cy="64" rx="6" ry="8" transform="rotate(-45 36 64)"/>
+            <ellipse cx="64" cy="64" rx="6" ry="8" transform="rotate(45 64 64)"/>
+          </g>
+        </g>
+      </symbol>
+
+      <symbol id="mx-talavera" viewBox="0 0 100 100">
+        <rect width="100" height="100" fill="#1a8a8a"/>
+        <g fill="#f5e8d0" opacity="0.85">
+          <circle cx="50" cy="50" r="14"/>
+          <path d="M50,10 L55,40 L50,50 L45,40 Z"/>
+          <path d="M50,90 L55,60 L50,50 L45,60 Z"/>
+          <path d="M10,50 L40,55 L50,50 L40,45 Z"/>
+          <path d="M90,50 L60,55 L50,50 L60,45 Z"/>
+          <path d="M22,22 L38,42 L22,38 Z"/>
+          <path d="M78,22 L62,42 L78,38 Z"/>
+          <path d="M22,78 L38,58 L22,62 Z"/>
+          <path d="M78,78 L62,58 L78,62 Z"/>
+        </g>
+        <circle cx="50" cy="50" r="6" fill="#8b1e1e"/>
+        <g fill="#c4631e">
+          <circle cx="50" cy="20" r="3"/>
+          <circle cx="50" cy="80" r="3"/>
+          <circle cx="20" cy="50" r="3"/>
+          <circle cx="80" cy="50" r="3"/>
+        </g>
+      </symbol>
+
+      <pattern id="mx-talavera-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+        <use href="#mx-talavera" width="40" height="40"/>
+      </pattern>
+
+      <symbol id="mx-banner" viewBox="0 0 1200 100" preserveAspectRatio="none">
+        <rect x="0" y="0" width="1200" height="80" fill="url(#mx-papel)"/>
+        <path d="M0,80 L60,80 L80,100 L100,80 L160,80 L180,100 L200,80 L260,80 L280,100 L300,80 L360,80 L380,100 L400,80 L460,80 L480,100 L500,80 L560,80 L580,100 L600,80 L660,80 L680,100 L700,80 L760,80 L780,100 L800,80 L860,80 L880,100 L900,80 L960,80 L980,100 L1000,80 L1060,80 L1080,100 L1100,80 L1160,80 L1180,100 L1200,80 Z" fill="#8b1e1e"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ SPLASH ============ -->
+  <div id="mx-splash" class="mx-splash">
+    <svg class="mx-papel-top" viewBox="0 0 1200 100" preserveAspectRatio="none"><use href="#mx-banner"/></svg>
+    <div class="mx-splash-content">
+      <svg class="mx-marigold-deco" viewBox="0 0 100 100"><use href="#mx-marigold"/></svg>
+      <p class="mx-pre">Vivan los novios</p>
+      <h1>Andrés <span>y</span> Mariana</h1>
+      <p class="mx-issue">18 · Octubre · 2027</p>
+      <p class="mx-issue-loc">San Miguel de Allende</p>
+      <button id="mx-cta">Ábreme la puerta</button>
+    </div>
+    <svg class="mx-papel-bot" viewBox="0 0 1200 100" preserveAspectRatio="none"><use href="#mx-banner"/></svg>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="mx-hero">
+    <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1800&auto=format&fit=crop&q=85" alt="San Miguel de Allende"/>
+    <div class="mx-hero-overlay"></div>
+    <svg class="mx-papel-hero-top" viewBox="0 0 1200 100" preserveAspectRatio="none"><use href="#mx-banner"/></svg>
+    <div class="mx-hero-text">
+      <p class="mx-hero-pre">Acompáñanos a celebrar nuestro</p>
+      <h1>SÍ <em>acepto</em></h1>
+      <p class="mx-hero-couple">Andrés &amp; Mariana</p>
+      <div class="mx-hero-meta">
+        <p>18 · Octubre · 2027</p>
+        <p>San Miguel de Allende, Gto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PADRES ============ -->
+  <section class="mx-parents" data-animate>
+    <div class="mx-parents-decor">
+      <svg viewBox="0 0 100 100"><use href="#mx-marigold"/></svg>
+    </div>
+    <p class="mx-pre center">Con la bendición de Dios y de nuestros padres</p>
+    <div class="mx-parents-grid">
+      <div>
+        <p class="mx-parents-title">Padres del novio</p>
+        <p class="mx-parents-name">Sr. Joaquín Vargas Solís</p>
+        <p class="mx-parents-name">Sra. Eugenia Hernández de Vargas</p>
+      </div>
+      <div>
+        <p class="mx-parents-title">Padres de la novia</p>
+        <p class="mx-parents-name">Sr. Ignacio Ramírez Olvera</p>
+        <p class="mx-parents-name">Sra. Lucía Castillo de Ramírez</p>
+      </div>
+    </div>
+    <div class="mx-padrinos">
+      <p class="mx-pre center">Padrinos de velación</p>
+      <p>Tío Eduardo Hernández · Tía Rosario Olvera</p>
+      <p class="mx-pre center mt">Padrinos de lazo</p>
+      <p>Don José Luis Vargas · Doña Esperanza Camargo</p>
+    </div>
+  </section>
+
+  <!-- ============ FRASE ============ -->
+  <section class="mx-quote" data-animate>
+    <svg class="mx-quote-flower" viewBox="0 0 100 100"><use href="#mx-marigold"/></svg>
+    <blockquote>
+      "El amor, cuando es de verdad, llega como llega el cempasúchil:<br/>
+      con flor amarilla y de golpe."
+    </blockquote>
+    <p>— Dicho de Doña Eugenia, abuela del novio.</p>
+  </section>
+
+  <!-- ============ MENSAJE ============ -->
+  <section class="mx-letter">
+    <div class="mx-letter-frame" data-animate>
+      <p class="mx-script">¡Qué gusto que estés aquí!</p>
+      <p>
+        Llevamos cinco años saliendo y dos viviendo juntos en una casita en la Roma. Crecimos
+        en el norte, en el centro, y nos encontramos en CDMX. Pero el corazón nos jaló para
+        el bajío: queremos casarnos en San Miguel, donde el cantera, la marigold y la cumbia
+        nos han dado los mejores fines de semana de nuestras vidas.
+      </p>
+      <p>
+        Habrá mariachi. Habrá mole. Habrá tequila. Habrá muchas tías y muchos primos.
+        Habrá lo mejor de México.
+      </p>
+      <p class="mx-sign">Con cariño,<br/><span>Andrés y Mariana</span></p>
+    </div>
+  </section>
+
+  <!-- ============ COUNTDOWN ============ -->
+  <section class="mx-cd" data-animate>
+    <p class="mx-pre center">Faltan</p>
+    <div class="mx-cd-grid">
+      <div><span id="mx-d">--</span><p>Días</p></div>
+      <div><span id="mx-h">--</span><p>Horas</p></div>
+      <div><span id="mx-m">--</span><p>Minutos</p></div>
+      <div><span id="mx-s">--</span><p>Segundos</p></div>
+    </div>
+    <p class="mx-cd-foot">para el día más esperado.</p>
+  </section>
+
+  <!-- ============ HISTORIA ============ -->
+  <section class="mx-story">
+    <div class="mx-story-head" data-animate>
+      <p class="mx-pre center">Nuestra historia</p>
+      <h2>Cómo terminamos<br/><em>queriéndonos así.</em></h2>
+    </div>
+    <div class="mx-story-grid">
+      <article data-animate>
+        <svg viewBox="0 0 100 100" class="mx-flower-mini"><use href="#mx-marigold"/></svg>
+        <p class="mx-year">2020</p>
+        <h3>Pandemia, Bumble, taquería.</h3>
+        <p>Match en marzo. Primera cita en julio cuando reabrieron las taquerías. Primera frase: "no te conozco pero sí sé que pides los tacos al pastor con piña".</p>
+      </article>
+      <article data-animate>
+        <svg viewBox="0 0 100 100" class="mx-flower-mini"><use href="#mx-marigold"/></svg>
+        <p class="mx-year">2022</p>
+        <h3>Día de muertos en Pátzcuaro.</h3>
+        <p>El primer viaje juntos. Vimos pasar la canoa con velas, lloramos un poco, decidimos —en silencio— que esto era para largo.</p>
+      </article>
+      <article data-animate>
+        <svg viewBox="0 0 100 100" class="mx-flower-mini"><use href="#mx-marigold"/></svg>
+        <p class="mx-year">2024</p>
+        <h3>Mudanza a la Roma.</h3>
+        <p>Una azotea, una jardinera, dos perros. La rutina nos sentó bien.</p>
+      </article>
+      <article data-animate>
+        <svg viewBox="0 0 100 100" class="mx-flower-mini"><use href="#mx-marigold"/></svg>
+        <p class="mx-year">2026</p>
+        <h3>La pedida en SMA.</h3>
+        <p>En la rotonda del jardín. Mariachis tocaron "El Rey". Todo el mundo aplaudió. Ella dijo sí entre carcajadas.</p>
+      </article>
+      <article data-animate>
+        <svg viewBox="0 0 100 100" class="mx-flower-mini"><use href="#mx-marigold"/></svg>
+        <p class="mx-year">2027</p>
+        <h3>El día que decidimos.</h3>
+        <p>Hacienda Las Trancas. Tú ahí. Mole en el horno. Cohetes en el cielo.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ GALERÍA ============ -->
+  <section class="mx-gallery" data-animate>
+    <p class="mx-pre center">Memorias</p>
+    <h2>Álbum del corazón.</h2>
+    <div class="mx-gal-grid">
+      <figure><img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1520637836862-4d197d17c969?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1583416750470-965b2707b355?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1612366589041-2f6dd33e7f5d?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1601128533718-374ffcca299b?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+    </div>
+  </section>
+
+  <!-- ============ ITINERARIO ============ -->
+  <section class="mx-program" data-animate>
+    <p class="mx-pre center">Programa</p>
+    <h2>El día con todo<br/><em>su sabor.</em></h2>
+    <div class="mx-program-list">
+      <div class="mx-pr-row"><span>16:00</span><div><h4>Misa católica</h4><p>Parroquia de San Miguel Arcángel.</p></div></div>
+      <div class="mx-pr-row"><span>17:30</span><div><h4>Coctel mexicano</h4><p>Mezcalitas, micheladas, esquites, tlayudas.</p></div></div>
+      <div class="mx-pr-row"><span>19:00</span><div><h4>Cena de gala</h4><p>Banquete de tres tiempos: mole negro de Oaxaca de plato fuerte.</p></div></div>
+      <div class="mx-pr-row"><span>21:00</span><div><h4>Mariachi y vals</h4><p>Mariachi Vargas para abrir pista.</p></div></div>
+      <div class="mx-pr-row"><span>22:00</span><div><h4>Banda y baile</h4><p>Banda en vivo: cumbia, salsa, perreo.</p></div></div>
+      <div class="mx-pr-row"><span>00:00</span><div><h4>Show de pirotecnia</h4><p>Castillo y palomas. Sí, en serio.</p></div></div>
+      <div class="mx-pr-row"><span>03:00</span><div><h4>Tornaboda</h4><p>Pozole rojo, café de olla y pan.</p></div></div>
+    </div>
+  </section>
+
+  <!-- ============ UBICACIONES ============ -->
+  <section class="mx-loc">
+    <p class="mx-pre center">Locaciones</p>
+    <h2 data-animate>Donde te esperamos.</h2>
+    <div class="mx-loc-grid">
+      <article data-animate>
+        <div class="mx-loc-img" style="background-image:url('https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=900&auto=format&fit=crop&q=80')"></div>
+        <p class="mx-loc-tag">Misa · 16:00</p>
+        <h3>Parroquia de San Miguel Arcángel</h3>
+        <p>Plaza Allende s/n, Centro Histórico, San Miguel de Allende, Gto.</p>
+        <a href="https://maps.google.com" target="_blank" rel="noopener">Ver mapa →</a>
+      </article>
+      <article data-animate>
+        <div class="mx-loc-img" style="background-image:url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=900&auto=format&fit=crop&q=80')"></div>
+        <p class="mx-loc-tag">Recepción · 17:30</p>
+        <h3>Hacienda Las Trancas</h3>
+        <p>Camino a Las Trancas Km 7, San Miguel de Allende, Gto.</p>
+        <a href="https://maps.google.com" target="_blank" rel="noopener">Ver mapa →</a>
+      </article>
+    </div>
+    <div class="mx-hotels" data-animate>
+      <h4>Hospedaje sugerido</h4>
+      <ul>
+        <li><strong>Rosewood San Miguel</strong> — Tarifa especial $7,800 MXN/noche con código <em>AYM2027</em>.</li>
+        <li><strong>Hotel Matilda</strong> — Boutique al centro, $4,200 MXN/noche.</li>
+        <li><strong>Casa Linda Hotel</strong> — A 7 min del jardín principal, $2,800 MXN/noche.</li>
+        <li><strong>Hotel Posada de las Monjas</strong> — Tradicional y económico, $1,400 MXN/noche.</li>
+      </ul>
+      <h4 class="mt">Camión organizado</h4>
+      <p>Salida CDMX (Polanco) viernes 17 a las 14:00 hrs. Regreso domingo 19 a las 11:00 hrs. Cupo limitado, especifica al confirmar tu asistencia.</p>
+    </div>
+  </section>
+
+  <!-- ============ DRESS CODE ============ -->
+  <section class="mx-dress" data-animate>
+    <p class="mx-pre center">Dress code</p>
+    <h2>Formal mexicano.</h2>
+    <p class="mx-dress-text">
+      Color, color y más color. Ellas: vestido largo o midi, bordado mexicano si se animan,
+      rebozo si quieren. Ellos: traje en tonos cálidos, guayabera bordada también funciona.
+      <em>Reservamos el blanco para la novia, por favor.</em>
+    </p>
+    <div class="mx-swatches">
+      <div><span style="background:#c4631e"></span><p>Naranja</p></div>
+      <div><span style="background:#8b1e1e"></span><p>Rojo cardenal</p></div>
+      <div><span style="background:#1a8a8a"></span><p>Turquesa</p></div>
+      <div><span style="background:#f4a14e"></span><p>Cempasúchil</p></div>
+      <div><span style="background:#3d4e2a"></span><p>Verde nopal</p></div>
+      <div><span style="background:#e8c75a"></span><p>Maíz</p></div>
+    </div>
+  </section>
+
+  <!-- ============ NIÑOS ============ -->
+  <section class="mx-kids" data-animate>
+    <p>👶 Nos encantan tus pequeños y queremos que estén. Habrá área kids con piñatas, animadores y catering infantil. <em>Indícanos cuántos al confirmar.</em></p>
+  </section>
+
+  <!-- ============ REGALOS ============ -->
+  <section class="mx-gifts" data-animate>
+    <p class="mx-pre center">Mesa de regalos</p>
+    <h2>Tu compañía es nuestra alegría.</h2>
+    <p class="mx-gifts-text">
+      Si quieres acompañarnos con un regalo, te dejamos opciones. Cualquier gesto se recibe con cariño.
+    </p>
+    <div class="mx-gifts-grid">
+      <div class="mx-gift">
+        <h4>Lluvia de sobres</h4>
+        <p>Habrá un cofre tallado en madera de la Sierra Gorda en la entrada con sobres bordados a tu disposición.</p>
+      </div>
+      <div class="mx-gift">
+        <h4>Transferencia</h4>
+        <p>Banorte · 0192 7384 5612 9034<br/>CLABE 072180019273845612<br/>Andrés Vargas / Mariana Ramírez</p>
+      </div>
+      <div class="mx-gift">
+        <h4>Mesa Liverpool</h4>
+        <p>Evento <em>59023</em> · Búscanos como "Vargas-Ramírez 2027".</p>
+      </div>
+      <div class="mx-gift">
+        <h4>Luna de miel</h4>
+        <p>Vamos a Japón en febrero. Cada aporte es un onsen, un sake, un templo en silencio.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RSVP ============ -->
+  <section class="mx-rsvp" data-animate>
+    <p class="mx-pre center">Confirmación</p>
+    <h2>¿Vienes?</h2>
+    <p class="mx-deadline">Confirma antes del 15 de septiembre de 2027.</p>
+    <form id="mx-rsvp-form" novalidate>
+      <label><span>Nombre completo</span><input type="text" name="name" required/></label>
+      <div class="mx-row">
+        <label><span>Asistencia</span><select name="attend"><option>Confirmo</option><option>No podré</option></select></label>
+        <label><span>Pase para</span><select name="guests"><option>1 persona</option><option>2 personas</option></select></label>
+      </div>
+      <label><span>Niños (cuántos)</span><input type="number" name="kids" min="0" max="5" value="0"/></label>
+      <label><span>Restricciones alimentarias</span><input type="text" name="diet" placeholder="Vegetariano, sin gluten, alergias..."/></label>
+      <label><span>¿Camión desde CDMX?</span><select name="bus"><option>No, voy por mi cuenta</option><option>Sí, ida y vuelta</option><option>Solo ida</option><option>Solo regreso</option></select></label>
+      <label><span>Una canción para la pista</span><input type="text" name="song"/></label>
+      <button type="submit">¡Confirmar!</button>
+      <p id="mx-rsvp-ok" class="mx-rsvp-ok" hidden>¡Recibido! Nos vemos en SMA. 🌼</p>
+    </form>
+  </section>
+
+  <!-- ============ PLAYLIST ============ -->
+  <section class="mx-pl" data-animate>
+    <p class="mx-pre center">Lo que sonará</p>
+    <h2>Cumbia, salsa<br/><em>y un poco de banda.</em></h2>
+    <div class="mx-pl-grid">
+      <div><strong>El Rey</strong><em>Vicente Fernández</em></div>
+      <div><strong>Cielito Lindo</strong><em>Mariachi Vargas</em></div>
+      <div><strong>La Llorona</strong><em>Chavela Vargas</em></div>
+      <div><strong>Caminos de Michoacán</strong><em>Vicente Fernández</em></div>
+      <div><strong>Bidi Bidi Bom Bom</strong><em>Selena</em></div>
+      <div><strong>Vivir Mi Vida</strong><em>Marc Anthony</em></div>
+      <div><strong>La Bicicleta</strong><em>Carlos Vives</em></div>
+      <div><strong>Provócame</strong><em>Chayanne</em></div>
+      <div><strong>Suavemente</strong><em>Elvis Crespo</em></div>
+      <div><strong>El Gran Varón</strong><em>Willie Colón</em></div>
+    </div>
+  </section>
+
+  <!-- ============ HASHTAG ============ -->
+  <section class="mx-hash" data-animate>
+    <p class="mx-pre center">Etiquétanos</p>
+    <h2 class="mx-hash-tag">#AndrésYMarianaSMA2027</h2>
+    <p>Sube todas las fotos. Las que salimos llorando, las que salimos bailando, todas.</p>
+  </section>
+
+  <!-- ============ CIERRE ============ -->
+  <section class="mx-end">
+    <svg class="mx-papel-end-top" viewBox="0 0 1200 100" preserveAspectRatio="none"><use href="#mx-banner"/></svg>
+    <div class="mx-end-inner" data-animate>
+      <svg class="mx-end-flower" viewBox="0 0 100 100"><use href="#mx-marigold"/></svg>
+      <p class="mx-script">¡Vivan los novios!</p>
+      <h2>Te esperamos<br/><em>con los brazos abiertos.</em></h2>
+      <p class="mx-end-sig">Andrés Vargas · Mariana Ramírez</p>
+      <p class="mx-end-date">Octubre · 2027 · San Miguel</p>
+    </div>
+  </section>
+
+  <style is:global>
+    .mex-body {
+      background: #f5e8d0;
+      color: #3a2818;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 400;
+    }
+    .mex-body h1, .mex-body h2 {
+      font-family: 'Abril Fatface', serif;
+      font-weight: 400;
+      color: #8b1e1e;
+      letter-spacing: 0.005em;
+    }
+    .mex-body h3, .mex-body h4 {
+      font-family: 'Abril Fatface', serif;
+      font-weight: 400;
+      color: #8b1e1e;
+    }
+    .mex-body em {
+      font-family: 'Lobster', cursive;
+      font-style: normal;
+      color: #c4631e;
+    }
+    .mex-body [data-animate] { opacity: 0; transform: translateY(28px); transition: opacity 1s ease, transform 1s ease; }
+    .mex-body [data-animate].in { opacity: 1; transform: none; }
+    .mex-body .mx-pre {
+      font-family: 'Lobster', cursive;
+      font-size: 22px;
+      color: #c4631e;
+      margin: 0 0 16px;
+      letter-spacing: 0.02em;
+    }
+    .mex-body .mx-pre.center { text-align: center; }
+    .mex-body .mx-script {
+      font-family: 'Lobster', cursive;
+      color: #8b1e1e;
+    }
+    .mex-body .mt { margin-top: 20px; }
+
+    /* SPLASH */
+    .mx-splash {
+      position: fixed; inset: 0; z-index: 100;
+      background: #f5e8d0;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 0;
+      transition: opacity 0.7s ease;
+    }
+    .mx-papel-top { width: 100%; height: 80px; }
+    .mx-papel-bot { width: 100%; height: 80px; transform: rotate(180deg); }
+    .mx-splash-content { text-align: center; padding: 32px 24px; max-width: 420px; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .mx-marigold-deco { width: 80px; height: 80px; margin: 0 auto 16px; animation: mx-spin 24s linear infinite; }
+    @keyframes mx-spin { to { transform: rotate(360deg); } }
+    .mx-splash h1 {
+      font-family: 'Abril Fatface', serif;
+      font-size: clamp(40px, 8vw, 64px);
+      color: #8b1e1e;
+      margin: 0 0 16px;
+      line-height: 1.1;
+    }
+    .mx-splash h1 span { font-family: 'Lobster', cursive; color: #c4631e; }
+    .mx-issue { font-size: 14px; letter-spacing: 0.16em; color: #3a2818; margin: 0 0 4px; font-weight: 500; }
+    .mx-issue-loc { font-family: 'Lobster', cursive; font-size: 18px; color: #1a8a8a; margin: 0 0 32px; }
+    #mx-cta {
+      background: #8b1e1e;
+      color: #f5e8d0;
+      border: none;
+      padding: 14px 32px;
+      font-family: 'Abril Fatface', serif;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    #mx-cta:hover { background: #c4631e; transform: translateY(-2px); }
+
+    /* HERO */
+    .mx-hero { position: relative; height: 100vh; min-height: 720px; overflow: hidden; }
+    .mx-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(1.05); }
+    .mx-hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%); }
+    .mx-papel-hero-top { position: absolute; top: 0; left: 0; width: 100%; height: 60px; }
+    .mx-hero-text { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 32px; text-align: center; color: #f5e8d0; }
+    .mx-hero-pre { font-family: 'Lobster', cursive; font-size: 22px; color: #f4a14e; margin: 0 0 16px; }
+    .mx-hero h1 {
+      font-family: 'Abril Fatface', serif;
+      font-size: clamp(72px, 16vw, 220px);
+      color: #f5e8d0;
+      line-height: 1;
+      margin: 0 0 16px;
+    }
+    .mx-hero h1 em { color: #f4a14e; padding: 0 0.05em; }
+    .mx-hero-couple { font-family: 'Lobster', cursive; font-size: clamp(28px, 5vw, 44px); color: #f5e8d0; margin: 0 0 24px; }
+    .mx-hero-meta { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+    .mx-hero-meta p { margin: 0; font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase; color: #f5e8d0; }
+
+    /* PARENTS */
+    .mx-parents { padding: 100px 24px; max-width: 900px; margin: 0 auto; text-align: center; }
+    .mx-parents-decor svg { width: 60px; height: 60px; margin: 0 auto 16px; }
+    .mx-parents-grid { display: grid; gap: 32px; margin: 32px 0; }
+    @media (min-width: 700px) { .mx-parents-grid { grid-template-columns: 1fr 1fr; gap: 48px; } }
+    .mx-parents-title { font-family: 'Lobster', cursive; font-size: 22px; color: #1a8a8a; margin: 0 0 16px; }
+    .mx-parents-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; margin: 4px 0; color: #3a2818; }
+    .mx-padrinos { padding-top: 32px; border-top: 2px dotted rgba(139,30,30,0.3); }
+    .mx-padrinos p { font-family: 'Cormorant Garamond', serif; font-size: 20px; margin: 0; color: #3a2818; }
+
+    /* QUOTE */
+    .mx-quote { padding: 80px 24px; max-width: 800px; margin: 0 auto; text-align: center; }
+    .mx-quote-flower { width: 70px; height: 70px; margin: 0 auto 24px; }
+    .mx-quote blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(20px, 2.6vw, 30px);
+      line-height: 1.5;
+      margin: 0 0 24px;
+      color: #3a2818;
+    }
+    .mx-quote p { font-family: 'Lobster', cursive; font-size: 18px; color: #c4631e; margin: 0; }
+
+    /* LETTER */
+    .mx-letter { padding: 80px 24px; max-width: 760px; margin: 0 auto; }
+    .mx-letter-frame {
+      background: #fff;
+      padding: 48px 32px;
+      box-shadow: 0 14px 50px rgba(58,40,24,0.1);
+      border: 2px solid rgba(139,30,30,0.15);
+      position: relative;
+    }
+    .mx-letter-frame .mx-script { font-size: 32px; margin: 0 0 20px; text-align: center; }
+    .mx-letter-frame p { font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.7; margin: 0 0 18px; color: #3a2818; }
+    .mx-sign { font-family: 'Cormorant Garamond', serif !important; text-align: right; font-size: 20px !important; }
+    .mx-sign span { font-family: 'Lobster', cursive; color: #c4631e; font-size: 30px; }
+
+    /* COUNTDOWN */
+    .mx-cd { padding: 80px 24px; max-width: 800px; margin: 0 auto; text-align: center; background: #fff; border-top: 2px solid #1a8a8a; border-bottom: 2px solid #1a8a8a; }
+    .mx-cd-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 32px auto; }
+    .mx-cd-grid > div {
+      padding: 24px 8px;
+      background: #1a8a8a;
+      color: #f5e8d0;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(26,138,138,0.25);
+    }
+    .mx-cd-grid span { display: block; font-family: 'Abril Fatface', serif; font-size: clamp(36px, 6vw, 56px); color: #f5e8d0; line-height: 1; }
+    .mx-cd-grid p { margin: 12px 0 0; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #f4a14e; font-weight: 500; }
+    .mx-cd-foot { font-family: 'Cormorant Garamond', serif; font-style: italic; color: #3a2818; margin: 0; font-size: 18px; }
+
+    /* STORY */
+    .mx-story { padding: 100px 24px; max-width: 1200px; margin: 0 auto; }
+    .mx-story-head { text-align: center; margin-bottom: 56px; }
+    .mx-story-head h2 { font-size: clamp(40px, 6vw, 72px); margin: 0; line-height: 1.05; }
+    .mx-story-grid { display: grid; gap: 24px; }
+    @media (min-width: 700px) { .mx-story-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
+    @media (min-width: 1000px) { .mx-story-grid { grid-template-columns: repeat(3, 1fr); } }
+    .mx-story-grid article { padding: 32px 24px; background: #fff; border-radius: 12px; border-top: 4px solid #c4631e; box-shadow: 0 8px 24px rgba(58,40,24,0.08); text-align: center; }
+    .mx-flower-mini { width: 50px; height: 50px; margin: 0 auto 12px; display: block; }
+    .mx-year { font-family: 'Abril Fatface', serif; font-size: 32px; color: #1a8a8a; margin: 0 0 12px; line-height: 1; }
+    .mx-story-grid h3 { font-family: 'Lobster', cursive; font-size: 22px; margin: 0 0 12px; color: #8b1e1e; }
+    .mx-story-grid p { font-family: 'Cormorant Garamond', serif; font-size: 17px; line-height: 1.6; color: #3a2818; margin: 0; }
+
+    /* GALLERY */
+    .mx-gallery { padding: 100px 24px; max-width: 1280px; margin: 0 auto; text-align: center; }
+    .mx-gallery h2 { font-size: clamp(36px, 5vw, 60px); margin: 0 0 56px; }
+    .mx-gal-grid { display: grid; gap: 8px; grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 768px) { .mx-gal-grid { grid-template-columns: repeat(3, 1fr); } }
+    .mx-gal-grid figure { margin: 0; aspect-ratio: 4/5; overflow: hidden; border: 4px solid #f4a14e; }
+    .mx-gal-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s ease; }
+    .mx-gal-grid figure:hover img { transform: scale(1.05); }
+
+    /* PROGRAM */
+    .mx-program { padding: 100px 24px; max-width: 800px; margin: 0 auto; text-align: center; }
+    .mx-program h2 { font-size: clamp(36px, 5.5vw, 64px); margin: 0 0 56px; line-height: 1.1; }
+    .mx-program-list { display: grid; gap: 14px; text-align: left; }
+    .mx-pr-row { display: grid; grid-template-columns: 90px 1fr; gap: 20px; align-items: center; padding: 20px 24px; background: #fff; border-radius: 12px; border-left: 6px solid #1a8a8a; box-shadow: 0 4px 12px rgba(58,40,24,0.06); }
+    .mx-pr-row span { font-family: 'Abril Fatface', serif; font-size: 28px; color: #c4631e; }
+    .mx-pr-row h4 { font-family: 'Lobster', cursive; font-size: 22px; margin: 0 0 4px; color: #8b1e1e; }
+    .mx-pr-row p { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #3a2818; margin: 0; }
+
+    /* LOC */
+    .mx-loc { padding: 100px 24px; max-width: 1100px; margin: 0 auto; text-align: center; }
+    .mx-loc h2 { font-size: clamp(36px, 5vw, 60px); margin: 0 0 56px; }
+    .mx-loc-grid { display: grid; gap: 24px; text-align: left; margin-bottom: 48px; }
+    @media (min-width: 700px) { .mx-loc-grid { grid-template-columns: repeat(2, 1fr); } }
+    .mx-loc-grid article { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(58,40,24,0.08); }
+    .mx-loc-img { width: 100%; height: 220px; background-size: cover; background-position: center; }
+    .mx-loc-grid article > * { padding-left: 24px; padding-right: 24px; }
+    .mx-loc-tag { font-family: 'Lobster', cursive; font-size: 18px; color: #1a8a8a; margin: 20px 0 8px; }
+    .mx-loc-grid h3 { font-size: 24px; margin: 0 0 12px; }
+    .mx-loc-grid > article > p { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: #3a2818; margin: 0 0 16px; }
+    .mx-loc-grid a { display: inline-block; color: #8b1e1e; font-family: 'Lobster', cursive; font-size: 17px; border-bottom: 1px solid #8b1e1e; padding-bottom: 4px; margin-bottom: 24px; text-decoration: none; }
+    .mx-hotels { padding: 32px; background: #fff; border-radius: 16px; text-align: left; box-shadow: 0 6px 24px rgba(58,40,24,0.06); border-left: 6px solid #c4631e; }
+    .mx-hotels h4 { margin: 0 0 16px; font-family: 'Lobster', cursive; font-size: 24px; color: #c4631e; }
+    .mx-hotels ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+    .mx-hotels li { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: #3a2818; }
+    .mx-hotels strong { color: #8b1e1e; font-family: 'Inter', sans-serif; font-weight: 600; }
+    .mx-hotels em { color: #1a8a8a; font-family: 'Inter', sans-serif; font-style: normal; letter-spacing: 0.1em; }
+    .mx-hotels p { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: #3a2818; margin: 0; line-height: 1.5; }
+
+    /* DRESS */
+    .mx-dress { padding: 100px 24px; max-width: 800px; margin: 0 auto; text-align: center; }
+    .mx-dress h2 { font-size: clamp(32px, 5vw, 56px); margin: 0 0 24px; }
+    .mx-dress-text { font-family: 'Cormorant Garamond', serif; font-size: 18px; line-height: 1.7; margin: 0 0 40px; color: #3a2818; }
+    .mx-swatches { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+    .mx-swatches > div { text-align: center; }
+    .mx-swatches span { display: block; width: 56px; height: 56px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    .mx-swatches p { margin: 12px 0 0; font-family: 'Lobster', cursive; font-size: 14px; color: #3a2818; }
+
+    /* KIDS */
+    .mx-kids { padding: 60px 24px; max-width: 720px; margin: 0 auto; text-align: center; }
+    .mx-kids p { font-family: 'Cormorant Garamond', serif; font-size: 19px; color: #3a2818; line-height: 1.6; margin: 0; }
+
+    /* GIFTS */
+    .mx-gifts { padding: 100px 24px; max-width: 1100px; margin: 0 auto; text-align: center; }
+    .mx-gifts h2 { font-size: clamp(36px, 5vw, 60px); margin: 0 0 24px; }
+    .mx-gifts-text { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #3a2818; max-width: 640px; margin: 0 auto 48px; }
+    .mx-gifts-grid { display: grid; gap: 20px; text-align: left; }
+    @media (min-width: 700px) { .mx-gifts-grid { grid-template-columns: repeat(2, 1fr); } }
+    .mx-gift { padding: 28px; background: #fff; border-radius: 12px; border-top: 4px solid #1a8a8a; box-shadow: 0 6px 20px rgba(58,40,24,0.06); }
+    .mx-gift h4 { font-family: 'Lobster', cursive; font-size: 24px; margin: 0 0 12px; color: #c4631e; }
+    .mx-gift p { font-family: 'Cormorant Garamond', serif; font-size: 17px; line-height: 1.6; color: #3a2818; margin: 0; }
+    .mx-gift em { color: #8b1e1e; font-family: 'Inter', sans-serif; font-style: normal; letter-spacing: 0.06em; }
+
+    /* RSVP */
+    .mx-rsvp { padding: 100px 24px; max-width: 640px; margin: 0 auto; text-align: center; }
+    .mx-rsvp h2 { font-size: clamp(48px, 7vw, 80px); margin: 0 0 12px; line-height: 1; }
+    .mx-deadline { font-family: 'Lobster', cursive; color: #c4631e; margin: 0 0 40px; font-size: 20px; }
+    #mx-rsvp-form { display: grid; gap: 16px; text-align: left; }
+    #mx-rsvp-form label { display: grid; gap: 6px; }
+    #mx-rsvp-form span { font-family: 'Lobster', cursive; font-size: 18px; color: #1a8a8a; }
+    #mx-rsvp-form input, #mx-rsvp-form select { background: #fff; border: 2px solid rgba(139,30,30,0.2); border-radius: 8px; padding: 12px 14px; font-size: 16px; font-family: 'Cormorant Garamond', serif; color: #3a2818; outline: none; transition: border-color 0.2s ease; }
+    #mx-rsvp-form input:focus, #mx-rsvp-form select:focus { border-color: #8b1e1e; }
+    .mx-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    #mx-rsvp-form button { margin-top: 16px; background: #8b1e1e; color: #f5e8d0; border: none; padding: 16px 24px; border-radius: 8px; font-family: 'Abril Fatface', serif; font-size: 18px; letter-spacing: 0.04em; }
+    .mx-rsvp-ok { font-family: 'Lobster', cursive; color: #1a8a8a; font-size: 22px; text-align: center; margin-top: 16px; }
+
+    /* PLAYLIST */
+    .mx-pl { padding: 100px 24px; max-width: 900px; margin: 0 auto; text-align: center; }
+    .mx-pl h2 { font-size: clamp(36px, 5vw, 56px); margin: 0 0 48px; line-height: 1.1; }
+    .mx-pl-grid { display: grid; gap: 12px; grid-template-columns: 1fr; text-align: left; }
+    @media (min-width: 700px) { .mx-pl-grid { grid-template-columns: 1fr 1fr; } }
+    .mx-pl-grid > div { padding: 16px 20px; background: #fff; border-radius: 12px; border-left: 4px solid #f4a14e; box-shadow: 0 4px 12px rgba(58,40,24,0.05); }
+    .mx-pl-grid strong { display: block; font-family: 'Abril Fatface', serif; font-weight: 400; font-size: 18px; color: #8b1e1e; }
+    .mx-pl-grid em { font-family: 'Lobster', cursive; font-size: 16px; color: #c4631e; font-style: normal; }
+
+    /* HASH */
+    .mx-hash { padding: 100px 24px; text-align: center; max-width: 800px; margin: 0 auto; }
+    .mx-hash-tag { font-family: 'Lobster', cursive !important; font-size: clamp(28px, 6vw, 56px); color: #c4631e !important; margin: 16px 0 24px; word-break: break-word; }
+    .mx-hash p { font-family: 'Cormorant Garamond', serif; font-size: 19px; color: #3a2818; margin: 0; }
+
+    /* END */
+    .mx-end { position: relative; background: #1a8a8a; color: #f5e8d0; }
+    .mx-papel-end-top { width: 100%; height: 80px; }
+    .mx-end-inner { padding: 80px 24px 100px; max-width: 720px; margin: 0 auto; text-align: center; }
+    .mx-end-flower { width: 80px; height: 80px; margin: 0 auto 24px; display: block; }
+    .mx-end-inner .mx-script { font-size: 36px; margin: 0 0 16px; color: #f4a14e; }
+    .mx-end h2 { font-size: clamp(40px, 7vw, 72px); margin: 0 0 32px; line-height: 1.1; color: #f5e8d0; font-family: 'Abril Fatface', serif; }
+    .mx-end h2 em { color: #f4a14e; font-family: 'Lobster', cursive; }
+    .mx-end-sig { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; color: #f5e8d0; margin: 0 0 8px; }
+    .mx-end-date { font-family: 'Lobster', cursive; font-size: 18px; color: #f4a14e; margin: 0; }
+  </style>
+
+  <script>
+    import gsap from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    gsap.registerPlugin(ScrollTrigger);
+
+    const splash = document.getElementById('mx-splash');
+    const cta = document.getElementById('mx-cta');
+    if (splash) {
+      document.body.style.overflow = 'hidden';
+      const dismiss = () => {
+        gsap.to(splash, { opacity: 0, duration: 0.7, ease: 'power2.in', onComplete: () => {
+          splash.style.display = 'none';
+          document.body.style.overflow = '';
+        }});
+      };
+      cta?.addEventListener('click', dismiss);
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-animate]').forEach(el => io.observe(el));
+
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const heroImg = document.querySelector<HTMLImageElement>('.mx-hero img');
+      if (heroImg) gsap.to(heroImg, { yPercent: 12, ease: 'none', scrollTrigger: { trigger: '.mx-hero', start: 'top top', end: 'bottom top', scrub: true } });
+    }
+
+    const target = new Date('2027-10-18T16:00:00-06:00').getTime();
+    const tick = () => {
+      const diff = target - Date.now();
+      if (diff <= 0) return;
+      const set = (id: string, v: number) => { const el = document.getElementById(id); if (el) el.textContent = String(v).padStart(2, '0'); };
+      set('mx-d', Math.floor(diff / 86400000));
+      set('mx-h', Math.floor((diff / 3600000) % 24));
+      set('mx-m', Math.floor((diff / 60000) % 60));
+      set('mx-s', Math.floor((diff / 1000) % 60));
+    };
+    tick(); setInterval(tick, 1000);
+
+    const form = document.getElementById('mx-rsvp-form');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('mx-rsvp-ok')?.removeAttribute('hidden');
+      (form as HTMLFormElement).reset();
+    });
+  </script>
+</DemoLayout>

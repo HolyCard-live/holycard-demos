@@ -1,0 +1,97 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  themeColor?: string;
+  bodyClass?: string;
+  fontsHref?: string;
+  ogImage?: string;
+  progressColor?: string;
+}
+const {
+  title = 'Holycard — Invitación',
+  description = 'Invitación digital de boda',
+  themeColor = '#ffffff',
+  bodyClass = '',
+  fontsHref,
+  ogImage = 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&auto=format&fit=crop&q=80',
+  progressColor = '#111111',
+} = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content={themeColor} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    {fontsHref && <link href={fontsHref} rel="stylesheet" />}
+    <slot name="head" />
+  </head>
+  <body class={bodyClass}>
+    <div
+      id="scroll-progress"
+      style={`position:fixed;top:0;left:0;height:2px;width:100%;background:${progressColor};z-index:90;transform:scaleX(0);transform-origin:left;`}
+      aria-hidden="true"
+    ></div>
+
+    <a
+      href="/"
+      class="back-home"
+      aria-label="Volver a la galería"
+      style="position:fixed;top:14px;left:14px;z-index:80;display:flex;align-items:center;gap:6px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);font-family:'Inter',system-ui,sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#222;text-decoration:none;border:1px solid rgba(0,0,0,0.08);box-shadow:0 4px 14px rgba(0,0,0,0.08);"
+    >
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Demos
+    </a>
+
+    <slot />
+
+    <script>
+      import Lenis from 'lenis';
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      });
+      function raf(time: number) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+
+      const progressBar = document.getElementById('scroll-progress');
+      if (progressBar) {
+        window.addEventListener('scroll', () => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+          progressBar.style.transform = `scaleX(${progress})`;
+        }, { passive: true });
+      }
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: auto; -webkit-text-size-adjust: 100%; }
+  img { max-width: 100%; display: block; }
+  button { font-family: inherit; cursor: pointer; }
+  .back-home:hover { background: #fff; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>

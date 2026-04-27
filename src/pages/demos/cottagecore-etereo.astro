@@ -1,0 +1,686 @@
+---
+import DemoLayout from '../../layouts/DemoLayout.astro';
+const fonts = 'https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Lora:ital,wght@0,400;0,500;1,400&family=Quicksand:wght@300;400;500&display=swap';
+---
+<DemoLayout
+  title="Joaquín & Lucía · 17·07·2027 · Valle de Guadalupe"
+  description="Boda al atardecer entre viñedos de Valle de Guadalupe."
+  themeColor="#fefdf8"
+  bodyClass="cot-body"
+  fontsHref={fonts}
+  ogImage="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&auto=format&fit=crop&q=80"
+  progressColor="#b8a4c9"
+>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="ct-eucalyptus" viewBox="0 0 100 200">
+        <path d="M50,5 Q52,80 50,160 Q48,180 50,195" stroke="#7a9476" stroke-width="1" fill="none"/>
+        <g fill="#a8c4a2" stroke="#7a9476" stroke-width="0.4">
+          <ellipse cx="35" cy="20" rx="9" ry="14" transform="rotate(-30 35 20)"/>
+          <ellipse cx="65" cy="35" rx="9" ry="14" transform="rotate(30 65 35)"/>
+          <ellipse cx="33" cy="55" rx="10" ry="15" transform="rotate(-30 33 55)"/>
+          <ellipse cx="67" cy="70" rx="10" ry="15" transform="rotate(30 67 70)"/>
+          <ellipse cx="35" cy="95" rx="11" ry="16" transform="rotate(-30 35 95)"/>
+          <ellipse cx="65" cy="115" rx="11" ry="16" transform="rotate(30 65 115)"/>
+          <ellipse cx="40" cy="140" rx="9" ry="13" transform="rotate(-30 40 140)"/>
+          <ellipse cx="60" cy="160" rx="8" ry="12" transform="rotate(30 60 160)"/>
+        </g>
+      </symbol>
+      <symbol id="ct-flower" viewBox="0 0 60 60">
+        <g fill="#f0d5d5" stroke="#b8a4c9" stroke-width="0.4">
+          <ellipse cx="30" cy="14" rx="6" ry="10"/>
+          <ellipse cx="46" cy="22" rx="10" ry="6" transform="rotate(45 46 22)"/>
+          <ellipse cx="46" cy="38" rx="6" ry="10" transform="rotate(90 46 38)"/>
+          <ellipse cx="30" cy="46" rx="6" ry="10"/>
+          <ellipse cx="14" cy="38" rx="10" ry="6" transform="rotate(45 14 38)"/>
+          <ellipse cx="14" cy="22" rx="10" ry="6" transform="rotate(-45 14 22)"/>
+          <ellipse cx="46" cy="22" rx="6" ry="10" transform="rotate(-45 46 22)"/>
+          <circle cx="30" cy="30" r="5" fill="#f5e6a8"/>
+          <circle cx="30" cy="30" r="2" fill="#b8a4c9"/>
+        </g>
+      </symbol>
+      <symbol id="ct-wreath" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#a8c4a2" stroke-width="0.6"/>
+        <use href="#ct-eucalyptus" x="20" y="80" width="50" height="100" transform="rotate(120 50 130)"/>
+        <use href="#ct-eucalyptus" x="130" y="80" width="50" height="100" transform="rotate(-120 150 130)"/>
+        <use href="#ct-flower" x="80" y="10" width="40" height="40"/>
+        <use href="#ct-flower" x="80" y="150" width="40" height="40"/>
+        <use href="#ct-flower" x="20" y="80" width="30" height="30"/>
+        <use href="#ct-flower" x="150" y="90" width="30" height="30"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ SPLASH ============ -->
+  <div id="ct-splash" class="ct-splash">
+    <div class="ct-splash-glow" aria-hidden="true"></div>
+    <svg class="ct-wreath-splash" viewBox="0 0 200 200"><use href="#ct-wreath"/></svg>
+    <div class="ct-splash-content">
+      <p class="ct-pre">Acompáñanos a celebrar nuestro</p>
+      <p class="ct-script-big">amor</p>
+      <h1>Joaquín <span>&amp;</span> Lucía</h1>
+      <div class="ct-divider"><span></span><svg viewBox="0 0 60 60" width="20" height="20"><use href="#ct-flower"/></svg><span></span></div>
+      <p class="ct-issue">17 · Julio · 2027 · Valle de Guadalupe</p>
+      <button id="ct-cta">Entrar al jardín</button>
+    </div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="ct-hero">
+    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1800&auto=format&fit=crop&q=85" alt="Valle de Guadalupe"/>
+    <div class="ct-hero-veil"></div>
+    <div class="ct-petals" id="ct-petals" aria-hidden="true"></div>
+    <svg class="ct-eucalyptus-tl" viewBox="0 0 100 200"><use href="#ct-eucalyptus"/></svg>
+    <svg class="ct-eucalyptus-br" viewBox="0 0 100 200"><use href="#ct-eucalyptus"/></svg>
+    <div class="ct-hero-text">
+      <p class="ct-script-big">Save the date</p>
+      <h1>Joaquín <em>&amp;</em><br/>Lucía</h1>
+      <p class="ct-hero-meta">Sábado · 17 de julio de 2027</p>
+      <p class="ct-hero-meta light">Cuatro Cuatros · Valle de Guadalupe</p>
+    </div>
+  </section>
+
+  <!-- ============ FRASE ============ -->
+  <section class="ct-quote" data-animate>
+    <svg class="ct-flower-deco" viewBox="0 0 60 60"><use href="#ct-flower"/></svg>
+    <blockquote>
+      "Y si me preguntan dónde he estado,<br/>
+      diré que <em>en su risa</em>, todo este tiempo."
+    </blockquote>
+    <p>— Carta encontrada entre nuestras cosas.</p>
+  </section>
+
+  <!-- ============ MENSAJE ============ -->
+  <section class="ct-letter">
+    <div class="ct-letter-paper" data-animate>
+      <p class="ct-script">Querida persona,</p>
+      <p>
+        Llevamos siete primaveras juntos. Cada año plantamos algo: un romero, una jacaranda,
+        una manzanilla. Esta vez plantamos una boda — y queremos que la veas crecer.
+      </p>
+      <p>
+        Será al atardecer, entre viñedos. Habrá pan recién hecho, queso fresco, vino del valle.
+        Habrá luces colgando, mantas para el frío, y nada que apure. Solo la noche cayendo
+        despacio sobre todos nosotros.
+      </p>
+      <p class="ct-letter-sign">Con cariño,<br/><span>Joaquín &amp; Lucía</span></p>
+    </div>
+  </section>
+
+  <!-- ============ COUNTDOWN ============ -->
+  <section class="ct-cd" data-animate>
+    <p class="ct-pre center">Faltan</p>
+    <div class="ct-cd-grid">
+      <div><span id="ct-d">--</span><p>días</p></div>
+      <div class="ct-cd-sep"><svg viewBox="0 0 60 60"><use href="#ct-flower"/></svg></div>
+      <div><span id="ct-h">--</span><p>horas</p></div>
+      <div class="ct-cd-sep"><svg viewBox="0 0 60 60"><use href="#ct-flower"/></svg></div>
+      <div><span id="ct-m">--</span><p>min</p></div>
+      <div class="ct-cd-sep"><svg viewBox="0 0 60 60"><use href="#ct-flower"/></svg></div>
+      <div><span id="ct-s">--</span><p>seg</p></div>
+    </div>
+    <p class="ct-cd-foot">para encontrarnos.</p>
+  </section>
+
+  <!-- ============ HISTORIA ============ -->
+  <section class="ct-story">
+    <div class="ct-story-head" data-animate>
+      <svg class="ct-flower-deco" viewBox="0 0 60 60"><use href="#ct-flower"/></svg>
+      <p class="ct-pre center">Nuestra historia</p>
+      <h2><em>Siete</em> primaveras<br/>juntos.</h2>
+    </div>
+    <div class="ct-story-list">
+      <article data-animate>
+        <p class="ct-year">2020</p>
+        <h3>Mercado de domingo en Coyoacán.</h3>
+        <p>Compré un ramo de manzanilla. Me dijo que olía bien. Le compré otro. Sigue habiendo manzanilla en la casa.</p>
+      </article>
+      <article data-animate class="alt">
+        <p class="ct-year">2021</p>
+        <h3>Una huerta en Tepoztlán.</h3>
+        <p>Plantamos jitomate, calabaza y cilantro. Solo crecieron las hierbas. Empezamos a cocinar mejor.</p>
+      </article>
+      <article data-animate>
+        <p class="ct-year">2023</p>
+        <h3>Casita rentada en Valle.</h3>
+        <p>Vinimos al valle por primera vez. Despertamos con niebla. Volvimos seis veces ese año.</p>
+      </article>
+      <article data-animate class="alt">
+        <p class="ct-year">2025</p>
+        <h3>La pedida en el rosal.</h3>
+        <p>Un domingo. Ramo de rosas blancas. Anillo simple. Nada planeado, todo necesario.</p>
+      </article>
+      <article data-animate>
+        <p class="ct-year">2027</p>
+        <h3>Cuatro Cuatros.</h3>
+        <p>Volvemos al valle. Esta vez con todos los que nos importan.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ FOTO PARALLAX ============ -->
+  <section class="ct-photo">
+    <img src="https://images.unsplash.com/photo-1505490625596-3a8b1be4afa3?w=1600&auto=format&fit=crop&q=85" alt=""/>
+  </section>
+
+  <!-- ============ GALERÍA ============ -->
+  <section class="ct-gallery" data-animate>
+    <p class="ct-pre center">Memorias</p>
+    <h2><em>Pequeños</em> tesoros.</h2>
+    <div class="ct-gal-grid">
+      <figure><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1505631104084-a40bb04f7d83?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1485463611174-f302f6a5c1c9?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1510265382576-1c2bb937bb1d?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1518710843675-2540dd79065c?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+    </div>
+  </section>
+
+  <!-- ============ ITINERARIO ============ -->
+  <section class="ct-program">
+    <div class="ct-program-head" data-animate>
+      <p class="ct-pre center">El día</p>
+      <h2><em>Sin prisa,</em><br/>así nos gusta.</h2>
+    </div>
+    <div class="ct-program-list">
+      <div class="ct-pr-item" data-animate>
+        <div class="ct-pr-time"><span>17:00</span><p>hrs</p></div>
+        <div class="ct-pr-body"><h4>Llegada al viñedo</h4><p>Welcome con limonada de lavanda y queso del valle.</p></div>
+      </div>
+      <div class="ct-pr-item alt" data-animate>
+        <div class="ct-pr-time"><span>18:00</span><p>hrs</p></div>
+        <div class="ct-pr-body"><h4>Ceremonia simbólica</h4><p>Entre vides, con el atardecer cayendo lento.</p></div>
+      </div>
+      <div class="ct-pr-item" data-animate>
+        <div class="ct-pr-time"><span>19:30</span><p>hrs</p></div>
+        <div class="ct-pr-body"><h4>Brindis &amp; cata</h4><p>Vinos del valle, jamón ibérico, pan recién hecho.</p></div>
+      </div>
+      <div class="ct-pr-item alt" data-animate>
+        <div class="ct-pr-time"><span>21:00</span><p>hrs</p></div>
+        <div class="ct-pr-body"><h4>Cena familiar</h4><p>Mesas largas. Banquete de campo. Tres tiempos.</p></div>
+      </div>
+      <div class="ct-pr-item" data-animate>
+        <div class="ct-pr-time"><span>23:00</span><p>hrs</p></div>
+        <div class="ct-pr-body"><h4>Música y baile</h4><p>Trío de cuerdas y luego DJ con set folk-electronic.</p></div>
+      </div>
+      <div class="ct-pr-item alt" data-animate>
+        <div class="ct-pr-time"><span>02:00</span><p>hrs</p></div>
+        <div class="ct-pr-body"><h4>Pan dulce y café</h4><p>Para los que quieran ver el sol salir entre las parras.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UBICACIÓN ============ -->
+  <section class="ct-loc" data-animate>
+    <p class="ct-pre center">Locación</p>
+    <h2>Cuatro Cuatros</h2>
+    <p class="ct-loc-text">
+      Viñedo y resort sobre las colinas de Valle de Guadalupe, BC. Ceremonia en el viñedo de
+      poniente, recepción en el "Bar Bura" con vista al valle.
+    </p>
+    <div class="ct-loc-img">
+      <img src="https://images.unsplash.com/photo-1474649107449-ea4f014b7e9f?w=1400&auto=format&fit=crop&q=80" alt="Cuatro Cuatros viñedo"/>
+    </div>
+    <p class="ct-loc-address">Carretera Federal Tecate-Ensenada Km 89.5, Valle de Guadalupe, BC.</p>
+    <a href="https://maps.google.com" target="_blank" rel="noopener" class="ct-link">Ver en mapa →</a>
+    <div class="ct-trans">
+      <h4>Cómo llegar</h4>
+      <ul>
+        <li><strong>Avión:</strong> a Tijuana (TIJ), 1h 30min en auto al valle.</li>
+        <li><strong>Auto:</strong> desde San Diego, 2h por la carretera escénica.</li>
+        <li><strong>Hospedaje en sitio:</strong> 30 cabañas con tarifa especial $3,800 MXN/noche con código <em>JYL2027</em>.</li>
+        <li><strong>Otras opciones:</strong> Encuentro Guadalupe, Bruma, Adobe Guadalupe.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ DRESS CODE ============ -->
+  <section class="ct-dress" data-animate>
+    <p class="ct-pre center">Dress code</p>
+    <h2><em>Garden</em> chic.</h2>
+    <p class="ct-dress-text">
+      Telas frescas, tonos pastel, suelas cómodas (caminamos sobre tierra y pasto).
+      Ellas: vestidos largos, faldas con vuelo, encajes. Ellos: traje de lino, sin corbata.
+      <em>Trae un suéter</em> — cuando cae el sol, refresca.
+    </p>
+    <div class="ct-swatches">
+      <div><span style="background:#b8a4c9"></span><p>Lavanda</p></div>
+      <div><span style="background:#f5e6a8"></span><p>Mantequilla</p></div>
+      <div><span style="background:#a8c4a2"></span><p>Eucalipto</p></div>
+      <div><span style="background:#f0d5d5"></span><p>Rosa polvo</p></div>
+      <div><span style="background:#d8c0a8"></span><p>Trigo</p></div>
+      <div><span style="background:#9eaa86"></span><p>Salvia</p></div>
+    </div>
+    <p class="ct-dress-no">Por favor, reserva el blanco para nosotros.</p>
+  </section>
+
+  <!-- ============ REGALOS ============ -->
+  <section class="ct-gifts" data-animate>
+    <p class="ct-pre center">Regalos</p>
+    <h2><em>Tu compañía</em><br/>es nuestra alegría.</h2>
+    <div class="ct-gifts-grid">
+      <div class="ct-gift">
+        <h4>Sobre</h4>
+        <p>Habrá una canasta de mimbre con sobres bordados a mano en la entrada.</p>
+      </div>
+      <div class="ct-gift">
+        <h4>Transferencia</h4>
+        <p>Santander · 5031 7894 5612 8902<br/>CLABE: 014180050317894561<br/>Joaquín Mendoza / Lucía Cárdenas</p>
+      </div>
+      <div class="ct-gift">
+        <h4>Mesa Sears</h4>
+        <p>Evento <em>#67890</em> · Búscanos como "Mendoza-Cárdenas".</p>
+      </div>
+      <div class="ct-gift">
+        <h4>Luna de miel</h4>
+        <p>Vamos a la Toscana en agosto. Aporta a un pícnic, una bicicleta, una tarde con vino.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RSVP ============ -->
+  <section class="ct-rsvp" data-animate>
+    <div class="ct-rsvp-paper">
+      <svg class="ct-flower-deco" viewBox="0 0 60 60"><use href="#ct-flower"/></svg>
+      <p class="ct-pre center">Confirmación</p>
+      <h2>¿Vienes con nosotros?</h2>
+      <p class="ct-deadline">Confirma antes del 17 de junio de 2027.</p>
+      <form id="ct-rsvp-form" novalidate>
+        <label><span>Tu nombre</span><input type="text" name="name" required/></label>
+        <div class="ct-row">
+          <label><span>Asistencia</span><select name="attend"><option>Sí, ahí estaré</option><option>No podré</option></select></label>
+          <label><span>Pase para</span><select name="guests"><option>1</option><option>2</option></select></label>
+        </div>
+        <label><span>Restricciones</span><input type="text" name="diet" placeholder="Vegetariano, sin gluten, alergias..."/></label>
+        <label><span>¿Te quedarás en Cuatro Cuatros?</span><select name="stay"><option>Sí, reservaré cabaña</option><option>No, otro hotel</option><option>Aún no decido</option></select></label>
+        <label><span>Una canción para escuchar al atardecer</span><input type="text" name="song"/></label>
+        <button type="submit">Confirmar</button>
+        <p id="ct-rsvp-ok" class="ct-rsvp-ok" hidden>¡Gracias! Tu silla en el viñedo está reservada.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ PLAYLIST ============ -->
+  <section class="ct-pl" data-animate>
+    <p class="ct-pre center">Soundtrack</p>
+    <h2>Lo que <em>sonará</em> al atardecer.</h2>
+    <ol class="ct-pl-list">
+      <li><span>I.</span><strong>Holocene</strong><em>Bon Iver</em></li>
+      <li><span>II.</span><strong>Vincent</strong><em>Don McLean</em></li>
+      <li><span>III.</span><strong>I'll Follow You into the Dark</strong><em>Death Cab for Cutie</em></li>
+      <li><span>IV.</span><strong>The Night We Met</strong><em>Lord Huron</em></li>
+      <li><span>V.</span><strong>First Day of My Life</strong><em>Bright Eyes</em></li>
+      <li><span>VI.</span><strong>Te Esperaré</strong><em>Carla Morrison</em></li>
+      <li><span>VII.</span><strong>Banks of the Ohio</strong><em>Joan Baez</em></li>
+      <li><span>VIII.</span><strong>Skinny Love</strong><em>Birdy</em></li>
+    </ol>
+  </section>
+
+  <!-- ============ HASHTAG ============ -->
+  <section class="ct-hash" data-animate>
+    <svg class="ct-flower-deco" viewBox="0 0 60 60"><use href="#ct-flower"/></svg>
+    <p class="ct-pre center">Comparte el día</p>
+    <h2 class="ct-hash-tag">#JoaquínYLucía<br/>EnElValle</h2>
+    <p>Sube tus fotos. Las que parezcan de revista y las que no. Queremos verlas todas.</p>
+  </section>
+
+  <!-- ============ CIERRE ============ -->
+  <section class="ct-end">
+    <div class="ct-end-glow" aria-hidden="true"></div>
+    <svg class="ct-wreath-end" viewBox="0 0 200 200"><use href="#ct-wreath"/></svg>
+    <div class="ct-end-inner" data-animate>
+      <p class="ct-script">Hasta julio,</p>
+      <h2>Te <em>esperamos.</em></h2>
+      <p class="ct-end-sig">Joaquín · Lucía</p>
+      <p class="ct-end-date">Valle de Guadalupe · Julio 2027</p>
+    </div>
+  </section>
+
+  <style is:global>
+    .cot-body {
+      background: #fefdf8;
+      color: #4a4055;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 400;
+    }
+    .cot-body h1, .cot-body h2 {
+      font-family: 'Lora', serif;
+      font-weight: 400;
+      color: #4a4055;
+      letter-spacing: 0.005em;
+    }
+    .cot-body h3, .cot-body h4 {
+      font-family: 'Lora', serif;
+      font-weight: 500;
+      color: #4a4055;
+    }
+    .cot-body em {
+      font-family: 'Petit Formal Script', cursive;
+      font-style: normal;
+      color: #b8a4c9;
+    }
+    .cot-body [data-animate] { opacity: 0; transform: translateY(28px); transition: opacity 1.4s ease, transform 1.4s ease; }
+    .cot-body [data-animate].in { opacity: 1; transform: none; }
+    .cot-body .ct-pre {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.36em;
+      text-transform: uppercase;
+      color: #b8a4c9;
+      margin: 0 0 16px;
+      font-weight: 500;
+    }
+    .cot-body .ct-pre.center { text-align: center; }
+    .cot-body .ct-script {
+      font-family: 'Petit Formal Script', cursive;
+      color: #b8a4c9;
+    }
+    .cot-body .ct-script-big { font-family: 'Petit Formal Script', cursive; font-size: clamp(36px, 6vw, 64px); color: #b8a4c9; margin: 0 0 12px; line-height: 1; }
+    .cot-body .ct-flower-deco { width: 50px; height: 50px; margin: 0 auto 16px; display: block; }
+
+    /* SPLASH */
+    .ct-splash {
+      position: fixed; inset: 0; z-index: 100;
+      background: linear-gradient(180deg, #fefdf8 0%, #f4eff7 60%, #f0d5d5 100%);
+      display: flex; align-items: center; justify-content: center;
+      padding: 32px;
+      transition: opacity 0.7s ease;
+      overflow: hidden;
+    }
+    .ct-splash-glow {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 600px; height: 600px;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(245,230,168,0.4) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .ct-wreath-splash { position: absolute; width: 320px; height: 320px; opacity: 0.5; animation: ct-spin 60s linear infinite; }
+    @keyframes ct-spin { to { transform: rotate(360deg); } }
+    .ct-splash-content { position: relative; text-align: center; padding: 32px; max-width: 460px; z-index: 5; }
+    .ct-splash h1 {
+      font-family: 'Lora', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(36px, 6vw, 56px);
+      color: #4a4055;
+      margin: 0 0 16px;
+      line-height: 1.1;
+    }
+    .ct-splash h1 span { color: #b8a4c9; font-style: normal; }
+    .ct-divider { display: flex; align-items: center; gap: 12px; justify-content: center; margin: 0 auto 16px; max-width: 200px; }
+    .ct-divider span { flex: 1; height: 1px; background: #b8a4c9; opacity: 0.4; }
+    .ct-issue { font-family: 'Quicksand', sans-serif; font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: #4a4055; margin: 0 0 32px; font-weight: 500; }
+    #ct-cta {
+      background: #b8a4c9;
+      color: #fefdf8;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 999px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    #ct-cta:hover { background: #a890bd; transform: translateY(-2px); }
+
+    /* HERO */
+    .ct-hero { position: relative; height: 100vh; min-height: 720px; overflow: hidden; }
+    .ct-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85) brightness(1.1); }
+    .ct-hero-veil { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(254,253,248,0.2) 0%, rgba(184,164,201,0.4) 100%); }
+    .ct-petals { position: absolute; inset: 0; pointer-events: none; }
+    .ct-petals span { position: absolute; width: 8px; height: 8px; border-radius: 70% 30% 50% 50%; background: rgba(240,213,213,0.85); opacity: 0; animation: ct-fall 9s linear infinite; box-shadow: 0 0 8px rgba(255,255,255,0.4); }
+    @keyframes ct-fall {
+      0% { transform: translateY(-30px) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.85; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+    .ct-eucalyptus-tl { position: absolute; top: 0; left: 0; width: clamp(100px, 18vw, 200px); height: clamp(200px, 36vw, 400px); opacity: 0.7; }
+    .ct-eucalyptus-br { position: absolute; bottom: 0; right: 0; width: clamp(100px, 18vw, 200px); height: clamp(200px, 36vw, 400px); opacity: 0.7; transform: scale(-1, -1); }
+    .ct-hero-text { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 32px; text-align: center; color: #fefdf8; }
+    .ct-hero-text .ct-script-big { color: #fefdf8; margin: 0 0 16px; }
+    .ct-hero h1 {
+      font-family: 'Lora', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(56px, 11vw, 130px);
+      line-height: 1;
+      margin: 0 0 24px;
+      color: #fefdf8;
+      text-shadow: 0 4px 20px rgba(74,64,85,0.3);
+    }
+    .ct-hero h1 em { font-family: 'Petit Formal Script', cursive; color: #f5e6a8; padding: 0 0.05em; }
+    .ct-hero-meta { font-family: 'Quicksand', sans-serif; font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase; color: #fefdf8; margin: 4px 0; font-weight: 500; }
+    .ct-hero-meta.light { font-weight: 400; opacity: 0.95; letter-spacing: 0.24em; }
+
+    /* QUOTE */
+    .ct-quote { padding: 100px 32px; max-width: 800px; margin: 0 auto; text-align: center; }
+    .ct-quote blockquote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: clamp(20px, 2.6vw, 30px);
+      line-height: 1.6;
+      margin: 0 0 24px;
+      color: #4a4055;
+    }
+    .ct-quote p { font-family: 'Petit Formal Script', cursive; font-size: 22px; color: #b8a4c9; margin: 0; }
+
+    /* LETTER */
+    .ct-letter { padding: 80px 24px; max-width: 720px; margin: 0 auto; }
+    .ct-letter-paper {
+      background: #fff;
+      padding: 56px 36px;
+      border-radius: 4px;
+      box-shadow: 0 20px 60px rgba(184,164,201,0.18);
+      position: relative;
+    }
+    .ct-letter-paper::before, .ct-letter-paper::after {
+      content: ''; position: absolute;
+      width: 60px; height: 60px;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'><g fill='%23a8c4a2' opacity='0.5'><ellipse cx='30' cy='15' rx='6' ry='10'/><ellipse cx='45' cy='30' rx='10' ry='6'/><ellipse cx='30' cy='45' rx='6' ry='10'/><ellipse cx='15' cy='30' rx='10' ry='6'/></g></svg>");
+      background-size: contain;
+    }
+    .ct-letter-paper::before { top: -20px; left: -20px; transform: rotate(-15deg); }
+    .ct-letter-paper::after { bottom: -20px; right: -20px; transform: rotate(165deg); }
+    .ct-letter-paper .ct-script { font-size: 32px; margin: 0 0 20px; }
+    .ct-letter-paper p { font-family: 'Lora', serif; font-size: 18px; line-height: 1.8; margin: 0 0 18px; color: #4a4055; }
+    .ct-letter-sign { font-family: 'Lora', serif !important; font-style: italic; text-align: right; font-size: 17px !important; }
+    .ct-letter-sign span { font-family: 'Petit Formal Script', cursive; color: #b8a4c9; font-size: 28px; font-style: normal; }
+
+    /* COUNTDOWN */
+    .ct-cd { padding: 80px 24px; max-width: 900px; margin: 0 auto; text-align: center; }
+    .ct-cd-grid { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 24px auto; flex-wrap: nowrap; }
+    .ct-cd-grid > div:not(.ct-cd-sep) { flex: 1; max-width: 120px; padding: 20px 4px; background: #fff; border-radius: 16px; box-shadow: 0 8px 24px rgba(184,164,201,0.15); }
+    .ct-cd-grid span { display: block; font-family: 'Lora', serif; font-style: italic; font-size: clamp(28px, 5vw, 48px); color: #b8a4c9; line-height: 1; }
+    .ct-cd-grid p { margin: 6px 0 0; font-family: 'Quicksand', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #4a4055; font-weight: 500; }
+    .ct-cd-sep svg { width: 24px; height: 24px; opacity: 0.4; }
+    @media (max-width: 600px) { .ct-cd-sep { display: none; } .ct-cd-grid { flex-wrap: wrap; gap: 8px; } .ct-cd-grid > div:not(.ct-cd-sep) { flex: 1 1 calc(50% - 4px); max-width: none; } }
+    .ct-cd-foot { font-family: 'Petit Formal Script', cursive; color: #b8a4c9; margin: 8px 0 0; font-size: 24px; }
+
+    /* STORY */
+    .ct-story { padding: 100px 24px; max-width: 920px; margin: 0 auto; }
+    .ct-story-head { text-align: center; margin-bottom: 64px; }
+    .ct-story-head h2 { font-size: clamp(36px, 5vw, 64px); margin: 0; line-height: 1.1; }
+    .ct-story-list { display: grid; gap: 24px; }
+    .ct-story-list article { padding: 32px; background: #fff; border-radius: 16px; box-shadow: 0 6px 20px rgba(184,164,201,0.1); position: relative; }
+    .ct-story-list article.alt { background: #f4eff7; }
+    .ct-story-list article::before {
+      content: ''; position: absolute;
+      top: 16px; right: 16px;
+      width: 30px; height: 30px;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'><g fill='%23f5e6a8' opacity='0.6'><circle cx='30' cy='30' r='5'/><ellipse cx='30' cy='15' rx='4' ry='8'/><ellipse cx='45' cy='30' rx='8' ry='4'/><ellipse cx='30' cy='45' rx='4' ry='8'/><ellipse cx='15' cy='30' rx='8' ry='4'/></g></svg>");
+      background-size: contain;
+    }
+    .ct-year { font-family: 'Lora', serif; font-style: italic; font-size: 28px; color: #b8a4c9; margin: 0 0 10px; line-height: 1; }
+    .ct-story-list h3 { font-family: 'Lora', serif; font-weight: 500; font-size: 21px; margin: 0 0 12px; color: #4a4055; }
+    .ct-story-list p { font-family: 'Lora', serif; font-size: 17px; line-height: 1.6; color: #4a4055; margin: 0; }
+
+    /* PHOTO */
+    .ct-photo { width: 100%; aspect-ratio: 16/9; max-height: 600px; overflow: hidden; }
+    .ct-photo img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85) brightness(1.05); }
+
+    /* GALLERY */
+    .ct-gallery { padding: 100px 24px; max-width: 1280px; margin: 0 auto; text-align: center; }
+    .ct-gallery h2 { font-size: clamp(36px, 5vw, 60px); margin: 0 0 56px; }
+    .ct-gal-grid { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 768px) { .ct-gal-grid { grid-template-columns: repeat(3, 1fr); } }
+    .ct-gal-grid figure { margin: 0; aspect-ratio: 4/5; overflow: hidden; border-radius: 200px 200px 24px 24px; }
+    .ct-gal-grid figure:nth-child(2n) { border-radius: 24px 24px 200px 200px; }
+    .ct-gal-grid img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85) brightness(1.05); transition: transform 1.4s ease; }
+    .ct-gal-grid figure:hover img { transform: scale(1.05); }
+
+    /* PROGRAM */
+    .ct-program { padding: 100px 24px; max-width: 800px; margin: 0 auto; }
+    .ct-program-head { text-align: center; margin-bottom: 56px; }
+    .ct-program-head h2 { font-size: clamp(36px, 5vw, 60px); margin: 0; line-height: 1.1; }
+    .ct-program-list { display: grid; gap: 20px; }
+    .ct-pr-item { display: grid; grid-template-columns: 100px 1fr; gap: 20px; align-items: center; padding: 24px; background: #fff; border-radius: 20px; box-shadow: 0 6px 20px rgba(184,164,201,0.1); }
+    .ct-pr-item.alt { background: #f4eff7; }
+    .ct-pr-time { text-align: center; }
+    .ct-pr-time span { display: block; font-family: 'Lora', serif; font-style: italic; font-size: 28px; color: #b8a4c9; line-height: 1; }
+    .ct-pr-time p { margin: 4px 0 0; font-family: 'Quicksand', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #4a4055; }
+    .ct-pr-body h4 { font-size: 19px; margin: 0 0 4px; }
+    .ct-pr-body p { font-family: 'Lora', serif; font-size: 16px; color: #4a4055; margin: 0; }
+
+    /* LOC */
+    .ct-loc { padding: 100px 24px; max-width: 1000px; margin: 0 auto; text-align: center; }
+    .ct-loc h2 { font-size: clamp(36px, 5vw, 56px); margin: 0 0 24px; }
+    .ct-loc-text { font-family: 'Lora', serif; font-size: 18px; line-height: 1.6; color: #4a4055; max-width: 720px; margin: 0 auto 40px; }
+    .ct-loc-img { margin: 0 0 32px; border-radius: 20px; overflow: hidden; }
+    .ct-loc-img img { width: 100%; height: auto; }
+    .ct-loc-address { font-family: 'Lora', serif; font-size: 17px; color: #4a4055; margin: 0 0 16px; }
+    .ct-link { display: inline-block; color: #b8a4c9; text-decoration: none; border-bottom: 1px solid #b8a4c9; padding-bottom: 4px; font-family: 'Quicksand', sans-serif; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 500; }
+    .ct-trans { margin-top: 48px; padding: 32px; background: #f4eff7; border-radius: 20px; text-align: left; }
+    .ct-trans h4 { font-family: 'Lora', serif; font-weight: 500; font-size: 22px; margin: 0 0 16px; color: #b8a4c9; }
+    .ct-trans ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .ct-trans li { font-family: 'Lora', serif; font-size: 17px; color: #4a4055; line-height: 1.5; }
+    .ct-trans strong { color: #4a4055; font-family: 'Quicksand', sans-serif; font-weight: 600; }
+    .ct-trans em { color: #b8a4c9; font-family: 'Quicksand', sans-serif; font-style: normal; letter-spacing: 0.08em; }
+
+    /* DRESS */
+    .ct-dress { padding: 100px 24px; max-width: 800px; margin: 0 auto; text-align: center; }
+    .ct-dress h2 { font-size: clamp(32px, 4.5vw, 48px); margin: 0 0 24px; }
+    .ct-dress-text { font-family: 'Lora', serif; font-size: 18px; line-height: 1.7; color: #4a4055; margin: 0 0 40px; }
+    .ct-swatches { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+    .ct-swatches > div { text-align: center; }
+    .ct-swatches span { display: block; width: 56px; height: 56px; border-radius: 50%; box-shadow: 0 4px 12px rgba(184,164,201,0.2); }
+    .ct-swatches p { margin: 12px 0 0; font-family: 'Quicksand', sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #4a4055; font-weight: 500; }
+    .ct-dress-no { font-family: 'Petit Formal Script', cursive; color: #b8a4c9; font-size: 22px; margin-top: 32px; }
+
+    /* GIFTS */
+    .ct-gifts { padding: 100px 24px; max-width: 1100px; margin: 0 auto; text-align: center; }
+    .ct-gifts h2 { font-size: clamp(36px, 5vw, 60px); margin: 0 0 48px; line-height: 1.1; }
+    .ct-gifts-grid { display: grid; gap: 20px; text-align: left; }
+    @media (min-width: 700px) { .ct-gifts-grid { grid-template-columns: repeat(2, 1fr); } }
+    .ct-gift { padding: 32px; background: #fff; border-radius: 20px; box-shadow: 0 8px 24px rgba(184,164,201,0.1); }
+    .ct-gift h4 { font-family: 'Lora', serif; font-weight: 500; font-size: 22px; margin: 0 0 12px; color: #b8a4c9; }
+    .ct-gift p { font-family: 'Lora', serif; font-size: 17px; line-height: 1.6; color: #4a4055; margin: 0; }
+    .ct-gift em { color: #a8c4a2; font-family: 'Quicksand', sans-serif; font-style: normal; letter-spacing: 0.06em; font-weight: 500; }
+
+    /* RSVP */
+    .ct-rsvp { padding: 100px 24px; max-width: 720px; margin: 0 auto; }
+    .ct-rsvp-paper { padding: 56px 32px; background: #fff; border-radius: 24px; text-align: center; box-shadow: 0 20px 60px rgba(184,164,201,0.15); }
+    .ct-rsvp h2 { font-size: clamp(32px, 5vw, 48px); margin: 0 0 12px; }
+    .ct-deadline { font-family: 'Petit Formal Script', cursive; color: #b8a4c9; margin: 0 0 32px; font-size: 22px; }
+    #ct-rsvp-form { display: grid; gap: 16px; text-align: left; }
+    #ct-rsvp-form label { display: grid; gap: 6px; }
+    #ct-rsvp-form span { font-family: 'Quicksand', sans-serif; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #b8a4c9; font-weight: 500; }
+    #ct-rsvp-form input, #ct-rsvp-form select { background: #f4eff7; border: 1px solid rgba(184,164,201,0.25); border-radius: 12px; padding: 12px 14px; font-family: 'Lora', serif; font-size: 16px; color: #4a4055; outline: none; transition: border-color 0.2s ease; }
+    #ct-rsvp-form input:focus, #ct-rsvp-form select:focus { border-color: #b8a4c9; }
+    .ct-row { display: grid; grid-template-columns: 1fr 110px; gap: 12px; }
+    #ct-rsvp-form button { margin-top: 16px; background: #b8a4c9; color: #fefdf8; border: none; padding: 16px 24px; border-radius: 999px; font-family: 'Quicksand', sans-serif; font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; font-weight: 500; }
+    .ct-rsvp-ok { font-family: 'Petit Formal Script', cursive; color: #a8c4a2; font-size: 22px; text-align: center; margin-top: 16px; }
+
+    /* PLAYLIST */
+    .ct-pl { padding: 100px 24px; max-width: 720px; margin: 0 auto; text-align: center; }
+    .ct-pl h2 { font-size: clamp(32px, 4.5vw, 52px); margin: 0 0 48px; line-height: 1.1; }
+    .ct-pl-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; text-align: left; }
+    .ct-pl-list li { display: grid; grid-template-columns: 60px 1fr auto; gap: 16px; padding: 14px 0; border-bottom: 1px dotted rgba(184,164,201,0.4); align-items: baseline; }
+    .ct-pl-list span { font-family: 'Lora', serif; font-style: italic; font-size: 22px; color: #b8a4c9; }
+    .ct-pl-list strong { font-family: 'Lora', serif; font-weight: 500; font-size: 18px; }
+    .ct-pl-list em { font-family: 'Petit Formal Script', cursive; font-size: 18px; color: #b8a4c9; text-align: right; }
+
+    /* HASH */
+    .ct-hash { padding: 100px 24px; text-align: center; max-width: 720px; margin: 0 auto; }
+    .ct-hash-tag { font-family: 'Petit Formal Script', cursive !important; font-size: clamp(28px, 5vw, 56px); color: #b8a4c9 !important; margin: 16px 0 24px; word-break: break-word; line-height: 1.1; }
+    .ct-hash p { font-family: 'Lora', serif; font-size: 18px; color: #4a4055; margin: 0; }
+
+    /* END */
+    .ct-end { position: relative; padding: 140px 24px 100px; text-align: center; overflow: hidden; }
+    .ct-end-glow { position: absolute; inset: 0; background: radial-gradient(circle at 50% 80%, rgba(245,230,168,0.5) 0%, transparent 60%); pointer-events: none; }
+    .ct-wreath-end { position: absolute; left: 50%; top: 30%; width: 280px; height: 280px; transform: translateX(-50%); opacity: 0.4; }
+    .ct-end-inner { position: relative; max-width: 720px; margin: 0 auto; z-index: 5; }
+    .ct-end-inner .ct-script { font-size: 32px; margin: 0 0 16px; color: #b8a4c9; }
+    .ct-end h2 { font-size: clamp(48px, 8vw, 96px); margin: 0 0 32px; line-height: 1; }
+    .ct-end-sig { font-family: 'Petit Formal Script', cursive; font-size: 26px; color: #b8a4c9; margin: 0 0 8px; }
+    .ct-end-date { font-family: 'Quicksand', sans-serif; font-size: 11px; letter-spacing: 0.36em; text-transform: uppercase; color: #4a4055; margin: 0; font-weight: 500; }
+  </style>
+
+  <script>
+    import gsap from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Petals
+    const petals = document.getElementById('ct-petals');
+    if (petals && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      for (let i = 0; i < 18; i++) {
+        const p = document.createElement('span');
+        p.style.left = (Math.random() * 100) + '%';
+        p.style.animationDelay = (Math.random() * 9) + 's';
+        p.style.animationDuration = (7 + Math.random() * 6) + 's';
+        const colors = ['rgba(240,213,213,0.85)', 'rgba(245,230,168,0.7)', 'rgba(184,164,201,0.7)'];
+        p.style.background = colors[i % 3];
+        petals.appendChild(p);
+      }
+    }
+
+    const splash = document.getElementById('ct-splash');
+    const cta = document.getElementById('ct-cta');
+    if (splash) {
+      document.body.style.overflow = 'hidden';
+      const dismiss = () => {
+        gsap.to(splash, { opacity: 0, duration: 0.9, ease: 'power2.in', onComplete: () => {
+          splash.style.display = 'none';
+          document.body.style.overflow = '';
+        }});
+      };
+      cta?.addEventListener('click', dismiss);
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-animate]').forEach(el => io.observe(el));
+
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const heroImg = document.querySelector<HTMLImageElement>('.ct-hero img');
+      if (heroImg) gsap.to(heroImg, { yPercent: 12, ease: 'none', scrollTrigger: { trigger: '.ct-hero', start: 'top top', end: 'bottom top', scrub: true } });
+      const photo = document.querySelector<HTMLImageElement>('.ct-photo img');
+      if (photo) gsap.fromTo(photo, { yPercent: -8 }, { yPercent: 8, ease: 'none', scrollTrigger: { trigger: '.ct-photo', start: 'top bottom', end: 'bottom top', scrub: true } });
+    }
+
+    const target = new Date('2027-07-17T17:00:00-07:00').getTime();
+    const tick = () => {
+      const diff = target - Date.now();
+      if (diff <= 0) return;
+      const set = (id: string, v: number) => { const el = document.getElementById(id); if (el) el.textContent = String(v).padStart(2, '0'); };
+      set('ct-d', Math.floor(diff / 86400000));
+      set('ct-h', Math.floor((diff / 3600000) % 24));
+      set('ct-m', Math.floor((diff / 60000) % 60));
+      set('ct-s', Math.floor((diff / 1000) % 60));
+    };
+    tick(); setInterval(tick, 1000);
+
+    const form = document.getElementById('ct-rsvp-form');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('ct-rsvp-ok')?.removeAttribute('hidden');
+      (form as HTMLFormElement).reset();
+    });
+  </script>
+</DemoLayout>

@@ -1,105 +1,407 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Quote from '../components/Quote.astro';
-import MusicPlayer from '../components/MusicPlayer.astro';
-import Countdown from '../components/Countdown.astro';
-import Locations from '../components/Locations.astro';
-import Timeline from '../components/Timeline.astro';
-import PhotoSeparator from '../components/PhotoSeparator.astro';
-import DressCode from '../components/DressCode.astro';
-import Gifts from '../components/Gifts.astro';
-import RSVP from '../components/RSVP.astro';
-import PlaylistSection from '../components/PlaylistSection.astro';
-import NoChildren from '../components/NoChildren.astro';
-import Closing from '../components/Closing.astro';
-import BotanicalDivider from '../components/BotanicalDivider.astro';
-import PersonalMessage from '../components/PersonalMessage.astro';
-import PhotoGallery from '../components/PhotoGallery.astro';
-import OurStory from '../components/OurStory.astro';
-import InstagramSection from '../components/InstagramSection.astro';
+const demos = [
+  {
+    slug: 'aurora-editorial',
+    title: 'Aurora Editorial',
+    couple: 'Mateo & Valentina',
+    location: 'Bariloche, Argentina',
+    date: '11 · Septiembre · 2027',
+    style: 'Editorial · Vogue',
+    palette: ['#1a2332', '#c9a961', '#f5f1e8'],
+    image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1200&auto=format&fit=crop&q=80',
+    description: 'Composición editorial de revista. Tipografía dominante, fotografía a sangre, jerarquía asimétrica.',
+  },
+  {
+    slug: 'costa-mediterranea',
+    title: 'Costa Mediterránea',
+    couple: 'Tomás & Isabella',
+    location: 'Tulum, México',
+    date: '06 · Junio · 2027',
+    style: 'Boho · Beach',
+    palette: ['#c8654a', '#e8d5b7', '#3d6b7c'],
+    image: 'https://images.unsplash.com/photo-1530653333484-8d8b1ee0ed05?w=1200&auto=format&fit=crop&q=80',
+    description: 'Atardeceres frente al mar. Acuarelas, formas orgánicas y arenas tibias.',
+  },
+  {
+    slug: 'maximalismo-floral',
+    title: 'Maximalismo Floral',
+    couple: 'Adrián & Camila',
+    location: 'Hacienda Querétaro',
+    date: '22 · Mayo · 2027',
+    style: 'Garden · Romántico',
+    palette: ['#722f37', '#d4a5a5', '#9eaa86'],
+    image: 'https://images.unsplash.com/photo-1525772764200-be829a350797?w=1200&auto=format&fit=crop&q=80',
+    description: 'Jardín en plena floración. Marcos ornamentales, ilustraciones densas, romanticismo barroco.',
+  },
+  {
+    slug: 'art-deco-gatsby',
+    title: 'Art Decó Gatsby',
+    couple: 'Emiliano & Renata',
+    location: 'Hotel · CDMX',
+    date: '13 · Noviembre · 2027',
+    style: 'Glamour · Black-tie',
+    palette: ['#0a0a0a', '#d4af37', '#1f4e3d'],
+    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&auto=format&fit=crop&q=80',
+    description: 'Geometría dorada, simetría, dramatismo nocturno. Glamour de los años 20 en clave moderna.',
+  },
+  {
+    slug: 'wabi-sabi',
+    title: 'Wabi-Sabi',
+    couple: 'Yuki & Sebastián',
+    location: 'Jardín Kioto · CDMX',
+    date: '04 · Abril · 2027',
+    style: 'Minimal · Japonés',
+    palette: ['#f4f1ec', '#1a1a1a', '#a0512c'],
+    image: 'https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200&auto=format&fit=crop&q=80',
+    description: 'Belleza imperfecta. Tinta sumi-e, espacio negativo y silencio tipográfico.',
+  },
+  {
+    slug: 'neon-retro',
+    title: 'Neon Retro',
+    couple: 'Diego & Sofía',
+    location: 'Las Vegas, NV',
+    date: '08 · Agosto · 2027',
+    style: 'Synthwave · Y2K',
+    palette: ['#1b0a2e', '#ff2d95', '#00f5ff'],
+    image: 'https://images.unsplash.com/photo-1605379399642-870262d3d051?w=1200&auto=format&fit=crop&q=80',
+    description: 'Capilla neón, autopistas violetas, retro-futurismo. Los 80 nunca terminaron.',
+  },
+  {
+    slug: 'rustico-mexicano',
+    title: 'Rústico Mexicano',
+    couple: 'Andrés & Mariana',
+    location: 'San Miguel de Allende',
+    date: '18 · Octubre · 2027',
+    style: 'Hacienda · Folk',
+    palette: ['#c4631e', '#8b1e1e', '#1a8a8a'],
+    image: 'https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1200&auto=format&fit=crop&q=80',
+    description: 'Papel picado, talavera y cempasúchil. Boda mexicana con orgullo y color.',
+  },
+  {
+    slug: 'cottagecore-etereo',
+    title: 'Cottagecore Etéreo',
+    couple: 'Joaquín & Lucía',
+    location: 'Valle de Guadalupe, BC',
+    date: '17 · Julio · 2027',
+    style: 'Pastoral · Viñedo',
+    palette: ['#b8a4c9', '#f5e6a8', '#a8c4a2'],
+    image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&auto=format&fit=crop&q=80',
+    description: 'Pastel onírico entre viñedos. Flores silvestres, luces tibias y romance suave.',
+  },
+];
 ---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holycard — Galería de Demos</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content="Showcase de 8 invitaciones digitales de boda. Cada demo, un universo distinto." />
+    <meta name="theme-color" content="#0e0e0e" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&family=Italiana&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="page">
 
-<Layout>
-  <Hero />
-  <Quote />
-  <BotanicalDivider variant="branch" />
-  <PersonalMessage />
-  <MusicPlayer />
-  <BotanicalDivider variant="leaves" />
-  <Countdown />
-  <Locations />
-  <PhotoGallery />
-  <BotanicalDivider variant="branch" bg="#eae4d6" />
-  <Timeline />
-  <PhotoSeparator
-    src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&auto=format&fit=crop&q=80"
-    alt="Gustave & Sophie"
-    topColor="#eae4d6"
-    bottomColor="#eae4d6"
-  />
-  <OurStory />
-  <BotanicalDivider variant="leaves" />
-  <DressCode />
-  <Gifts />
-  <RSVP />
-  <BotanicalDivider variant="dots" />
-  <PlaylistSection />
-  <InstagramSection />
-  <NoChildren />
-  <PhotoSeparator
-    src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80"
-    alt="Gustave & Sophie"
-    topColor="#f7f4ed"
-    bottomColor="#f7f4ed"
-  />
-  <Closing />
-</Layout>
+      <header class="hero">
+        <div class="hero-inner">
+          <p class="kicker">Holycard · Showcase 2027</p>
+          <h1>Ocho universos.<br/><em>Una sola promesa.</em></h1>
+          <p class="lede">
+            Invitaciones digitales que no se parecen a nada que hayas visto. Cada demo es un mundo cerrado:
+            tipografía, color, ritmo y emoción afinados al mismo tono. Selecciona una y entra.
+          </p>
+          <div class="hero-meta">
+            <span>8 estilos</span>
+            <span>·</span>
+            <span>15 secciones por demo</span>
+            <span>·</span>
+            <span>2027</span>
+          </div>
+        </div>
+        <div class="hero-rule" aria-hidden="true"></div>
+      </header>
 
-<script>
-  import gsap from 'gsap';
-  import { ScrollTrigger } from 'gsap/ScrollTrigger';
-  (window as any).__gsap = gsap;
-  gsap.registerPlugin(ScrollTrigger);
+      <section class="grid">
+        {demos.map((d, i) => (
+          <a class="card" href={`/demos/${d.slug}`} data-card>
+            <div class="card-media">
+              <img src={d.image} alt={d.title} loading="lazy" />
+              <div class="card-overlay"></div>
+              <div class="card-palette" aria-hidden="true">
+                {d.palette.map(c => (<span style={`background:${c}`}></span>))}
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="card-num">{String(i + 1).padStart(2, '0')}</p>
+              <p class="card-style">{d.style}</p>
+              <h2>{d.title}</h2>
+              <p class="card-couple">{d.couple}</p>
+              <p class="card-meta">{d.location} · {d.date}</p>
+              <p class="card-desc">{d.description}</p>
+              <span class="card-cta">Abrir invitación →</span>
+            </div>
+          </a>
+        ))}
+      </section>
 
-  // Fade-up genérico
-  gsap.utils.toArray<HTMLElement>('[data-animate]').forEach((el) => {
-    gsap.from(el, {
-      scrollTrigger: { trigger: el, start: 'top 88%' },
-      y: 32, opacity: 0, duration: 0.9, ease: 'power2.out',
-    });
-  });
+      <section class="legacy">
+        <div class="legacy-inner">
+          <p class="kicker">Demo legacy</p>
+          <h2>Gustave & Sophie <em>· Botánico</em></h2>
+          <p>El primer experimento. Verdes salvia, caligrafía romántica y partículas vivas en el viento.</p>
+          <a href="/invitacion-original">Ver demo original →</a>
+        </div>
+      </section>
 
-  // Hero texto stagger
-  gsap.from('.hero-text > *', {
-    y: 24, opacity: 0, stagger: 0.2, duration: 1, delay: 0.4, ease: 'power2.out',
-  });
+      <footer class="foot">
+        <p>Holycard · 2027 · Hecho con cariño y código.</p>
+      </footer>
 
-  // Timeline items
-  gsap.from('.timeline-item', {
-    scrollTrigger: { trigger: '.timeline-section', start: 'top 80%' },
-    x: -24, opacity: 0, stagger: 0.13, duration: 0.65, ease: 'power2.out',
-  });
+    </main>
 
-  // Parallax fotos
-  gsap.utils.toArray<HTMLElement>('.photo-parallax').forEach((wrapper) => {
-    const img = wrapper.querySelector('img');
-    if (!img) return;
-    gsap.fromTo(img,
-      { y: -40 },
-      { y: 40, ease: 'none', scrollTrigger: { trigger: wrapper, scrub: true } }
-    );
-  });
+    <script>
+      const cards = document.querySelectorAll<HTMLElement>('[data-card]');
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        }
+      }, { threshold: 0.1 });
+      cards.forEach(c => io.observe(c));
+    </script>
 
-  // Countdown scale-in
-  gsap.from('#cd-days, #cd-hours, #cd-mins, #cd-secs', {
-    scrollTrigger: { trigger: '#cd-days', start: 'top 85%' },
-    scale: 0.7, opacity: 0, stagger: 0.08, duration: 0.6, ease: 'back.out(1.4)',
-  });
+    <style is:global>
+      :root {
+        --bg: #0e0e0e;
+        --bg-soft: #161616;
+        --fg: #f4f1ec;
+        --fg-mid: #a3a09a;
+        --accent: #c9a961;
+        --rule: rgba(244,241,236,0.12);
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); }
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-weight: 300;
+        -webkit-font-smoothing: antialiased;
+      }
+      img { display: block; max-width: 100%; }
+      a { color: inherit; text-decoration: none; }
+      .page { min-height: 100vh; }
 
-  // Story items
-  gsap.from('.story-item', {
-    scrollTrigger: { trigger: '.story-item', start: 'top 85%' },
-    opacity: 0, y: 20, stagger: 0.15, duration: 0.7, ease: 'power2.out',
-  });
-</script>
+      .hero {
+        padding: 96px 24px 64px;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      @media (min-width: 768px) { .hero { padding: 140px 48px 80px; } }
+      .hero-inner { max-width: 880px; }
+      .kicker {
+        font-size: 11px;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 20px;
+      }
+      .hero h1 {
+        font-family: 'Italiana', serif;
+        font-weight: 400;
+        font-size: clamp(48px, 9vw, 128px);
+        line-height: 0.95;
+        margin: 0 0 32px;
+        letter-spacing: -0.01em;
+      }
+      .hero h1 em {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-weight: 300;
+        color: var(--fg-mid);
+      }
+      .lede {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(18px, 2vw, 22px);
+        line-height: 1.55;
+        color: var(--fg-mid);
+        max-width: 640px;
+        margin: 0 0 28px;
+      }
+      .hero-meta {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        font-size: 11px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--fg-mid);
+      }
+      .hero-rule {
+        margin: 64px 0 0;
+        height: 1px;
+        background: var(--rule);
+      }
+
+      .grid {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 64px 24px;
+        display: grid;
+        gap: 56px;
+      }
+      @media (min-width: 768px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 80px 56px;
+          padding: 96px 48px;
+        }
+      }
+
+      .card {
+        display: block;
+        position: relative;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.9s ease, transform 0.9s ease;
+      }
+      .card.in { opacity: 1; transform: translateY(0); }
+      .card-media {
+        position: relative;
+        aspect-ratio: 4 / 5;
+        overflow: hidden;
+        background: var(--bg-soft);
+      }
+      .card-media img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+        transition: transform 1.4s ease;
+        filter: saturate(0.9);
+      }
+      .card:hover .card-media img { transform: scale(1.06); }
+      .card-overlay {
+        position: absolute; inset: 0;
+        background: linear-gradient(to top, rgba(14,14,14,0.45), transparent 50%);
+      }
+      .card-palette {
+        position: absolute;
+        bottom: 16px; left: 16px;
+        display: flex; gap: 6px;
+      }
+      .card-palette span {
+        width: 18px; height: 18px;
+        border-radius: 50%;
+        border: 1px solid rgba(255,255,255,0.3);
+      }
+      .card-body {
+        padding: 24px 0 0;
+        position: relative;
+      }
+      .card-num {
+        position: absolute;
+        top: 24px; right: 0;
+        font-family: 'Italiana', serif;
+        font-size: 16px;
+        color: var(--fg-mid);
+        margin: 0;
+      }
+      .card-style {
+        font-size: 11px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 12px;
+      }
+      .card h2 {
+        font-family: 'Italiana', serif;
+        font-weight: 400;
+        font-size: clamp(28px, 3.6vw, 44px);
+        line-height: 1;
+        margin: 0 0 14px;
+        letter-spacing: -0.005em;
+      }
+      .card-couple {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 20px;
+        margin: 0 0 6px;
+        color: var(--fg);
+      }
+      .card-meta {
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--fg-mid);
+        margin: 0 0 18px;
+      }
+      .card-desc {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 17px;
+        line-height: 1.5;
+        color: var(--fg-mid);
+        margin: 0 0 20px;
+        max-width: 480px;
+      }
+      .card-cta {
+        font-size: 12px;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--accent);
+        border-bottom: 1px solid var(--accent);
+        padding-bottom: 4px;
+      }
+
+      .legacy {
+        border-top: 1px solid var(--rule);
+        padding: 80px 24px;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      @media (min-width: 768px) { .legacy { padding: 120px 48px; } }
+      .legacy-inner { max-width: 720px; }
+      .legacy h2 {
+        font-family: 'Italiana', serif;
+        font-weight: 400;
+        font-size: clamp(32px, 5vw, 60px);
+        margin: 0 0 20px;
+        line-height: 1.05;
+      }
+      .legacy h2 em {
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        color: var(--fg-mid);
+      }
+      .legacy p {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 19px;
+        color: var(--fg-mid);
+        margin: 0 0 28px;
+      }
+      .legacy a {
+        font-size: 12px;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--accent);
+        border-bottom: 1px solid var(--accent);
+        padding-bottom: 4px;
+      }
+
+      .foot {
+        border-top: 1px solid var(--rule);
+        padding: 28px 24px;
+        text-align: center;
+      }
+      .foot p {
+        font-size: 11px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--fg-mid);
+        margin: 0;
+      }
+    </style>
+  </body>
+</html>

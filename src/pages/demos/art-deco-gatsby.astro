@@ -1,0 +1,657 @@
+---
+import DemoLayout from '../../layouts/DemoLayout.astro';
+const fonts = 'https://fonts.googleapis.com/css2?family=Limelight&family=Poiret+One&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Inter:wght@300;400;500&display=swap';
+---
+<DemoLayout
+  title="Emiliano & Renata · 13·11·2027 · CDMX"
+  description="Una velada de gala en CDMX. Black tie, dorado, jazz."
+  themeColor="#0a0a0a"
+  bodyClass="deco-body"
+  fontsHref={fonts}
+  ogImage="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&auto=format&fit=crop&q=80"
+  progressColor="#d4af37"
+>
+
+  <!-- ============ SVG SYMBOLS ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="dc-sunburst" viewBox="0 0 200 100">
+        <g stroke="#d4af37" stroke-width="1" fill="none">
+          <path d="M100,100 L100,10"/>
+          <path d="M100,100 L20,100"/>
+          <path d="M100,100 L180,100"/>
+          <path d="M100,100 L40,30"/>
+          <path d="M100,100 L160,30"/>
+          <path d="M100,100 L70,15"/>
+          <path d="M100,100 L130,15"/>
+          <path d="M100,100 L25,55"/>
+          <path d="M100,100 L175,55"/>
+          <path d="M100,100 L55,20"/>
+          <path d="M100,100 L145,20"/>
+          <path d="M100,100 L85,12"/>
+          <path d="M100,100 L115,12"/>
+        </g>
+        <path d="M100,100 m-90,0 a90,90 0 0,1 180,0" stroke="#d4af37" stroke-width="1.2" fill="none"/>
+      </symbol>
+      <symbol id="dc-fan" viewBox="0 0 100 100">
+        <g stroke="#d4af37" stroke-width="0.8" fill="none">
+          <path d="M50,90 L50,10"/>
+          <path d="M50,90 L25,15"/>
+          <path d="M50,90 L75,15"/>
+          <path d="M50,90 L8,38"/>
+          <path d="M50,90 L92,38"/>
+          <path d="M50,90 m-40,0 a40,40 0 0,1 80,0" />
+          <path d="M50,90 m-30,0 a30,30 0 0,1 60,0" />
+          <path d="M50,90 m-20,0 a20,20 0 0,1 40,0" />
+        </g>
+      </symbol>
+      <symbol id="dc-corner" viewBox="0 0 100 100">
+        <g stroke="#d4af37" stroke-width="1" fill="none">
+          <path d="M0,0 L100,0 L100,100"/>
+          <path d="M10,10 L90,10 L90,90"/>
+          <path d="M0,30 L70,30 L70,100"/>
+          <circle cx="100" cy="0" r="4" fill="#d4af37"/>
+          <circle cx="100" cy="100" r="3"/>
+          <circle cx="0" cy="0" r="3"/>
+        </g>
+      </symbol>
+      <symbol id="dc-divider" viewBox="0 0 240 30">
+        <g stroke="#d4af37" stroke-width="1" fill="none">
+          <line x1="0" y1="15" x2="100" y2="15"/>
+          <line x1="140" y1="15" x2="240" y2="15"/>
+          <path d="M120,5 L130,15 L120,25 L110,15 Z" fill="#d4af37"/>
+          <line x1="105" y1="15" x2="115" y2="15" stroke="#0a0a0a"/>
+          <line x1="125" y1="15" x2="135" y2="15" stroke="#0a0a0a"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ SPLASH ============ -->
+  <div id="dc-splash" class="dc-splash">
+    <div class="dc-splash-bg"></div>
+    <div class="dc-splash-card">
+      <svg class="dc-corner-tl" viewBox="0 0 100 100"><use href="#dc-corner"/></svg>
+      <svg class="dc-corner-tr" viewBox="0 0 100 100"><use href="#dc-corner"/></svg>
+      <svg class="dc-corner-bl" viewBox="0 0 100 100"><use href="#dc-corner"/></svg>
+      <svg class="dc-corner-br" viewBox="0 0 100 100"><use href="#dc-corner"/></svg>
+      <svg class="dc-fan-deco" viewBox="0 0 100 100"><use href="#dc-fan"/></svg>
+      <p class="dc-pre">Una velada de gala</p>
+      <h1>E <span>·</span> R</h1>
+      <svg class="dc-divider" viewBox="0 0 240 30"><use href="#dc-divider"/></svg>
+      <p class="dc-issue">XIII · NOVEMBRE · MMXXVII</p>
+      <button id="dc-cta">Pase de invitación</button>
+    </div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="dc-hero">
+    <div class="dc-hero-bg"></div>
+    <svg class="dc-sunburst-bg" viewBox="0 0 200 100" preserveAspectRatio="none"><use href="#dc-sunburst"/></svg>
+    <div class="dc-hero-frame">
+      <p class="dc-hero-pre">Cordialmente le invitamos</p>
+      <h1>
+        <span class="dc-name">Emiliano</span>
+        <span class="dc-amp">&amp;</span>
+        <span class="dc-name">Renata</span>
+      </h1>
+      <svg class="dc-divider dc-divider-light" viewBox="0 0 240 30"><use href="#dc-divider"/></svg>
+      <p class="dc-hero-date">Sábado · 13 de noviembre de 2027</p>
+      <p class="dc-hero-loc">Hotel Hilton Reforma · CDMX · 19:00 hrs</p>
+    </div>
+  </section>
+
+  <!-- ============ FRASE ============ -->
+  <section class="dc-quote" data-animate>
+    <svg class="dc-quote-fan" viewBox="0 0 100 100"><use href="#dc-fan"/></svg>
+    <blockquote>
+      "I love you, and that's the beginning <em>and end</em> of everything."
+    </blockquote>
+    <p>— F. Scott Fitzgerald</p>
+  </section>
+
+  <!-- ============ MENSAJE ============ -->
+  <section class="dc-letter" data-animate>
+    <div class="dc-letter-frame">
+      <p class="dc-pre center">De los novios</p>
+      <p>
+        Nos casamos como soñamos: en un rooftop de la ciudad, con champagne, con jazz en vivo
+        y con las mejores personas que nos ha dado la vida. Es el evento que llevamos planeando
+        desde que descubrimos —en una boda ajena, hace tres años— que Renata sabía bailar y
+        Emiliano sabía mirarla bailar.
+      </p>
+      <p>
+        Vamos a brindar mucho. Vamos a bailar más. Y queremos que cada hora del programa
+        cuente, así que llega a tiempo. <em>Por favor.</em>
+      </p>
+      <p class="dc-letter-sign">— E &amp; R</p>
+    </div>
+  </section>
+
+  <!-- ============ COUNTDOWN ============ -->
+  <section class="dc-cd" data-animate>
+    <p class="dc-pre center">El reloj sigue corriendo</p>
+    <div class="dc-cd-grid">
+      <div><span id="dc-d">--</span><p>Días</p></div>
+      <div class="dc-cd-sep">:</div>
+      <div><span id="dc-h">--</span><p>Horas</p></div>
+      <div class="dc-cd-sep">:</div>
+      <div><span id="dc-m">--</span><p>Minutos</p></div>
+      <div class="dc-cd-sep">:</div>
+      <div><span id="dc-s">--</span><p>Segundos</p></div>
+    </div>
+    <svg class="dc-divider" viewBox="0 0 240 30"><use href="#dc-divider"/></svg>
+  </section>
+
+  <!-- ============ HISTORIA ============ -->
+  <section class="dc-story">
+    <div class="dc-story-head" data-animate>
+      <p class="dc-pre center">Capítulos</p>
+      <h2>Un romance<br/><em>en cuatro actos.</em></h2>
+    </div>
+    <div class="dc-story-grid">
+      <article data-animate>
+        <p class="dc-act">Acto I</p>
+        <p class="dc-year">2021</p>
+        <h3>El bar del Hotel Geneve.</h3>
+        <p>Misma fiesta, misma copa, mismo gusto en jazz. Ella le pidió que bajara la voz. Él bajó toda la guardia.</p>
+      </article>
+      <article data-animate>
+        <p class="dc-act">Acto II</p>
+        <p class="dc-year">2023</p>
+        <h3>Nueva York en febrero.</h3>
+        <p>Diez días de frío, museos, vino malo y conversaciones largas. Volvieron sabiendo lo que querían.</p>
+      </article>
+      <article data-animate>
+        <p class="dc-act">Acto III</p>
+        <p class="dc-year">2025</p>
+        <h3>Una propuesta privada.</h3>
+        <p>En un velero en Acapulco, sin foto, sin público. Solo dos sonrisas y un sí inmediato.</p>
+      </article>
+      <article data-animate>
+        <p class="dc-act">Acto IV</p>
+        <p class="dc-year">2027</p>
+        <h3>Encore.</h3>
+        <p>Hilton Reforma. Vista a la ciudad. Tú ahí. La orquesta lista.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ GALERÍA ============ -->
+  <section class="dc-gallery">
+    <div class="dc-gal-head" data-animate>
+      <svg class="dc-fan-small" viewBox="0 0 100 100"><use href="#dc-fan"/></svg>
+      <p class="dc-pre">Portafolio</p>
+      <h2>The couple.</h2>
+    </div>
+    <div class="dc-gal-grid">
+      <figure data-animate><img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure data-animate><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure data-animate><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure data-animate><img src="https://images.unsplash.com/photo-1525772764200-be829a350797?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+    </div>
+  </section>
+
+  <!-- ============ ITINERARIO ============ -->
+  <section class="dc-program" data-animate>
+    <p class="dc-pre center">Programa de la velada</p>
+    <h2>El show.</h2>
+    <div class="dc-program-grid">
+      <div><strong>19:00</strong><div><h4>Llegada &amp; cocktail</h4><p>Tragos clásicos: Negroni, Sazerac, French 75.</p></div></div>
+      <div><strong>20:00</strong><div><h4>Ceremonia civil</h4><p>Rooftop con vista al Bosque de Chapultepec.</p></div></div>
+      <div><strong>21:00</strong><div><h4>Cena de cuatro tiempos</h4><p>Maridaje con vinos del Valle de Guadalupe.</p></div></div>
+      <div><strong>22:30</strong><div><h4>Vals &amp; show de jazz</h4><p>Sextet en vivo con repertorio de los 20s.</p></div></div>
+      <div><strong>23:30</strong><div><h4>Apertura de pista</h4><p>DJ con set bailable hasta el amanecer.</p></div></div>
+      <div><strong>03:00</strong><div><h4>Late-night bites</h4><p>Hot dogs gourmet y café para los aguerridos.</p></div></div>
+    </div>
+  </section>
+
+  <!-- ============ UBICACIÓN ============ -->
+  <section class="dc-loc" data-animate>
+    <p class="dc-pre center">Locación</p>
+    <h2>Hilton México City Reforma</h2>
+    <p class="dc-loc-desc">
+      Salón Reforma 30 (Penthouse) y Sky Lounge. Valet parking y elevador exclusivo de invitados.
+    </p>
+    <div class="dc-loc-card">
+      <p><strong>Av. Juárez 70</strong></p>
+      <p>Centro Histórico, 06010 CDMX</p>
+      <a href="https://maps.google.com" target="_blank" rel="noopener">Ver mapa →</a>
+    </div>
+    <div class="dc-loc-extra">
+      <div>
+        <h4>Hospedaje</h4>
+        <p>Tarifa especial en el mismo hotel con código <em>EYR2027</em>: $4,800 MXN/noche.</p>
+      </div>
+      <div>
+        <h4>Estacionamiento</h4>
+        <p>Valet incluido, presenta tu invitación.</p>
+      </div>
+      <div>
+        <h4>Salida discreta</h4>
+        <p>Habrá Uber/transporte a tarifa preferencial al cierre del evento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DRESS CODE ============ -->
+  <section class="dc-dress" data-animate>
+    <div class="dc-dress-frame">
+      <p class="dc-pre center">Código de vestimenta</p>
+      <h2>Black tie · de gala</h2>
+      <p class="dc-dress-text">
+        Smoking o tuxedo para ellos. Vestido largo de gala para ellas. <em>Sin excepciones.</em>
+        Si traes algo dorado, plata o joyas oscuras, mejor.
+      </p>
+      <div class="dc-swatches">
+        <div><span style="background:#0a0a0a"></span><p>Negro</p></div>
+        <div><span style="background:#1f4e3d"></span><p>Esmeralda</p></div>
+        <div><span style="background:#722f37"></span><p>Vino</p></div>
+        <div><span style="background:#0d2438"></span><p>Medianoche</p></div>
+        <div><span style="background:#d4af37"></span><p>Oro</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NIÑOS ============ -->
+  <section class="dc-kids" data-animate>
+    <p>Adultos · 21+. Es una noche larga, con coctelería, jazz y baile hasta tarde. <em>Sin niños, por favor.</em></p>
+  </section>
+
+  <!-- ============ REGALOS ============ -->
+  <section class="dc-gifts" data-animate>
+    <p class="dc-pre center">Mesa de regalos</p>
+    <h2>El gesto, no la fortuna.</h2>
+    <p class="dc-gifts-intro">
+      Tu compañía esta noche es lo que valoramos más. Si decides obsequiarnos algo, te dejamos opciones discretas.
+    </p>
+    <div class="dc-gifts-grid">
+      <div><h4>El sobre</h4><p>Habrá un cofre dorado en la entrada. Sobres con <em>E·R</em> bordados a tu disposición.</p></div>
+      <div><h4>Transferencia</h4><p>Banamex<br/>5256 7894 1234 8567<br/>CLABE 002180001234567890</p></div>
+      <div><h4>Mesa El Palacio</h4><p>Evento <em>#22198</em> · Búscanos como "Mendoza-Quintero".</p></div>
+      <div><h4>Luna de miel</h4><p>París, Riviera y Capri. Cualquier aporte es una copa, una vista, una historia.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ RSVP ============ -->
+  <section class="dc-rsvp">
+    <div class="dc-rsvp-frame" data-animate>
+      <p class="dc-pre center">Confirmación de asistencia</p>
+      <h2>Su pase, por favor.</h2>
+      <p class="dc-deadline">Confirma antes del 15 de octubre de 2027.</p>
+      <form id="dc-rsvp-form" novalidate>
+        <label><span>Nombre completo</span><input type="text" name="name" required/></label>
+        <div class="dc-row">
+          <label><span>Asistencia</span><select name="attend"><option>Confirmo asistencia</option><option>No podré asistir</option></select></label>
+          <label><span>Pase</span><select name="guests"><option>Solo</option><option>Con acompañante</option></select></label>
+        </div>
+        <label><span>Restricciones</span><input type="text" name="diet"/></label>
+        <label><span>Bebida favorita</span><select name="drink"><option>Whisky</option><option>Vino tinto</option><option>Vino blanco</option><option>Champagne</option><option>Mezcal</option><option>Sin alcohol</option></select></label>
+        <button type="submit">Validar pase</button>
+        <p id="dc-rsvp-ok" class="dc-rsvp-ok" hidden>Pase validado. Lo esperamos a la entrada.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ PLAYLIST ============ -->
+  <section class="dc-pl" data-animate>
+    <p class="dc-pre center">El soundtrack</p>
+    <h2>Jazz &amp; afters.</h2>
+    <ol class="dc-pl-list">
+      <li><span>I.</span><div><strong>Young and Beautiful</strong><em>Lana Del Rey</em></div></li>
+      <li><span>II.</span><div><strong>A-Yo</strong><em>Lady Gaga</em></div></li>
+      <li><span>III.</span><div><strong>The Charleston</strong><em>James P. Johnson</em></div></li>
+      <li><span>IV.</span><div><strong>L'Hymne à L'Amour</strong><em>Edith Piaf</em></div></li>
+      <li><span>V.</span><div><strong>Feeling Good</strong><em>Nina Simone</em></div></li>
+      <li><span>VI.</span><div><strong>Cheek to Cheek</strong><em>Ella & Louis</em></div></li>
+      <li><span>VII.</span><div><strong>Sing, Sing, Sing</strong><em>Benny Goodman</em></div></li>
+    </ol>
+  </section>
+
+  <!-- ============ HASHTAG ============ -->
+  <section class="dc-hash" data-animate>
+    <p class="dc-pre center">Etiquétanos</p>
+    <h2 class="dc-hash-tag">#EmilianoYRenata2027</h2>
+    <p>Sube las fotos en blanco y negro, las que tengan glamour y las que no. Las queremos todas.</p>
+  </section>
+
+  <!-- ============ CIERRE ============ -->
+  <section class="dc-end">
+    <svg class="dc-end-sun" viewBox="0 0 200 100" preserveAspectRatio="none"><use href="#dc-sunburst"/></svg>
+    <div class="dc-end-inner" data-animate>
+      <p class="dc-pre center">Final del programa</p>
+      <h2>Le esperamos<br/><em>con champagne en mano.</em></h2>
+      <p class="dc-end-sig">Emiliano Mendoza · Renata Quintero</p>
+      <p class="dc-end-date">CDMX · MMXXVII</p>
+    </div>
+  </section>
+
+  <style is:global>
+    .deco-body {
+      background: #0a0a0a;
+      color: #f5e8d0;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+    }
+    .deco-body h1, .deco-body h2 {
+      font-family: 'Limelight', serif;
+      font-weight: 400;
+      color: #f5e8d0;
+      letter-spacing: 0.04em;
+    }
+    .deco-body h3, .deco-body h4 {
+      font-family: 'Poiret One', sans-serif;
+      font-weight: 400;
+      color: #f5e8d0;
+    }
+    .deco-body em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; color: #d4af37; }
+    .deco-body [data-animate] { opacity: 0; transform: translateY(28px); transition: opacity 1s ease, transform 1s ease; }
+    .deco-body [data-animate].in { opacity: 1; transform: none; }
+    .deco-body .dc-pre {
+      font-family: 'Poiret One', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: #d4af37;
+      margin: 0 0 16px;
+    }
+    .deco-body .dc-pre.center { text-align: center; }
+    .deco-body .dc-divider { width: 240px; max-width: 100%; height: 30px; display: block; margin: 0 auto 24px; }
+    .deco-body .dc-divider-light path[fill="#0a0a0a"] { fill: #0a0a0a; }
+
+    /* SPLASH */
+    .dc-splash {
+      position: fixed; inset: 0; z-index: 100;
+      background: #0a0a0a;
+      display: flex; align-items: center; justify-content: center;
+      padding: 24px;
+      transition: opacity 0.7s ease;
+    }
+    .dc-splash-bg {
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 50% 50%, rgba(212,175,55,0.08) 0%, transparent 70%),
+        repeating-linear-gradient(45deg, transparent 0 20px, rgba(212,175,55,0.04) 20px 21px);
+    }
+    .dc-splash-card {
+      position: relative;
+      padding: 60px 40px;
+      max-width: 380px;
+      width: 100%;
+      text-align: center;
+      border: 1px solid rgba(212,175,55,0.4);
+      background: rgba(15,15,15,0.7);
+    }
+    .dc-corner-tl, .dc-corner-tr, .dc-corner-bl, .dc-corner-br { position: absolute; width: 50px; height: 50px; }
+    .dc-corner-tl { top: -1px; left: -1px; }
+    .dc-corner-tr { top: -1px; right: -1px; transform: scaleX(-1); }
+    .dc-corner-bl { bottom: -1px; left: -1px; transform: scaleY(-1); }
+    .dc-corner-br { bottom: -1px; right: -1px; transform: scale(-1, -1); }
+    .dc-fan-deco { width: 60px; height: 60px; margin: 0 auto 24px; display: block; }
+    .dc-splash-card h1 {
+      font-family: 'Limelight', serif;
+      font-size: clamp(48px, 9vw, 84px);
+      margin: 0 0 24px;
+      line-height: 1;
+      letter-spacing: 0.08em;
+      color: #f5e8d0;
+    }
+    .dc-splash-card h1 span { color: #d4af37; padding: 0 0.04em; font-size: 0.7em; vertical-align: middle; }
+    .dc-issue {
+      font-family: 'Poiret One', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.4em;
+      color: #d4af37;
+      margin: 0 0 32px;
+    }
+    #dc-cta {
+      background: transparent;
+      color: #d4af37;
+      border: 1px solid #d4af37;
+      padding: 14px 28px;
+      font-family: 'Poiret One', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    #dc-cta:hover { background: #d4af37; color: #0a0a0a; }
+
+    /* HERO */
+    .dc-hero { position: relative; height: 100vh; min-height: 720px; overflow: hidden; }
+    .dc-hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 50% 80%, rgba(31,78,61,0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(212,175,55,0.15) 0%, transparent 40%),
+        #0a0a0a;
+    }
+    .dc-sunburst-bg { position: absolute; left: 50%; bottom: 0; width: 200%; max-width: 1800px; height: 60%; transform: translateX(-50%); opacity: 0.3; }
+    .dc-hero-frame { position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 32px; text-align: center; }
+    .dc-hero-pre {
+      font-family: 'Poiret One', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: #d4af37;
+      margin: 0 0 32px;
+    }
+    .dc-hero h1 {
+      font-family: 'Limelight', serif;
+      font-size: clamp(48px, 10vw, 130px);
+      line-height: 1;
+      margin: 0 0 32px;
+      letter-spacing: 0.06em;
+      color: #f5e8d0;
+    }
+    .dc-hero h1 .dc-name { display: inline-block; }
+    .dc-hero h1 .dc-amp {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: #d4af37;
+      padding: 0 0.15em;
+      font-size: 0.8em;
+    }
+    .dc-hero-date {
+      font-family: 'Poiret One', sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: #f5e8d0;
+      margin: 0 0 8px;
+    }
+    .dc-hero-loc {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: #d4af37;
+      margin: 0;
+    }
+
+    /* QUOTE */
+    .dc-quote { padding: 100px 32px; max-width: 800px; margin: 0 auto; text-align: center; }
+    .dc-quote-fan { width: 80px; height: 80px; margin: 0 auto 32px; display: block; transform: rotate(180deg); }
+    .dc-quote blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(22px, 3vw, 36px);
+      line-height: 1.5;
+      margin: 0 0 24px;
+      color: #f5e8d0;
+    }
+    .dc-quote blockquote em { color: #d4af37; }
+    .dc-quote p { font-family: 'Poiret One', sans-serif; font-size: 11px; letter-spacing: 0.4em; text-transform: uppercase; color: #d4af37; margin: 0; }
+
+    /* LETTER */
+    .dc-letter { padding: 100px 24px; max-width: 760px; margin: 0 auto; }
+    .dc-letter-frame { padding: 56px 32px; border: 1px solid #d4af37; position: relative; background: rgba(15,15,15,0.6); }
+    .dc-letter-frame p { font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.7; color: #f5e8d0; margin: 0 0 18px; }
+    .dc-letter-sign { font-family: 'Limelight', serif !important; color: #d4af37 !important; font-size: 28px !important; text-align: right; margin-top: 24px; }
+
+    /* COUNTDOWN */
+    .dc-cd { padding: 100px 24px; text-align: center; max-width: 900px; margin: 0 auto; }
+    .dc-cd-grid { display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: nowrap; margin: 32px auto; }
+    .dc-cd-grid > div:not(.dc-cd-sep) {
+      flex: 1;
+      max-width: 130px;
+      padding: 24px 8px;
+      border: 1px solid #d4af37;
+    }
+    .dc-cd-grid span { display: block; font-family: 'Limelight', serif; font-size: clamp(28px, 5vw, 56px); color: #d4af37; line-height: 1; }
+    .dc-cd-grid p { margin: 12px 0 0; font-family: 'Poiret One', sans-serif; font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: #f5e8d0; }
+    .dc-cd-sep { font-family: 'Limelight', serif; font-size: clamp(28px, 5vw, 56px); color: #d4af37; padding: 0 4px; }
+
+    /* STORY */
+    .dc-story { padding: 100px 24px; max-width: 1100px; margin: 0 auto; }
+    .dc-story-head { text-align: center; margin-bottom: 64px; }
+    .dc-story-head h2 { font-size: clamp(36px, 5vw, 64px); margin: 0; line-height: 1.1; }
+    .dc-story-grid { display: grid; gap: 32px; }
+    @media (min-width: 768px) { .dc-story-grid { grid-template-columns: repeat(2, 1fr); gap: 48px; } }
+    .dc-story-grid article { padding: 32px; border: 1px solid rgba(212,175,55,0.4); position: relative; }
+    .dc-act { font-family: 'Poiret One', sans-serif; font-size: 11px; letter-spacing: 0.4em; text-transform: uppercase; color: #d4af37; margin: 0 0 8px; }
+    .dc-year { font-family: 'Limelight', serif; font-size: 36px; color: #f5e8d0; margin: 0 0 16px; line-height: 1; }
+    .dc-story-grid h3 { font-family: 'Poiret One', sans-serif; font-size: 22px; margin: 0 0 12px; color: #d4af37; }
+    .dc-story-grid p { font-family: 'Cormorant Garamond', serif; font-size: 17px; line-height: 1.6; color: #f5e8d0; margin: 0; }
+
+    /* GALLERY */
+    .dc-gallery { padding: 100px 24px; max-width: 1100px; margin: 0 auto; }
+    .dc-gal-head { text-align: center; margin-bottom: 56px; }
+    .dc-gal-head h2 { font-size: clamp(36px, 5vw, 60px); margin: 0; }
+    .dc-fan-small { width: 50px; height: 50px; margin: 0 auto 16px; display: block; }
+    .dc-gal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; }
+    .dc-gal-grid figure { margin: 0; aspect-ratio: 4/5; overflow: hidden; position: relative; }
+    .dc-gal-grid figure::before {
+      content: ''; position: absolute; inset: 8px;
+      border: 1px solid #d4af37; opacity: 0.6; z-index: 2; pointer-events: none;
+    }
+    .dc-gal-grid img { width: 100%; height: 100%; object-fit: cover; filter: contrast(1.1) saturate(0.85); transition: transform 1.4s ease; }
+    .dc-gal-grid figure:hover img { transform: scale(1.05); }
+
+    /* PROGRAM */
+    .dc-program { padding: 100px 24px; max-width: 800px; margin: 0 auto; text-align: center; }
+    .dc-program h2 { font-size: clamp(36px, 5vw, 56px); margin: 0 0 56px; }
+    .dc-program-grid { display: grid; gap: 16px; text-align: left; }
+    .dc-program-grid > div { display: grid; grid-template-columns: 80px 1fr; gap: 24px; align-items: center; padding: 20px; border: 1px solid rgba(212,175,55,0.3); }
+    .dc-program-grid strong { font-family: 'Limelight', serif; font-weight: 400; font-size: 22px; color: #d4af37; }
+    .dc-program-grid h4 { font-family: 'Poiret One', sans-serif; font-size: 20px; margin: 0 0 4px; color: #f5e8d0; }
+    .dc-program-grid p { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: rgba(245,232,208,0.78); margin: 0; }
+
+    /* LOC */
+    .dc-loc { padding: 100px 24px; max-width: 1000px; margin: 0 auto; text-align: center; }
+    .dc-loc h2 { font-size: clamp(32px, 4.5vw, 56px); margin: 0 0 16px; }
+    .dc-loc-desc { font-family: 'Cormorant Garamond', serif; font-size: 19px; color: rgba(245,232,208,0.85); margin: 0 0 32px; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .dc-loc-card { padding: 32px; border: 1px solid #d4af37; max-width: 480px; margin: 0 auto 32px; }
+    .dc-loc-card p { font-family: 'Cormorant Garamond', serif; font-size: 18px; margin: 0 0 6px; color: #f5e8d0; }
+    .dc-loc-card a { color: #d4af37; text-decoration: none; font-family: 'Poiret One', sans-serif; font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; border-bottom: 1px solid #d4af37; padding-bottom: 4px; display: inline-block; margin-top: 12px; }
+    .dc-loc-extra { display: grid; gap: 24px; margin-top: 24px; text-align: left; }
+    @media (min-width: 700px) { .dc-loc-extra { grid-template-columns: repeat(3, 1fr); } }
+    .dc-loc-extra > div { padding: 24px; background: rgba(212,175,55,0.05); border: 1px solid rgba(212,175,55,0.2); }
+    .dc-loc-extra h4 { font-family: 'Poiret One', sans-serif; font-size: 16px; margin: 0 0 10px; color: #d4af37; letter-spacing: 0.1em; text-transform: uppercase; }
+    .dc-loc-extra p { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #f5e8d0; margin: 0; }
+    .dc-loc-extra em { color: #d4af37; font-style: normal; }
+
+    /* DRESS */
+    .dc-dress { padding: 100px 24px; max-width: 760px; margin: 0 auto; }
+    .dc-dress-frame { text-align: center; padding: 56px 32px; border: 2px double #d4af37; }
+    .dc-dress-frame h2 { font-size: clamp(28px, 4vw, 44px); margin: 0 0 24px; }
+    .dc-dress-text { font-family: 'Cormorant Garamond', serif; font-size: 18px; line-height: 1.7; color: rgba(245,232,208,0.9); margin: 0 0 40px; }
+    .dc-swatches { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+    .dc-swatches > div { text-align: center; }
+    .dc-swatches span { display: block; width: 56px; height: 56px; border-radius: 50%; border: 1px solid #d4af37; }
+    .dc-swatches p { margin: 12px 0 0; font-family: 'Poiret One', sans-serif; font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: #f5e8d0; }
+
+    /* KIDS */
+    .dc-kids { padding: 60px 24px; text-align: center; max-width: 720px; margin: 0 auto; }
+    .dc-kids p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; color: rgba(245,232,208,0.85); margin: 0; }
+
+    /* GIFTS */
+    .dc-gifts { padding: 100px 24px; max-width: 1100px; margin: 0 auto; text-align: center; }
+    .dc-gifts h2 { font-size: clamp(32px, 4vw, 52px); margin: 0 0 24px; }
+    .dc-gifts-intro { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: rgba(245,232,208,0.85); max-width: 640px; margin: 0 auto 48px; }
+    .dc-gifts-grid { display: grid; gap: 20px; text-align: left; }
+    @media (min-width: 768px) { .dc-gifts-grid { grid-template-columns: repeat(2, 1fr); } }
+    .dc-gifts-grid > div { padding: 28px; border: 1px solid rgba(212,175,55,0.3); }
+    .dc-gifts-grid h4 { font-family: 'Poiret One', sans-serif; font-size: 20px; margin: 0 0 12px; color: #d4af37; }
+    .dc-gifts-grid p { font-family: 'Cormorant Garamond', serif; font-size: 17px; line-height: 1.6; color: #f5e8d0; margin: 0; }
+
+    /* RSVP */
+    .dc-rsvp { padding: 100px 24px; max-width: 640px; margin: 0 auto; }
+    .dc-rsvp-frame { padding: 48px 32px; border: 2px double #d4af37; text-align: center; }
+    .dc-rsvp h2 { font-size: clamp(36px, 5vw, 56px); margin: 0 0 12px; }
+    .dc-deadline { font-family: 'Cormorant Garamond', serif; font-style: italic; color: #d4af37; margin: 0 0 32px; }
+    #dc-rsvp-form { display: grid; gap: 16px; text-align: left; }
+    #dc-rsvp-form label { display: grid; gap: 6px; }
+    #dc-rsvp-form span { font-family: 'Poiret One', sans-serif; font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: #d4af37; }
+    #dc-rsvp-form input, #dc-rsvp-form select { background: rgba(212,175,55,0.05); border: 1px solid rgba(212,175,55,0.4); padding: 12px 14px; font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #f5e8d0; outline: none; }
+    #dc-rsvp-form input:focus, #dc-rsvp-form select:focus { border-color: #d4af37; }
+    .dc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    #dc-rsvp-form button { margin-top: 16px; background: #d4af37; color: #0a0a0a; border: none; padding: 14px 24px; font-family: 'Poiret One', sans-serif; font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; }
+    .dc-rsvp-ok { font-family: 'Cormorant Garamond', serif; font-style: italic; color: #d4af37; text-align: center; font-size: 17px; margin-top: 16px; }
+
+    /* PLAYLIST */
+    .dc-pl { padding: 100px 24px; max-width: 720px; margin: 0 auto; text-align: center; }
+    .dc-pl h2 { font-size: clamp(32px, 4vw, 48px); margin: 0 0 40px; }
+    .dc-pl-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; text-align: left; }
+    .dc-pl-list li { display: grid; grid-template-columns: 60px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(212,175,55,0.18); align-items: baseline; }
+    .dc-pl-list span { font-family: 'Limelight', serif; font-size: 22px; color: #d4af37; }
+    .dc-pl-list strong { display: block; font-family: 'Poiret One', sans-serif; font-weight: 400; font-size: 19px; color: #f5e8d0; }
+    .dc-pl-list em { font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #d4af37; }
+
+    /* HASH */
+    .dc-hash { padding: 100px 24px; text-align: center; max-width: 720px; margin: 0 auto; }
+    .dc-hash-tag { font-family: 'Limelight', serif !important; font-size: clamp(28px, 5vw, 56px); color: #d4af37 !important; margin: 16px 0 24px; word-break: break-word; letter-spacing: 0.04em; }
+    .dc-hash p { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: rgba(245,232,208,0.85); margin: 0; }
+
+    /* END */
+    .dc-end { position: relative; padding: 140px 24px 100px; text-align: center; overflow: hidden; }
+    .dc-end-sun { position: absolute; left: 50%; top: 0; width: 200%; max-width: 1800px; height: 60%; transform: translateX(-50%) rotate(180deg); opacity: 0.25; }
+    .dc-end-inner { position: relative; max-width: 720px; margin: 0 auto; }
+    .dc-end h2 { font-size: clamp(36px, 6vw, 72px); margin: 0 0 32px; line-height: 1.15; }
+    .dc-end-sig { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; color: #d4af37; margin: 0 0 8px; }
+    .dc-end-date { font-family: 'Poiret One', sans-serif; font-size: 11px; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(245,232,208,0.6); margin: 0; }
+  </style>
+
+  <script>
+    import gsap from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    gsap.registerPlugin(ScrollTrigger);
+
+    const splash = document.getElementById('dc-splash');
+    const cta = document.getElementById('dc-cta');
+    if (splash) {
+      document.body.style.overflow = 'hidden';
+      const dismiss = () => {
+        gsap.to(splash, { opacity: 0, duration: 0.7, ease: 'power2.in', onComplete: () => {
+          splash.style.display = 'none';
+          document.body.style.overflow = '';
+        }});
+      };
+      cta?.addEventListener('click', dismiss);
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-animate]').forEach(el => io.observe(el));
+
+    const target = new Date('2027-11-13T19:00:00-06:00').getTime();
+    const tick = () => {
+      const diff = target - Date.now();
+      if (diff <= 0) return;
+      const set = (id: string, v: number) => { const el = document.getElementById(id); if (el) el.textContent = String(v).padStart(2, '0'); };
+      set('dc-d', Math.floor(diff / 86400000));
+      set('dc-h', Math.floor((diff / 3600000) % 24));
+      set('dc-m', Math.floor((diff / 60000) % 60));
+      set('dc-s', Math.floor((diff / 1000) % 60));
+    };
+    tick(); setInterval(tick, 1000);
+
+    const form = document.getElementById('dc-rsvp-form');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('dc-rsvp-ok')?.removeAttribute('hidden');
+      (form as HTMLFormElement).reset();
+    });
+  </script>
+</DemoLayout>

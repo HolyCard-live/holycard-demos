@@ -1,0 +1,554 @@
+---
+import DemoLayout from '../../layouts/DemoLayout.astro';
+const fonts = 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;400;500&family=EB+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400&display=swap';
+---
+<DemoLayout
+  title="Yuki & Sebastián · 04·04·2027"
+  description="Jardín Japonés · CDMX. Una boda en silencio."
+  themeColor="#f4f1ec"
+  bodyClass="ws-body"
+  fontsHref={fonts}
+  ogImage="https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1200&auto=format&fit=crop&q=80"
+  progressColor="#1a1a1a"
+>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="ws-enso" viewBox="0 0 200 200">
+        <path
+          d="M100,30 Q170,30 170,100 Q170,170 100,170 Q40,170 40,100 Q40,40 100,30 L110,32"
+          fill="none" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round"
+          opacity="0.92"
+        />
+      </symbol>
+      <symbol id="ws-stroke" viewBox="0 0 200 30">
+        <path d="M5,15 Q60,5 100,15 Q150,25 195,12" stroke="#1a1a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="ws-bamboo" viewBox="0 0 60 200">
+        <line x1="30" y1="10" x2="30" y2="190" stroke="#1a1a1a" stroke-width="1.5"/>
+        <ellipse cx="30" cy="40" rx="8" ry="2" fill="#1a1a1a"/>
+        <ellipse cx="30" cy="90" rx="8" ry="2" fill="#1a1a1a"/>
+        <ellipse cx="30" cy="140" rx="8" ry="2" fill="#1a1a1a"/>
+        <path d="M30,55 Q15,50 5,40" stroke="#1a1a1a" stroke-width="1" fill="none"/>
+        <ellipse cx="8" cy="38" rx="6" ry="2" transform="rotate(-30 8 38)" fill="#1a1a1a" opacity="0.7"/>
+        <path d="M30,105 Q45,100 55,95" stroke="#1a1a1a" stroke-width="1" fill="none"/>
+        <ellipse cx="55" cy="93" rx="6" ry="2" transform="rotate(20 55 93)" fill="#1a1a1a" opacity="0.7"/>
+      </symbol>
+      <symbol id="ws-sakura" viewBox="0 0 60 60">
+        <g fill="#a0512c" opacity="0.85">
+          <path d="M30,15 Q24,18 25,28 Q30,32 35,28 Q36,18 30,15 Z"/>
+          <path d="M30,15 Q24,18 25,28 Q30,32 35,28 Q36,18 30,15 Z" transform="rotate(72 30 30)"/>
+          <path d="M30,15 Q24,18 25,28 Q30,32 35,28 Q36,18 30,15 Z" transform="rotate(144 30 30)"/>
+          <path d="M30,15 Q24,18 25,28 Q30,32 35,28 Q36,18 30,15 Z" transform="rotate(216 30 30)"/>
+          <path d="M30,15 Q24,18 25,28 Q30,32 35,28 Q36,18 30,15 Z" transform="rotate(288 30 30)"/>
+          <circle cx="30" cy="30" r="3" fill="#1a1a1a"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ SPLASH ============ -->
+  <div id="ws-splash" class="ws-splash">
+    <svg class="ws-enso-splash" viewBox="0 0 200 200"><use href="#ws-enso"/></svg>
+    <p class="ws-jp">結婚 · Kekkon</p>
+    <h1>Yuki <span>·</span> Sebastián</h1>
+    <p class="ws-issue">四 · 四 · 二〇二七</p>
+    <button id="ws-cta">入る · entrar</button>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="ws-hero">
+    <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1800&auto=format&fit=crop&q=85" alt="Jardín japonés"/>
+    <div class="ws-hero-veil"></div>
+    <div class="ws-hero-text">
+      <p class="ws-jp">結婚式へのご招待</p>
+      <h1>
+        <span>Yuki</span>
+        <em>&amp;</em>
+        <span>Sebastián</span>
+      </h1>
+      <p class="ws-hero-date">04 · 04 · 2027</p>
+    </div>
+  </section>
+
+  <!-- ============ FRASE ============ -->
+  <section class="ws-quote" data-animate>
+    <svg class="ws-stroke-deco" viewBox="0 0 200 30"><use href="#ws-stroke"/></svg>
+    <blockquote>
+      物の哀れ
+    </blockquote>
+    <p class="ws-quote-meaning"><em>Mono no aware</em> — la ternura que se siente al saber que las cosas pasan.</p>
+  </section>
+
+  <!-- ============ MENSAJE ============ -->
+  <section class="ws-letter">
+    <div class="ws-letter-inner" data-animate>
+      <p>
+        Vamos a casarnos en silencio. Sin marcha, sin discursos largos. Solo nosotros, las personas
+        que más nos importan, y un jardín que aprendimos a querer juntos.
+      </p>
+      <p>
+        Si vienes, ven listo para escuchar. La ceremonia será corta. Después, el sake.
+      </p>
+      <p class="ws-letter-sign">— Y &amp; S</p>
+    </div>
+  </section>
+
+  <!-- ============ COUNTDOWN ============ -->
+  <section class="ws-cd" data-animate>
+    <svg class="ws-stroke-deco" viewBox="0 0 200 30"><use href="#ws-stroke"/></svg>
+    <p class="ws-jp">残された時間 · resta</p>
+    <div class="ws-cd-grid">
+      <div><span id="ws-d">--</span><p>日</p></div>
+      <div><span id="ws-h">--</span><p>時</p></div>
+      <div><span id="ws-m">--</span><p>分</p></div>
+      <div><span id="ws-s">--</span><p>秒</p></div>
+    </div>
+  </section>
+
+  <!-- ============ HISTORIA ============ -->
+  <section class="ws-story">
+    <div class="ws-story-head" data-animate>
+      <p class="ws-jp">わたしたちの物語</p>
+      <h2>Nuestra historia.</h2>
+    </div>
+    <div class="ws-story-list">
+      <article data-animate>
+        <p class="ws-year">2019</p>
+        <h3>Tokio. Un izakaya en Shimokitazawa.</h3>
+        <p>Ella sirvió, él tradujo mal el menú. Comió cuatro platos que no había pedido. Lo agradece.</p>
+      </article>
+      <article data-animate>
+        <p class="ws-year">2021</p>
+        <h3>CDMX. Un patio con un naranjo.</h3>
+        <p>Mudanza compartida. Un naranjo, una mesa baja, un perro adoptado de un albergue de Veracruz.</p>
+      </article>
+      <article data-animate>
+        <p class="ws-year">2024</p>
+        <h3>Nara. Un templo, una conversación.</h3>
+        <p>Ahí dijimos —sin decirlo— que esto iba a ser. La quietud lo confirmó.</p>
+      </article>
+      <article data-animate>
+        <p class="ws-year">2027</p>
+        <h3>Jardín Japonés. CDMX.</h3>
+        <p>Volvemos a la quietud. Esta vez con todos ustedes.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ FOTO ============ -->
+  <section class="ws-photo" data-animate>
+    <img src="https://images.unsplash.com/photo-1545569310-a3d9c8e6cf72?w=1600&auto=format&fit=crop&q=85" alt=""/>
+  </section>
+
+  <!-- ============ GALERÍA ============ -->
+  <section class="ws-gallery" data-animate>
+    <p class="ws-jp">写真集</p>
+    <h2>Imágenes.</h2>
+    <div class="ws-gal-grid">
+      <figure><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1490810194309-344b3661ba39?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure><img src="https://images.unsplash.com/photo-1493514789931-586cb221d7a7?w=900&auto=format&fit=crop&q=80" alt=""/></figure>
+    </div>
+  </section>
+
+  <!-- ============ ITINERARIO ============ -->
+  <section class="ws-program">
+    <div class="ws-program-head" data-animate>
+      <p class="ws-jp">予定</p>
+      <h2>Plan del día.</h2>
+    </div>
+    <div class="ws-program-list">
+      <div data-animate><span>15:30</span><h4>Llegada</h4><p>Té y agua de jamaica.</p></div>
+      <div data-animate><span>16:00</span><h4>Ceremonia</h4><p>Quince minutos. Solo lo necesario.</p></div>
+      <div data-animate><span>16:30</span><h4>San-san-kudo</h4><p>Tres copas de sake compartidas. Tradición japonesa.</p></div>
+      <div data-animate><span>17:30</span><h4>Cena kaiseki</h4><p>Siete tiempos. Vegetariano disponible.</p></div>
+      <div data-animate><span>20:00</span><h4>Música</h4><p>Cuarteto de cuerda en vivo.</p></div>
+      <div data-animate><span>23:00</span><h4>Fin</h4><p>Despedida con farolillos.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ UBICACIÓN ============ -->
+  <section class="ws-loc" data-animate>
+    <p class="ws-jp">場所</p>
+    <h2>Jardín Japonés Edomura</h2>
+    <p class="ws-loc-text">
+      Un rincón japonés escondido en Las Lomas, CDMX. Estanque con carpas koi, puente de piedra,
+      pabellón de té y bambú. La ceremonia será junto al agua.
+    </p>
+    <p class="ws-loc-address">Sierra Mojada 626, Lomas de Chapultepec, 11000 CDMX</p>
+    <a href="https://maps.google.com" target="_blank" rel="noopener" class="ws-link">地図 → ver mapa</a>
+    <div class="ws-trans">
+      <h4>Cómo llegar</h4>
+      <ul>
+        <li><strong>Estacionamiento:</strong> valet en sitio, sin costo.</li>
+        <li><strong>Uber/taxi:</strong> punto de acceso por Av. de las Palmas.</li>
+        <li><strong>Hotel cercano:</strong> Hotel Carlota, 8 min en auto.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ DRESS CODE ============ -->
+  <section class="ws-dress" data-animate>
+    <p class="ws-jp">服装</p>
+    <h2>Vestimenta.</h2>
+    <p class="ws-dress-text">
+      <em>Cocktail elegante.</em> Ellas: vestido midi o pantalón de tela. Ellos: traje sin corbata.
+      Tonos neutros y tierra. <em>Por favor, sin tacón muy alto</em> — caminaremos sobre piedra.
+    </p>
+    <div class="ws-swatches">
+      <div><span style="background:#f4f1ec"></span><p>Blanco roto</p></div>
+      <div><span style="background:#727272"></span><p>Sumi gris</p></div>
+      <div><span style="background:#1a1a1a"></span><p>Tinta</p></div>
+      <div><span style="background:#a0512c"></span><p>Óxido</p></div>
+      <div><span style="background:#7a8a6e"></span><p>Bambú</p></div>
+    </div>
+  </section>
+
+  <!-- ============ REGALOS ============ -->
+  <section class="ws-gifts" data-animate>
+    <p class="ws-jp">贈り物</p>
+    <h2>Tu compañía es suficiente.</h2>
+    <p class="ws-gifts-text">
+      Si quieres acompañarnos con algo, te dejamos opciones discretas. Cualquier gesto, en cualquier
+      escala, es bienvenido. <em>Lo importante es que vengas.</em>
+    </p>
+    <div class="ws-gifts-list">
+      <div><h4>Sobre</h4><p>Habrá un cofre de madera de cedro junto a la entrada.</p></div>
+      <div><h4>Transferencia</h4><p>Banorte · 0123 4567 8901 2345<br/>CLABE 072180012345678901</p></div>
+      <div><h4>Mesa Sears</h4><p>Evento <em>#41928</em></p></div>
+      <div><h4>Luna de miel</h4><p>Vamos a Kioto en mayo. Aporta a un té, un templo, un atardecer.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ RSVP ============ -->
+  <section class="ws-rsvp" data-animate>
+    <p class="ws-jp">出席のご返事</p>
+    <h2>¿Vienes?</h2>
+    <p class="ws-deadline">Confirma antes del 4 de marzo de 2027.</p>
+    <form id="ws-rsvp-form" novalidate>
+      <label><span>Nombre</span><input type="text" name="name" required/></label>
+      <div class="ws-row">
+        <label><span>Asistencia</span><select name="attend"><option>Sí, asistiré</option><option>No podré</option></select></label>
+        <label><span>Acompañante</span><select name="guests"><option>Solo</option><option>Con +1</option></select></label>
+      </div>
+      <label><span>Restricciones</span><input type="text" name="diet"/></label>
+      <label><span>Una palabra que <em>describa</em> el día que esperas</span><input type="text" name="word"/></label>
+      <button type="submit">送信 · enviar</button>
+      <p id="ws-rsvp-ok" class="ws-rsvp-ok" hidden>有り難う · gracias. Te esperamos.</p>
+    </form>
+  </section>
+
+  <!-- ============ PLAYLIST ============ -->
+  <section class="ws-pl" data-animate>
+    <p class="ws-jp">音楽</p>
+    <h2>Lo que sonará.</h2>
+    <ol class="ws-pl-list">
+      <li><span>I</span><strong>Sakura</strong><em>Tradicional · koto</em></li>
+      <li><span>II</span><strong>Merry Christmas Mr. Lawrence</strong><em>Ryuichi Sakamoto</em></li>
+      <li><span>III</span><strong>The Wind Forest</strong><em>Joe Hisaishi</em></li>
+      <li><span>IV</span><strong>Spiegel im Spiegel</strong><em>Arvo Pärt</em></li>
+      <li><span>V</span><strong>Clair de Lune</strong><em>Debussy</em></li>
+      <li><span>VI</span><strong>Mychael Danna · Life of Pi</strong><em>God Storm</em></li>
+    </ol>
+  </section>
+
+  <!-- ============ HASHTAG ============ -->
+  <section class="ws-hash" data-animate>
+    <svg viewBox="0 0 60 60" class="ws-sakura-deco"><use href="#ws-sakura"/></svg>
+    <p class="ws-jp">写真をシェアしてください</p>
+    <h2 class="ws-hash-tag">#YukiYSeb2027</h2>
+    <p>Comparte tus fotos. Las queremos en silencio o con risas, ambas funcionan.</p>
+  </section>
+
+  <!-- ============ CIERRE ============ -->
+  <section class="ws-end">
+    <svg class="ws-enso-end" viewBox="0 0 200 200"><use href="#ws-enso"/></svg>
+    <div class="ws-end-inner" data-animate>
+      <p class="ws-jp">またね</p>
+      <h2>Hasta abril.</h2>
+      <p class="ws-end-sig">Yuki Tanaka · Sebastián Pérez</p>
+    </div>
+  </section>
+
+  <style is:global>
+    .ws-body {
+      background: #f4f1ec;
+      color: #1a1a1a;
+      font-family: 'EB Garamond', serif;
+      font-weight: 400;
+    }
+    .ws-body h1, .ws-body h2 {
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 200;
+      color: #1a1a1a;
+      letter-spacing: 0.02em;
+    }
+    .ws-body h3, .ws-body h4 {
+      font-family: 'EB Garamond', serif;
+      font-weight: 400;
+    }
+    .ws-body em { font-style: italic; }
+    .ws-body [data-animate] { opacity: 0; transform: translateY(28px); transition: opacity 1.6s ease, transform 1.6s ease; }
+    .ws-body [data-animate].in { opacity: 1; transform: none; }
+    .ws-body .ws-jp {
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 400;
+      font-size: 12px;
+      letter-spacing: 0.4em;
+      color: #a0512c;
+      margin: 0 0 24px;
+    }
+    .ws-body .ws-stroke-deco { width: 100px; height: 20px; opacity: 0.6; display: block; margin: 0 auto 32px; }
+
+    /* SPLASH */
+    .ws-splash {
+      position: fixed; inset: 0; z-index: 100;
+      background: #f4f1ec;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 32px;
+      transition: opacity 0.7s ease;
+      text-align: center;
+    }
+    .ws-enso-splash { width: 140px; height: 140px; margin-bottom: 32px; }
+    .ws-splash h1 {
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 200;
+      font-size: clamp(36px, 6vw, 56px);
+      margin: 0 0 16px;
+      color: #1a1a1a;
+      letter-spacing: 0.05em;
+    }
+    .ws-splash h1 span { color: #a0512c; padding: 0 0.1em; }
+    .ws-issue {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 14px;
+      letter-spacing: 0.4em;
+      color: #727272;
+      margin: 0 0 32px;
+    }
+    #ws-cta {
+      background: transparent;
+      color: #1a1a1a;
+      border: 1px solid #1a1a1a;
+      padding: 14px 32px;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 12px;
+      letter-spacing: 0.32em;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    #ws-cta:hover { background: #1a1a1a; color: #f4f1ec; }
+
+    /* HERO */
+    .ws-hero { position: relative; height: 100vh; min-height: 720px; overflow: hidden; }
+    .ws-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(0.6) brightness(0.92); }
+    .ws-hero-veil { position: absolute; inset: 0; background: rgba(244,241,236,0.35); }
+    .ws-hero-text { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 32px 14vh 32px; max-width: 1200px; margin: 0 auto; }
+    .ws-hero-text .ws-jp { color: #a0512c; }
+    .ws-hero h1 {
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 200;
+      font-size: clamp(48px, 9vw, 110px);
+      line-height: 1.1;
+      margin: 0 0 24px;
+      color: #1a1a1a;
+    }
+    .ws-hero h1 em { color: #a0512c; padding: 0 0.15em; font-family: 'EB Garamond', serif; font-style: italic; font-weight: 300; }
+    .ws-hero h1 span { display: block; }
+    @media (min-width: 700px) { .ws-hero h1 span { display: inline; } .ws-hero h1 em { display: inline-block; } }
+    .ws-hero-date { font-family: 'Noto Serif JP', serif; font-size: 14px; letter-spacing: 0.4em; color: #1a1a1a; margin: 0; }
+
+    /* QUOTE */
+    .ws-quote { padding: 160px 32px; max-width: 720px; margin: 0 auto; text-align: center; }
+    .ws-quote blockquote {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(40px, 7vw, 80px);
+      font-weight: 200;
+      line-height: 1.2;
+      margin: 0 0 32px;
+      color: #1a1a1a;
+      letter-spacing: 0.04em;
+    }
+    .ws-quote-meaning { font-family: 'EB Garamond', serif; font-size: 18px; color: #727272; margin: 0; }
+
+    /* LETTER */
+    .ws-letter { padding: 120px 32px; max-width: 640px; margin: 0 auto; }
+    .ws-letter-inner p { font-family: 'EB Garamond', serif; font-size: 19px; line-height: 1.8; margin: 0 0 20px; color: #1a1a1a; }
+    .ws-letter-sign { font-family: 'Noto Serif JP', serif !important; font-size: 22px !important; color: #a0512c !important; text-align: right; margin-top: 24px !important; }
+
+    /* COUNTDOWN */
+    .ws-cd { padding: 120px 32px; text-align: center; max-width: 720px; margin: 0 auto; border-top: 1px solid rgba(26,26,26,0.12); border-bottom: 1px solid rgba(26,26,26,0.12); }
+    .ws-cd .ws-jp { text-align: center; }
+    .ws-cd-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 32px; }
+    .ws-cd-grid > div { text-align: center; }
+    .ws-cd-grid span { display: block; font-family: 'Noto Serif JP', serif; font-weight: 200; font-size: clamp(36px, 6vw, 64px); color: #1a1a1a; line-height: 1; }
+    .ws-cd-grid p { margin: 12px 0 0; font-family: 'Noto Serif JP', serif; font-size: 16px; color: #a0512c; }
+
+    /* STORY */
+    .ws-story { padding: 120px 32px; max-width: 720px; margin: 0 auto; }
+    .ws-story-head { margin-bottom: 80px; text-align: center; }
+    .ws-story-head h2 { font-size: clamp(32px, 4.5vw, 48px); margin: 0; }
+    .ws-story-list { display: grid; gap: 80px; }
+    .ws-story-list article { padding-bottom: 40px; border-bottom: 1px solid rgba(26,26,26,0.1); }
+    .ws-year { font-family: 'Noto Serif JP', serif; font-weight: 200; font-size: 36px; color: #a0512c; margin: 0 0 16px; line-height: 1; }
+    .ws-story-list h3 { font-family: 'Noto Serif JP', serif; font-weight: 400; font-size: 22px; margin: 0 0 12px; }
+    .ws-story-list p { font-family: 'EB Garamond', serif; font-size: 19px; line-height: 1.7; margin: 0; color: #4a4a4a; }
+
+    /* PHOTO */
+    .ws-photo { width: 100%; margin: 0; aspect-ratio: 16/9; max-height: 600px; overflow: hidden; }
+    .ws-photo img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.7); }
+
+    /* GALLERY */
+    .ws-gallery { padding: 120px 32px; max-width: 1100px; margin: 0 auto; text-align: center; }
+    .ws-gallery h2 { font-size: clamp(32px, 4.5vw, 48px); margin: 0 0 56px; }
+    .ws-gal-grid { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 700px) { .ws-gal-grid { grid-template-columns: repeat(4, 1fr); } }
+    .ws-gal-grid figure { margin: 0; aspect-ratio: 3/4; overflow: hidden; }
+    .ws-gal-grid img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.7); transition: transform 1.6s ease; }
+    .ws-gal-grid figure:hover img { transform: scale(1.04); }
+
+    /* PROGRAM */
+    .ws-program { padding: 120px 32px; max-width: 720px; margin: 0 auto; }
+    .ws-program-head { text-align: center; margin-bottom: 64px; }
+    .ws-program-head h2 { font-size: clamp(32px, 4.5vw, 48px); margin: 0; }
+    .ws-program-list { display: grid; gap: 48px; }
+    .ws-program-list > div { display: grid; grid-template-columns: 80px 1fr; gap: 32px; align-items: baseline; }
+    .ws-program-list span { font-family: 'Noto Serif JP', serif; font-weight: 200; font-size: 24px; color: #a0512c; }
+    .ws-program-list h4 { font-family: 'Noto Serif JP', serif; font-weight: 400; font-size: 20px; margin: 0 0 8px; }
+    .ws-program-list p { font-family: 'EB Garamond', serif; font-size: 17px; color: #4a4a4a; margin: 0; }
+
+    /* LOC */
+    .ws-loc { padding: 120px 32px; max-width: 720px; margin: 0 auto; text-align: center; }
+    .ws-loc h2 { font-size: clamp(32px, 4.5vw, 48px); margin: 0 0 24px; }
+    .ws-loc-text { font-family: 'EB Garamond', serif; font-size: 18px; line-height: 1.7; color: #4a4a4a; margin: 0 0 24px; }
+    .ws-loc-address { font-family: 'Noto Serif JP', serif; font-size: 16px; color: #1a1a1a; margin: 0 0 16px; }
+    .ws-link {
+      display: inline-block;
+      color: #1a1a1a;
+      text-decoration: none;
+      border-bottom: 1px solid #1a1a1a;
+      padding-bottom: 4px;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+    }
+    .ws-trans { margin-top: 56px; padding: 32px; background: #fff; text-align: left; border-left: 2px solid #a0512c; }
+    .ws-trans h4 { font-family: 'Noto Serif JP', serif; font-weight: 400; font-size: 18px; margin: 0 0 16px; color: #a0512c; }
+    .ws-trans ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .ws-trans li { font-family: 'EB Garamond', serif; font-size: 17px; color: #1a1a1a; }
+    .ws-trans strong { font-family: 'Noto Serif JP', serif; font-weight: 400; color: #a0512c; }
+
+    /* DRESS */
+    .ws-dress { padding: 120px 32px; max-width: 720px; margin: 0 auto; text-align: center; }
+    .ws-dress h2 { font-size: clamp(32px, 4.5vw, 48px); margin: 0 0 24px; }
+    .ws-dress-text { font-family: 'EB Garamond', serif; font-size: 18px; line-height: 1.7; margin: 0 0 40px; color: #4a4a4a; }
+    .ws-swatches { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+    .ws-swatches > div { text-align: center; }
+    .ws-swatches span { display: block; width: 56px; height: 56px; border-radius: 50%; border: 1px solid rgba(26,26,26,0.15); }
+    .ws-swatches p { margin: 12px 0 0; font-family: 'Noto Serif JP', serif; font-size: 11px; letter-spacing: 0.2em; color: #1a1a1a; }
+
+    /* GIFTS */
+    .ws-gifts { padding: 120px 32px; max-width: 1000px; margin: 0 auto; text-align: center; }
+    .ws-gifts h2 { font-size: clamp(32px, 4.5vw, 48px); margin: 0 0 24px; }
+    .ws-gifts-text { font-family: 'EB Garamond', serif; font-size: 18px; line-height: 1.7; color: #4a4a4a; max-width: 640px; margin: 0 auto 56px; }
+    .ws-gifts-list { display: grid; gap: 16px; text-align: left; }
+    @media (min-width: 700px) { .ws-gifts-list { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
+    .ws-gifts-list > div { padding: 32px; background: #fff; border-left: 2px solid #a0512c; }
+    .ws-gifts-list h4 { font-family: 'Noto Serif JP', serif; font-weight: 400; font-size: 18px; margin: 0 0 12px; color: #a0512c; }
+    .ws-gifts-list p { font-family: 'EB Garamond', serif; font-size: 17px; line-height: 1.6; color: #1a1a1a; margin: 0; }
+
+    /* RSVP */
+    .ws-rsvp { padding: 120px 32px; max-width: 560px; margin: 0 auto; text-align: center; }
+    .ws-rsvp h2 { font-size: clamp(40px, 6vw, 60px); margin: 0 0 16px; }
+    .ws-deadline { font-family: 'EB Garamond', serif; font-style: italic; color: #727272; margin: 0 0 40px; }
+    #ws-rsvp-form { display: grid; gap: 18px; text-align: left; }
+    #ws-rsvp-form label { display: grid; gap: 6px; }
+    #ws-rsvp-form span { font-family: 'Noto Serif JP', serif; font-size: 13px; letter-spacing: 0.16em; color: #a0512c; }
+    #ws-rsvp-form input, #ws-rsvp-form select {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #1a1a1a;
+      padding: 10px 0;
+      font-family: 'EB Garamond', serif;
+      font-size: 18px;
+      color: #1a1a1a;
+      outline: none;
+    }
+    .ws-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    #ws-rsvp-form button {
+      margin-top: 24px;
+      background: #1a1a1a;
+      color: #f4f1ec;
+      border: none;
+      padding: 16px 24px;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 13px;
+      letter-spacing: 0.32em;
+    }
+    .ws-rsvp-ok { font-family: 'Noto Serif JP', serif; color: #a0512c; text-align: center; margin-top: 16px; font-size: 17px; }
+
+    /* PLAYLIST */
+    .ws-pl { padding: 120px 32px; max-width: 640px; margin: 0 auto; text-align: center; }
+    .ws-pl h2 { font-size: clamp(32px, 4.5vw, 48px); margin: 0 0 48px; }
+    .ws-pl-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; text-align: left; }
+    .ws-pl-list li { display: grid; grid-template-columns: 50px 1fr; gap: 16px; padding: 18px 0; border-bottom: 1px solid rgba(26,26,26,0.1); align-items: baseline; }
+    .ws-pl-list span { font-family: 'Noto Serif JP', serif; font-weight: 200; font-size: 22px; color: #a0512c; grid-row: span 2; align-self: center; }
+    .ws-pl-list strong { display: block; font-family: 'Noto Serif JP', serif; font-weight: 400; font-size: 18px; color: #1a1a1a; }
+    .ws-pl-list em { font-family: 'EB Garamond', serif; font-style: italic; font-size: 14px; color: #727272; display: block; margin-top: 4px; }
+
+    /* HASH */
+    .ws-hash { padding: 120px 32px; text-align: center; max-width: 720px; margin: 0 auto; }
+    .ws-sakura-deco { width: 50px; height: 50px; margin: 0 auto 24px; display: block; }
+    .ws-hash-tag { font-family: 'Noto Serif JP', serif !important; font-weight: 200 !important; font-size: clamp(28px, 5vw, 48px) !important; color: #a0512c !important; margin: 16px 0 24px !important; word-break: break-word; letter-spacing: 0.04em !important; }
+    .ws-hash p { font-family: 'EB Garamond', serif; font-size: 18px; color: #4a4a4a; margin: 0; }
+
+    /* END */
+    .ws-end { padding: 160px 32px 100px; text-align: center; position: relative; }
+    .ws-enso-end { width: 80px; height: 80px; margin: 0 auto 32px; display: block; opacity: 0.7; }
+    .ws-end-inner { max-width: 640px; margin: 0 auto; }
+    .ws-end h2 { font-size: clamp(36px, 6vw, 64px); margin: 0 0 32px; }
+    .ws-end-sig { font-family: 'EB Garamond', serif; font-style: italic; font-size: 17px; color: #727272; margin: 0; }
+  </style>
+
+  <script>
+    import gsap from 'gsap';
+
+    const splash = document.getElementById('ws-splash');
+    const cta = document.getElementById('ws-cta');
+    if (splash) {
+      document.body.style.overflow = 'hidden';
+      const dismiss = () => {
+        gsap.to(splash, { opacity: 0, duration: 0.9, ease: 'power2.in', onComplete: () => {
+          splash.style.display = 'none';
+          document.body.style.overflow = '';
+        }});
+      };
+      cta?.addEventListener('click', dismiss);
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-animate]').forEach(el => io.observe(el));
+
+    const target = new Date('2027-04-04T16:00:00-06:00').getTime();
+    const tick = () => {
+      const diff = target - Date.now();
+      if (diff <= 0) return;
+      const set = (id: string, v: number) => { const el = document.getElementById(id); if (el) el.textContent = String(v).padStart(2, '0'); };
+      set('ws-d', Math.floor(diff / 86400000));
+      set('ws-h', Math.floor((diff / 3600000) % 24));
+      set('ws-m', Math.floor((diff / 60000) % 60));
+      set('ws-s', Math.floor((diff / 1000) % 60));
+    };
+    tick(); setInterval(tick, 1000);
+
+    const form = document.getElementById('ws-rsvp-form');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('ws-rsvp-ok')?.removeAttribute('hidden');
+      (form as HTMLFormElement).reset();
+    });
+  </script>
+</DemoLayout>

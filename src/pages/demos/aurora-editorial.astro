@@ -1,0 +1,720 @@
+---
+import DemoLayout from '../../layouts/DemoLayout.astro';
+const fonts = 'https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap';
+---
+<DemoLayout
+  title="Mateo & Valentina · 11·09·2027"
+  description="Una boda editorial entre los lagos de Bariloche."
+  themeColor="#0f1721"
+  bodyClass="editorial-body"
+  fontsHref={fonts}
+  ogImage="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1200&auto=format&fit=crop&q=80"
+  progressColor="#c9a961"
+>
+
+  <!-- ============ SPLASH ============ -->
+  <div id="ed-splash" class="ed-splash">
+    <div class="ed-envelope" id="ed-env">
+      <p class="ed-vol">Vol. <em>I</em> · Edición Especial</p>
+      <h1>M <span>&amp;</span> V</h1>
+      <p class="ed-issue">11 · IX · MMXXVII</p>
+      <button id="ed-cta">Abrir edición</button>
+    </div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="ed-hero" data-animate>
+    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1600&auto=format&fit=crop&q=85" alt="Mateo y Valentina" />
+    <div class="ed-hero-grain"></div>
+    <div class="ed-hero-overlay"></div>
+    <div class="ed-hero-text">
+      <p class="ed-mast">The Wedding Issue · Patagonia 2027</p>
+      <h1>Mateo <em>&amp;</em><br/>Valentina</h1>
+      <div class="ed-hero-meta">
+        <p>Sábado · 11 de septiembre</p>
+        <p>Bariloche, Argentina</p>
+      </div>
+    </div>
+    <div class="ed-hero-num">N°01</div>
+  </section>
+
+  <!-- ============ FRASE ============ -->
+  <section class="ed-quote" data-animate>
+    <p class="ed-quote-mark">"</p>
+    <blockquote>
+      Hay personas que llegan al final del libro como si siempre hubieran estado escritas en el primer capítulo.
+    </blockquote>
+    <p class="ed-quote-author">— Para los nuestros, con todo el corazón.</p>
+  </section>
+
+  <!-- ============ MENSAJE PERSONAL ============ -->
+  <section class="ed-letter">
+    <div class="ed-letter-grid">
+      <div class="ed-letter-side" data-animate>
+        <p class="ed-label">Carta abierta</p>
+        <h2>De los novios.</h2>
+      </div>
+      <div class="ed-letter-body" data-animate>
+        <p>
+          Si estás leyendo esto, es porque eres parte del paisaje que queremos en la foto que aún no tomamos.
+          Decidimos casarnos en la Patagonia porque es ahí, frente al lago, donde por primera vez se nos
+          ocurrió la tontería de hacerlo todo juntos: los días, los inviernos, las decisiones difíciles.
+        </p>
+        <p>
+          No queremos un evento perfecto, queremos una noche que sepa a verdad. Que haya frío y haya vino,
+          que se baile mal y se ría mucho. Que cada uno traiga consigo algo que ya somos por su culpa.
+        </p>
+        <p class="ed-signature">Mateo &amp; Valentina</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COUNTDOWN ============ -->
+  <section class="ed-cd" data-animate>
+    <p class="ed-label center">Faltan</p>
+    <div class="ed-cd-grid">
+      <div><span id="ed-d">--</span><p>Días</p></div>
+      <div><span id="ed-h">--</span><p>Horas</p></div>
+      <div><span id="ed-m">--</span><p>Minutos</p></div>
+      <div><span id="ed-s">--</span><p>Segundos</p></div>
+    </div>
+    <p class="ed-cd-foot">Para que toda nuestra gente esté en el mismo lugar.</p>
+  </section>
+
+  <!-- ============ NUESTRA HISTORIA ============ -->
+  <section class="ed-story">
+    <div class="ed-story-head" data-animate>
+      <p class="ed-label">Capítulo I</p>
+      <h2>De cómo el invierno<br/><em>se volvió compañía.</em></h2>
+    </div>
+    <div class="ed-timeline">
+      <article class="ed-tl-item" data-animate>
+        <div class="ed-tl-year">2019</div>
+        <div class="ed-tl-body">
+          <h3>Coyoacán, lluvia, una librería.</h3>
+          <p>Discutíamos por el último ejemplar de un libro que ya teníamos los dos. Ganó ella. Y también, técnicamente, él.</p>
+        </div>
+      </article>
+      <article class="ed-tl-item" data-animate>
+        <div class="ed-tl-year">2020</div>
+        <div class="ed-tl-body">
+          <h3>Cuarentena, tres mudanzas, un perro.</h3>
+          <p>Adoptamos a Tito en mayo. Convivimos antes de saber que estábamos conviviendo. Tito sigue siendo el más maduro de la casa.</p>
+        </div>
+      </article>
+      <article class="ed-tl-item" data-animate>
+        <div class="ed-tl-year">2022</div>
+        <div class="ed-tl-body">
+          <h3>Primer viaje a la Patagonia.</h3>
+          <p>Nos perdimos buscando el Cerro Llao Llao. Encontramos el lugar donde dijimos —medio en broma— "aquí, algún día".</p>
+        </div>
+      </article>
+      <article class="ed-tl-item" data-animate>
+        <div class="ed-tl-year">2025</div>
+        <div class="ed-tl-body">
+          <h3>La pregunta.</h3>
+          <p>En la cocina. Sin anillo. Con las manos llenas de masa. Dijimos que sí antes de saber qué pregunta era.</p>
+        </div>
+      </article>
+      <article class="ed-tl-item" data-animate>
+        <div class="ed-tl-year">2027</div>
+        <div class="ed-tl-body ed-tl-now">
+          <h3>El día.</h3>
+          <p>Volvemos al lago. Esta vez no nos perdemos.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ GALERÍA EDITORIAL ============ -->
+  <section class="ed-gallery">
+    <div class="ed-gal-head" data-animate>
+      <p class="ed-label">Editorial</p>
+      <h2>Fotografía</h2>
+    </div>
+    <div class="ed-gal-grid">
+      <figure class="g-1" data-animate><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1000&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure class="g-2" data-animate><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1000&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure class="g-3" data-animate><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1000&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure class="g-4" data-animate><img src="https://images.unsplash.com/photo-1525772764200-be829a350797?w=1000&auto=format&fit=crop&q=80" alt=""/></figure>
+      <figure class="g-5" data-animate><img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1000&auto=format&fit=crop&q=80" alt=""/></figure>
+    </div>
+  </section>
+
+  <!-- ============ ITINERARIO ============ -->
+  <section class="ed-program" data-animate>
+    <div class="ed-program-head">
+      <p class="ed-label">Programa</p>
+      <h2>El día, hora por hora.</h2>
+    </div>
+    <ol class="ed-program-list">
+      <li><span>15:30</span><div><h4>Recepción</h4><p>Welcome con vino caliente en la entrada del hotel.</p></div></li>
+      <li><span>16:30</span><div><h4>Ceremonia civil</h4><p>Frente al ventanal del lago Nahuel Huapi.</p></div></li>
+      <li><span>17:30</span><div><h4>Brindis &amp; canapés</h4><p>En la terraza, mientras cae la tarde.</p></div></li>
+      <li><span>20:00</span><div><h4>Banquete</h4><p>Cena de tres tiempos con maridaje patagónico.</p></div></li>
+      <li><span>22:30</span><div><h4>Primer baile &amp; pista</h4><p>El DJ está bajo amenaza si no toca lo prometido.</p></div></li>
+      <li><span>02:00</span><div><h4>Carrito de medialunas</h4><p>Última estación antes de cerrar la noche.</p></div></li>
+    </ol>
+  </section>
+
+  <!-- ============ UBICACIONES ============ -->
+  <section class="ed-loc">
+    <div class="ed-loc-head" data-animate>
+      <p class="ed-label">Locaciones</p>
+      <h2>Donde te esperamos.</h2>
+    </div>
+    <div class="ed-loc-grid">
+      <article data-animate>
+        <p class="ed-loc-tag">Ceremonia · 16:30 hrs</p>
+        <h3>Catedral del Lago</h3>
+        <p>Av. Bustillo Km 18, Bariloche, Río Negro.</p>
+        <a href="https://maps.google.com" target="_blank" rel="noopener">Cómo llegar →</a>
+      </article>
+      <article data-animate>
+        <p class="ed-loc-tag">Recepción · 17:30 hrs</p>
+        <h3>Llao Llao Resort &amp; Spa</h3>
+        <p>Av. Bustillo Km 25, Bariloche, Río Negro.</p>
+        <a href="https://maps.google.com" target="_blank" rel="noopener">Cómo llegar →</a>
+      </article>
+    </div>
+    <div class="ed-loc-hotel" data-animate>
+      <p class="ed-label">Hospedaje sugerido</p>
+      <ul>
+        <li><strong>Llao Llao Resort</strong> — Tarifa especial $4,200 ARS / noche con código <em>MV2027</em>.</li>
+        <li><strong>Hotel Edelweiss</strong> — 12 min del venue, desde $2,800 ARS.</li>
+        <li><strong>Charming Luxury Lodge</strong> — Boutique, 8 hab. disponibles para invitados.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ DRESS CODE ============ -->
+  <section class="ed-dress" data-animate>
+    <div class="ed-dress-head">
+      <p class="ed-label">Código de vestimenta</p>
+      <h2>Formal · Black tie opcional</h2>
+    </div>
+    <p class="ed-dress-text">
+      Llevaremos vestidos largos y sacos oscuros. Patagonia en septiembre es bella e impredecible — un abrigo es una buena idea.
+      Te pedimos evitar tonos blancos y crudos.
+    </p>
+    <div class="ed-swatches">
+      <div><span style="background:#1a2332"></span><p>Navy</p></div>
+      <div><span style="background:#4a5568"></span><p>Steel</p></div>
+      <div><span style="background:#722f37"></span><p>Bordó</p></div>
+      <div><span style="background:#2d3d20"></span><p>Bosque</p></div>
+      <div><span style="background:#c9a961"></span><p>Champagne</p></div>
+    </div>
+  </section>
+
+  <!-- ============ REGALOS ============ -->
+  <section class="ed-gifts" data-animate>
+    <p class="ed-label">Mesa de regalos</p>
+    <h2>Tu presencia <em>es el regalo</em>.</h2>
+    <p class="ed-gifts-text">
+      Si además quieres acompañarnos con algo más, lo agradecemos profundamente.
+      Tenemos una pequeña lista de cosas que sumarán a la casa que estamos armando.
+    </p>
+    <div class="ed-gifts-grid">
+      <div>
+        <h4>Sobre el día del evento</h4>
+        <p>Habrá un buzón discreto en la entrada. Te dejamos sobres con nuestras iniciales.</p>
+      </div>
+      <div>
+        <h4>Transferencia</h4>
+        <p>Banco Galicia · Cta. 4017829 · CBU 0070123456789012345678 · M. Iturbide / V. Reyes</p>
+      </div>
+      <div>
+        <h4>Mesa Falabella</h4>
+        <p>Lista digital nº 88412 · Búscanos como "Iturbide-Reyes".</p>
+      </div>
+      <div>
+        <h4>Luna de miel</h4>
+        <p>Estamos juntando para Islandia. Un café tuyo allá nos haría feliz.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RSVP ============ -->
+  <section class="ed-rsvp" data-animate>
+    <p class="ed-label">Confirmación</p>
+    <h2>Necesitamos saberlo<br/><em>antes del 15 de agosto.</em></h2>
+    <form id="ed-rsvp-form" novalidate>
+      <label>
+        <span>Nombre completo</span>
+        <input type="text" required name="name" placeholder="Tu nombre" />
+      </label>
+      <label>
+        <span>¿Vienes?</span>
+        <select name="attend">
+          <option>Sí, no me lo perdería</option>
+          <option>No podré, los abrazo</option>
+        </select>
+      </label>
+      <label>
+        <span>Acompañantes</span>
+        <input type="number" min="0" max="3" value="1" name="guests" />
+      </label>
+      <label>
+        <span>Restricciones alimentarias</span>
+        <input type="text" name="diet" placeholder="Vegetariano, sin gluten, alergias..." />
+      </label>
+      <label>
+        <span>Una canción que <em>tienen</em> que tocar</span>
+        <input type="text" name="song" placeholder="Artista — Canción" />
+      </label>
+      <button type="submit">Enviar confirmación</button>
+      <p id="ed-rsvp-ok" class="ed-rsvp-ok" hidden>Recibido. Nos vemos en septiembre.</p>
+    </form>
+  </section>
+
+  <!-- ============ PLAYLIST ============ -->
+  <section class="ed-pl" data-animate>
+    <div class="ed-pl-head">
+      <p class="ed-label">Soundtrack</p>
+      <h2>La playlist oficial</h2>
+    </div>
+    <ol class="ed-pl-list">
+      <li><span>01</span><div><strong>Northern Sky</strong><em>Nick Drake</em></div></li>
+      <li><span>02</span><div><strong>Harvest Moon</strong><em>Neil Young</em></div></li>
+      <li><span>03</span><div><strong>Ribs</strong><em>Lorde</em></div></li>
+      <li><span>04</span><div><strong>The Night We Met</strong><em>Lord Huron</em></div></li>
+      <li><span>05</span><div><strong>De Música Ligera</strong><em>Soda Stereo</em></div></li>
+      <li><span>06</span><div><strong>Heroes</strong><em>David Bowie</em></div></li>
+    </ol>
+  </section>
+
+  <!-- ============ HASHTAG ============ -->
+  <section class="ed-hash" data-animate>
+    <p class="ed-label">Comparte el día</p>
+    <h2 class="ed-hash-tag">#MateoYValentina2027</h2>
+    <p>Sube tus fotos del día con este hashtag. Las queremos todas, especialmente las que no salimos posando.</p>
+  </section>
+
+  <!-- ============ CIERRE ============ -->
+  <section class="ed-end">
+    <div class="ed-end-inner" data-animate>
+      <p class="ed-end-label">Fin del primer capítulo</p>
+      <h2>Te esperamos.</h2>
+      <p class="ed-end-sig">M &amp; V · Sept 2027</p>
+    </div>
+  </section>
+
+  <style is:global>
+    .editorial-body {
+      background: #0f1721;
+      color: #f5f1e8;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
+    .editorial-body h1, .editorial-body h2, .editorial-body h3, .editorial-body h4 {
+      font-family: 'Italiana', serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+    .editorial-body em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+    }
+    .editorial-body [data-animate] { opacity: 0; transform: translateY(28px); transition: opacity 1s ease, transform 1s ease; }
+    .editorial-body [data-animate].in { opacity: 1; transform: none; }
+
+    .editorial-body .ed-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #c9a961;
+      margin: 0 0 16px;
+    }
+    .editorial-body .ed-label.center { text-align: center; }
+
+    /* SPLASH */
+    .ed-splash {
+      position: fixed; inset: 0; z-index: 100;
+      background: #0f1721;
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.6s ease;
+    }
+    .ed-envelope {
+      text-align: center;
+      padding: 60px 40px;
+      border: 1px solid #c9a961;
+      max-width: 360px;
+    }
+    .ed-envelope .ed-vol {
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #c9a961;
+      margin: 0 0 32px;
+    }
+    .ed-envelope h1 {
+      font-family: 'Italiana', serif;
+      font-size: 80px;
+      margin: 0 0 20px;
+      line-height: 1;
+      color: #f5f1e8;
+    }
+    .ed-envelope h1 span {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 60px;
+      color: #c9a961;
+    }
+    .ed-envelope .ed-issue {
+      font-size: 11px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: #f5f1e8;
+      margin: 0 0 32px;
+    }
+    #ed-cta {
+      background: #c9a961;
+      color: #0f1721;
+      border: none;
+      padding: 14px 32px;
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: transform 0.2s ease;
+    }
+    #ed-cta:hover { transform: translateY(-2px); }
+
+    /* HERO */
+    .ed-hero {
+      position: relative;
+      height: 100vh;
+      min-height: 700px;
+      overflow: hidden;
+    }
+    .ed-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85) brightness(0.75); }
+    .ed-hero-grain { position: absolute; inset: 0; opacity: 0.08; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='0.9'/></filter><rect width='200' height='200' filter='url(%23n)' opacity='0.5'/></svg>"); }
+    .ed-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,23,33,0.85) 0%, rgba(15,23,33,0.2) 50%, rgba(15,23,33,0.5) 100%); }
+    .ed-hero-text {
+      position: absolute;
+      bottom: 8vh;
+      left: 24px; right: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    @media (min-width: 768px) { .ed-hero-text { left: 64px; right: 64px; bottom: 10vh; } }
+    .ed-mast {
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #c9a961;
+      margin: 0 0 24px;
+      border-top: 1px solid #c9a961;
+      padding-top: 16px;
+      max-width: 360px;
+    }
+    .ed-hero h1 {
+      font-size: clamp(64px, 13vw, 200px);
+      line-height: 0.88;
+      margin: 0 0 32px;
+      color: #f5f1e8;
+    }
+    .ed-hero h1 em {
+      color: #c9a961;
+      font-size: 0.55em;
+      vertical-align: middle;
+      padding: 0 0.05em;
+    }
+    .ed-hero-meta {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: #f5f1e8;
+    }
+    .ed-hero-meta p { margin: 0; }
+    .ed-hero-num {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      font-family: 'Italiana', serif;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      color: #c9a961;
+    }
+    @media (min-width: 768px) { .ed-hero-num { top: 40px; right: 64px; font-size: 16px; } }
+
+    /* QUOTE */
+    .ed-quote {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 140px 32px;
+      text-align: center;
+    }
+    .ed-quote-mark {
+      font-family: 'Italiana', serif;
+      font-size: 96px;
+      color: #c9a961;
+      line-height: 0.5;
+      margin: 0;
+    }
+    .ed-quote blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(24px, 3vw, 40px);
+      line-height: 1.4;
+      margin: 24px 0;
+      font-weight: 300;
+    }
+    .ed-quote-author {
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #c9a961;
+      margin-top: 32px;
+    }
+
+    /* LETTER */
+    .ed-letter { padding: 80px 24px; max-width: 1200px; margin: 0 auto; }
+    @media (min-width: 768px) { .ed-letter { padding: 120px 64px; } }
+    .ed-letter-grid { display: grid; gap: 40px; }
+    @media (min-width: 768px) { .ed-letter-grid { grid-template-columns: 280px 1fr; gap: 80px; } }
+    .ed-letter-side h2 { font-size: clamp(36px, 5vw, 60px); margin: 0; line-height: 1; }
+    .ed-letter-body p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(17px, 1.6vw, 21px);
+      line-height: 1.7;
+      margin: 0 0 24px;
+      color: rgba(245,241,232,0.85);
+    }
+    .ed-signature { font-family: 'Cormorant Garamond', serif !important; font-style: italic; font-size: 28px !important; color: #c9a961 !important; }
+
+    /* COUNTDOWN */
+    .ed-cd {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 100px 32px;
+      text-align: center;
+      border-top: 1px solid rgba(201,169,97,0.25);
+      border-bottom: 1px solid rgba(201,169,97,0.25);
+    }
+    .ed-cd-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 32px 0 24px; }
+    .ed-cd-grid > div { text-align: center; }
+    .ed-cd-grid span {
+      display: block;
+      font-family: 'Italiana', serif;
+      font-size: clamp(40px, 6vw, 80px);
+      color: #c9a961;
+      line-height: 1;
+    }
+    .ed-cd-grid p {
+      margin: 12px 0 0;
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+    }
+    .ed-cd-foot {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: rgba(245,241,232,0.7);
+      margin: 0;
+    }
+
+    /* STORY */
+    .ed-story { padding: 100px 24px; max-width: 1100px; margin: 0 auto; }
+    @media (min-width: 768px) { .ed-story { padding: 140px 64px; } }
+    .ed-story-head h2 { font-size: clamp(40px, 6vw, 80px); margin: 0 0 80px; line-height: 1; }
+    .ed-timeline { display: grid; gap: 56px; }
+    .ed-tl-item { display: grid; gap: 16px; padding-bottom: 56px; border-bottom: 1px solid rgba(201,169,97,0.15); }
+    @media (min-width: 768px) { .ed-tl-item { grid-template-columns: 160px 1fr; gap: 64px; } }
+    .ed-tl-year { font-family: 'Italiana', serif; font-size: 48px; color: #c9a961; line-height: 1; }
+    .ed-tl-body h3 { font-size: clamp(22px, 2.4vw, 32px); margin: 0 0 12px; }
+    .ed-tl-body p { font-family: 'Cormorant Garamond', serif; font-size: 18px; line-height: 1.6; color: rgba(245,241,232,0.78); margin: 0; }
+    .ed-tl-now h3 { color: #c9a961; }
+
+    /* GALLERY */
+    .ed-gallery { padding: 100px 24px; max-width: 1280px; margin: 0 auto; }
+    .ed-gal-head { margin-bottom: 56px; }
+    .ed-gal-head h2 { font-size: clamp(40px, 6vw, 80px); margin: 0; }
+    .ed-gal-grid { display: grid; gap: 16px; grid-template-columns: repeat(2, 1fr); grid-auto-rows: minmax(180px, auto); }
+    @media (min-width: 768px) {
+      .ed-gal-grid { grid-template-columns: repeat(6, 1fr); grid-auto-rows: 200px; gap: 16px; }
+      .g-1 { grid-column: span 3; grid-row: span 2; }
+      .g-2 { grid-column: span 3; grid-row: span 1; }
+      .g-3 { grid-column: span 2; grid-row: span 1; }
+      .g-4 { grid-column: span 4; grid-row: span 1; }
+      .g-5 { grid-column: span 6; grid-row: span 1; }
+    }
+    .ed-gal-grid figure { margin: 0; overflow: hidden; }
+    .ed-gal-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s ease; }
+    .ed-gal-grid figure:hover img { transform: scale(1.05); }
+
+    /* PROGRAM */
+    .ed-program { max-width: 1000px; margin: 0 auto; padding: 100px 24px; }
+    .ed-program-head h2 { font-size: clamp(36px, 5vw, 60px); margin: 0 0 48px; }
+    .ed-program-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 24px; }
+    .ed-program-list li {
+      display: grid; grid-template-columns: 80px 1fr; gap: 24px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(201,169,97,0.18);
+    }
+    .ed-program-list span { font-family: 'Italiana', serif; font-size: 28px; color: #c9a961; }
+    .ed-program-list h4 { margin: 0 0 6px; font-size: 22px; }
+    .ed-program-list p { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: rgba(245,241,232,0.7); margin: 0; }
+
+    /* LOC */
+    .ed-loc { max-width: 1100px; margin: 0 auto; padding: 100px 24px; }
+    .ed-loc-head h2 { font-size: clamp(40px, 5vw, 60px); margin: 0 0 56px; }
+    .ed-loc-grid { display: grid; gap: 40px; margin-bottom: 64px; }
+    @media (min-width: 640px) { .ed-loc-grid { grid-template-columns: repeat(2, 1fr); } }
+    .ed-loc-grid article { padding: 32px; border: 1px solid rgba(201,169,97,0.25); }
+    .ed-loc-tag { font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #c9a961; margin: 0 0 16px; }
+    .ed-loc-grid h3 { font-size: 32px; margin: 0 0 12px; }
+    .ed-loc-grid > article > p { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: rgba(245,241,232,0.8); margin: 0 0 20px; }
+    .ed-loc-grid a { color: #c9a961; text-decoration: none; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; border-bottom: 1px solid #c9a961; padding-bottom: 4px; }
+    .ed-loc-hotel ul { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 12px; }
+    .ed-loc-hotel li { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: rgba(245,241,232,0.78); }
+    .ed-loc-hotel li strong { color: #f5f1e8; }
+    .ed-loc-hotel li em { color: #c9a961; font-style: normal; letter-spacing: 0.1em; }
+
+    /* DRESS */
+    .ed-dress { max-width: 900px; margin: 0 auto; padding: 100px 24px; text-align: center; }
+    .ed-dress-head h2 { font-size: clamp(32px, 4vw, 48px); margin: 0 0 32px; }
+    .ed-dress-text { font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.6; color: rgba(245,241,232,0.8); margin: 0 0 56px; }
+    .ed-swatches { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+    .ed-swatches > div { text-align: center; }
+    .ed-swatches span { display: block; width: 56px; height: 56px; border-radius: 50%; border: 1px solid rgba(201,169,97,0.3); }
+    .ed-swatches p { margin: 12px 0 0; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; }
+
+    /* GIFTS */
+    .ed-gifts { max-width: 1000px; margin: 0 auto; padding: 100px 24px; text-align: center; }
+    .ed-gifts h2 { font-size: clamp(40px, 5vw, 64px); margin: 0 0 24px; }
+    .ed-gifts-text { font-family: 'Cormorant Garamond', serif; font-size: 19px; color: rgba(245,241,232,0.8); margin: 0 0 56px; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .ed-gifts-grid { display: grid; gap: 32px; text-align: left; }
+    @media (min-width: 768px) { .ed-gifts-grid { grid-template-columns: repeat(2, 1fr); } }
+    .ed-gifts-grid h4 { font-size: 20px; margin: 0 0 10px; color: #c9a961; }
+    .ed-gifts-grid p { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: rgba(245,241,232,0.78); margin: 0; line-height: 1.6; }
+
+    /* RSVP */
+    .ed-rsvp { max-width: 720px; margin: 0 auto; padding: 100px 24px; text-align: center; }
+    .ed-rsvp h2 { font-size: clamp(36px, 5vw, 56px); margin: 0 0 48px; }
+    #ed-rsvp-form { display: grid; gap: 20px; text-align: left; }
+    #ed-rsvp-form label { display: grid; gap: 8px; }
+    #ed-rsvp-form span { font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #c9a961; }
+    #ed-rsvp-form input, #ed-rsvp-form select {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(201,169,97,0.4);
+      color: #f5f1e8;
+      padding: 10px 0;
+      font-size: 17px;
+      font-family: 'Cormorant Garamond', serif;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    #ed-rsvp-form input:focus, #ed-rsvp-form select:focus { border-color: #c9a961; }
+    #ed-rsvp-form button {
+      margin-top: 24px;
+      background: #c9a961;
+      color: #0f1721;
+      border: none;
+      padding: 16px 24px;
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .ed-rsvp-ok {
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: #c9a961;
+      font-size: 19px;
+      margin: 16px 0 0;
+    }
+
+    /* PLAYLIST */
+    .ed-pl { max-width: 800px; margin: 0 auto; padding: 100px 24px; }
+    .ed-pl-head h2 { font-size: clamp(36px, 5vw, 56px); margin: 0 0 48px; }
+    .ed-pl-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
+    .ed-pl-list li { display: grid; grid-template-columns: 40px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(201,169,97,0.12); }
+    .ed-pl-list span { font-family: 'Italiana', serif; font-size: 18px; color: #c9a961; }
+    .ed-pl-list strong { display: block; font-weight: 400; font-size: 18px; }
+    .ed-pl-list em { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; color: rgba(245,241,232,0.6); }
+
+    /* HASHTAG */
+    .ed-hash { max-width: 800px; margin: 0 auto; padding: 100px 24px; text-align: center; }
+    .ed-hash-tag { font-size: clamp(28px, 5vw, 56px); margin: 16px 0 24px; color: #c9a961; word-break: break-word; }
+    .ed-hash p { font-family: 'Cormorant Garamond', serif; font-size: 19px; color: rgba(245,241,232,0.8); margin: 0; }
+
+    /* END */
+    .ed-end { padding: 140px 24px 100px; text-align: center; border-top: 1px solid rgba(201,169,97,0.25); }
+    .ed-end-label { font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #c9a961; margin: 0 0 32px; }
+    .ed-end h2 { font-size: clamp(56px, 9vw, 120px); margin: 0 0 48px; }
+    .ed-end-sig { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: rgba(245,241,232,0.7); margin: 0; }
+  </style>
+
+  <script>
+    import gsap from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Splash
+    const splash = document.getElementById('ed-splash');
+    const cta = document.getElementById('ed-cta');
+    if (splash) {
+      document.body.style.overflow = 'hidden';
+      const dismiss = () => {
+        gsap.to('#ed-env', { y: -16, opacity: 0, duration: 0.5, ease: 'power2.in' });
+        gsap.to(splash, { opacity: 0, duration: 0.6, delay: 0.3, ease: 'power2.in', onComplete: () => {
+          splash.style.display = 'none';
+          document.body.style.overflow = '';
+        }});
+      };
+      cta?.addEventListener('click', dismiss);
+      splash.addEventListener('click', (e) => { if (e.target === splash) dismiss(); });
+    }
+
+    // Animate
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      }
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-animate]').forEach(el => io.observe(el));
+
+    // Hero parallax
+    const heroImg = document.querySelector<HTMLImageElement>('.ed-hero img');
+    if (heroImg && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      gsap.to(heroImg, {
+        yPercent: 12, ease: 'none',
+        scrollTrigger: { trigger: '.ed-hero', start: 'top top', end: 'bottom top', scrub: true },
+      });
+    }
+
+    // Countdown
+    const target = new Date('2027-09-11T16:30:00-03:00').getTime();
+    const tick = () => {
+      const diff = target - Date.now();
+      if (diff <= 0) return;
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff / 3600000) % 24);
+      const m = Math.floor((diff / 60000) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+      const set = (id: string, v: number) => { const el = document.getElementById(id); if (el) el.textContent = String(v).padStart(2, '0'); };
+      set('ed-d', d); set('ed-h', h); set('ed-m', m); set('ed-s', s);
+    };
+    tick(); setInterval(tick, 1000);
+
+    // RSVP fake
+    const form = document.getElementById('ed-rsvp-form');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('ed-rsvp-ok')?.removeAttribute('hidden');
+      (form as HTMLFormElement).reset();
+    });
+  </script>
+</DemoLayout>
